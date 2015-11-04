@@ -1,6 +1,6 @@
 {
-  "name": "angularframeworkfrontend",
-  "version": "0.0.1",
+  "name": "Tesseract",
+  "version": "0.1",
   "description": "AngularFrameworkFrontend",
   "main": "gulpfile.js",
   "dependencies": {
