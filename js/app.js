@@ -6,19 +6,29 @@ var firstapp = angular.module('firstapp', [
     'navigationservice'
 ]);
 
-firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
+firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
 
     // for http request with session
     $httpProvider.defaults.withCredentials = true;
 
     $stateProvider
 
-    .state('home', {
+        .state('home', {
         url: "/home",
         templateUrl: "views/template.html",
         controller: 'HomeCtrl'
     })
 
+    .state('blog', {
+        url: "/blog/1",
+        templateUrl: "views/template.html",
+        controller: 'BlogCtrl'
+    })
+    .state('bloglist', {
+        url: "/blog",
+        templateUrl: "views/template.html",
+        controller: 'BloglistCtrl'
+    })
     .state('features', {
         url: "/features",
         templateUrl: "views/template.html",
@@ -48,23 +58,20 @@ firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
 });
 
 
-firstapp.directive('img', function($compile, $parse) {
+firstapp.directive('img', function ($compile, $parse) {
     return {
         restrict: 'E',
         replace: false,
-        link: function($scope, element, attrs) {
+        link: function ($scope, element, attrs) {
             var $element = $(element);
-            if(!attrs.noloading)
-            {
+            if (!attrs.noloading) {
                 $element.after("<img src='img/loading.gif' class='loading' />");
                 var $loading = $element.next(".loading");
-                $element.load(function() {
+                $element.load(function () {
                     $loading.remove();
                     $(this).addClass("doneLoading");
                 });
-            }
-            else
-            {
+            } else {
                 $($element).addClass("doneLoading");
             }
         }
