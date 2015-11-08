@@ -19,6 +19,30 @@ firstapp.config(function($stateProvider, $urlRouterProvider,$httpProvider) {
         controller: 'HomeCtrl'
     })
 
+    .state('features', {
+        url: "/features",
+        templateUrl: "views/template.html",
+        controller: 'FeaturesCtrl'
+    })
+
+    .state('pricing', {
+        url: "/pricing",
+        templateUrl: "views/template.html",
+        controller: 'PricingCtrl'
+    })
+
+    .state('login', {
+        url: "/login",
+        templateUrl: "views/template.html",
+        controller: 'LoginCtrl'
+    })
+
+    .state('register', {
+        url: "/register",
+        templateUrl: "views/template.html",
+        controller: 'RegisterCtrl'
+    })
+
     $urlRouterProvider.otherwise("/home");
 
 });
