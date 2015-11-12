@@ -43,6 +43,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Pricing");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+    
 })
 
 .controller('LoginCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
