@@ -35,7 +35,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })
-
+	
 .controller('PricingCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html for particular template file
     $scope.template = TemplateService.changecontent("pricing");
@@ -63,6 +63,24 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })
+
+	.controller('ForgotPasswordCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html for particular template file
+    $scope.template = TemplateService.changecontent("forgotpassword");
+
+    $scope.menutitle = NavigationService.makeactive("Forgot Password");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
+	.controller('ResetPasswordCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html for particular template file
+    $scope.template = TemplateService.changecontent("resetpassword");
+
+    $scope.menutitle = NavigationService.makeactive("Reset Password");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
+
 
 .controller('headerctrl', function ($scope, TemplateService) {
     $scope.template = TemplateService;
