@@ -66,6 +66,10 @@ $menu-height: 65px !default;
     content: "\e900";
 }
 
+.primary {
+    color: $brand-primary;
+}
+
 .fb-icon {
     border: 1px solid $facebook;
     background-color: $facebook;
@@ -226,5 +230,25 @@ a.navbar-brand {
         ul {
             padding-left: 15px;
         }
+    }
+}
+
+.brdr > .btn {
+    width: 25px;
+    height: 25px;
+    padding: 1px 6px;
+    text-align: center;
+}
+
+.blog-list {
+    p {
+        line-height: 200%;
+    }
+    span {
+        margin-left: 10px;
+        @extend .primary;
+    }
+    .blog-img {
+        margin: 30px 0;
     }
 }
