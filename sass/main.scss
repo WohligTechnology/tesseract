@@ -1,180 +1,230 @@
 /*Start writing sass here*/
+
 @import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900);
 @import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
-
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "../bower_components/flexslider/flexslider.css";
 @import "../bower_components/fontawesome/css/font-awesome.min.css";
-
-$gray-base:              #000 !default;
-$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
-$gray-dark:              lighten($gray-base, 20%) !default;   // #333
-$gray:                   lighten($gray-base, 33.5%) !default; // #555
-$gray-light:             lighten($gray-base, 46.7%) !default; // #777
-$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
-
-$brand-primary:         #1aa3eb !default;
-$brand-success:         #1aeb46 !default;
-$brand-warning:         #ebb21a !default;
-$brand-danger:          #eb2e1a !default;
-$brand-info:            #1ad0eb !default;
-
-$facebook:              #3a579d !default;
-$google:                #dd4d3c !default;
-$twitter:               #49c8f5 !default;
-
-$body-bg:               #fff !default;
-
-$text-color:            $gray !default;
-
-$link-color:            $gray !default;
-
-$link-hover-color:      $gray-base !default;
-
+$gray-base: #000 !default;
+$gray-darker: lighten($gray-base, 13.5%) !default; // #222
+$gray-dark: lighten($gray-base, 20%) !default; // #333
+$gray: lighten($gray-base, 33.5%) !default; // #555
+$gray-light: lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter: lighten($gray-base, 93.5%) !default; // #eee
+$brand-primary: #1aa3eb !default;
+$brand-success: #1aeb46 !default;
+$brand-warning: #ebb21a !default;
+$brand-danger: #eb2e1a !default;
+$brand-info: #1ad0eb !default;
+$facebook: #3a579d !default;
+$google: #dd4d3c !default;
+$twitter: #49c8f5 !default;
+$body-bg: #fff !default;
+$text-color: $gray !default;
+$link-color: $gray !default;
+$link-hover-color: $gray-base !default;
 $link-hover-decoration: none !default;
-
-$font-family-sans-serif:  "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif:       "Lato", Georgia, "Times New Roman", Times, serif !default;
-
-$border-radius-base:        0px !default;
-$border-radius-large:       0px !default;
-$border-radius-small:       0px !default;
-
+$font-family-sans-serif: "Lato",
+"Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif !default;
+$font-family-serif: "Lato",
+Georgia,
+"Times New Roman",
+Times,
+serif !default;
+$border-radius-base: 0px !default;
+$border-radius-large: 0px !default;
+$border-radius-small: 0px !default;
 $menu-height: 65px !default;
-
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
-
 @font-face {
-	font-family: 'Blazen';
-	src:url('../fonts/blazen.eot?sfgjhu');
-	src:url('../fonts/blazen.eot?sfgjhu#iefix') format('embedded-opentype'),
-		url('../fonts/blazen.ttf?sfgjhu') format('truetype'),
-		url('../fonts/blazen.woff?sfgjhu') format('woff'),
-		url('../fonts/blazen.svg?sfgjhu#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'Blazen';
+    src: url('../fonts/blazen.eot?sfgjhu');
+    src: url('../fonts/blazen.eot?sfgjhu#iefix') format('embedded-opentype'), url('../fonts/blazen.ttf?sfgjhu') format('truetype'), url('../fonts/blazen.woff?sfgjhu') format('woff'), url('../fonts/blazen.svg?sfgjhu#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
-[class^="icon-"], [class*=" icon-"] {
-	font-family: 'Blazen';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+
+[class^="icon-"],
+[class*=" icon-"] {
+    font-family: 'Blazen';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
 .icon-blazen:before {
-	content: "\e900";
+    content: "\e900";
+}
+
+.fb-icon {
+    border: 1px solid $facebook;
+    background-color: $facebook;
+    color: #fff;
+    &:hover {
+        background-color: darken($facebook, 10%);
+        color: #fff;
+    }
+}
+
+.google-icon {
+    border: 1px solid $google;
+    background-color: $google;
+    color: #fff;
+    &:hover {
+        background-color: darken($google, 10%);
+        color: #fff;
+    }
+}
+
+.twitter-icon {
+    border: 1px solid $twitter;
+    background-color: $twitter;
+    color: #fff;
+    &:hover {
+        background-color: darken($twitter, 10%);
+        color: #fff;
+    }
 }
 
 body {
-  padding-top: $menu-height;
+    padding-top: $menu-height;
 }
+
 img.loading {
-  text-align: center;
-  opacity: 1;
-  width: 32px !important;
-  height: auto;
+    text-align: center;
+    opacity: 1;
+    width: 32px !important;
+    height: auto;
 }
+
 img {
-  opacity: 0;
-  @include transition(all 300ms ease);
+    opacity: 0;
+    @include transition(all 300ms ease);
 }
+
 img.doneLoading {
-  opacity: 1;
+    opacity: 1;
 }
+
 nav li:hover .dropdown-menu {
-  display: block;
+    display: block;
 }
+
 .content {
-	min-height: 450px;
+    min-height: 450px;
 }
+
 hr.sweet-line {
-	background-image: url("../img/sweet-line.png");
-	background-repeat: no-repeat;
-	background-position: center;
-	width: 100%;
-	height: 15px;
-  background-size: 300px auto;
-	background-color: transparent;
-	border: none;
-	margin: 10px 0 30px;
+    background-image: url("../img/sweet-line.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 15px;
+    background-size: 300px auto;
+    background-color: transparent;
+    border: none;
+    margin: 10px 0 30px;
 }
+
 a.navbar-brand {
-	color: $brand-primary;
-	font-size: 30px;
-	.logo-text {
-		font-weight: 300;
-		font-size: 35px;
-	}
+    color: $brand-primary;
+    font-size: 30px;
+    .logo-text {
+        font-weight: 300;
+        font-size: 35px;
+    }
 }
 
 .nav {
-
-	> li {
-		padding: 0 20px;
-		&.active {
-			a {
-				color: $brand-primary;
-				border-color: $brand-primary;
-			}
-		}
-		&.special {
-			a {
-				background-color: $brand-primary;
-				color: white;
-				padding: 3px 15px;
-				margin-left: -15px;
-				border: 2px solid $brand-primary;
-			}
-		}
-
-		> a {
-			@include transition(all 300ms ease);
-			border-bottom: 2px solid transparent;
-			padding: 5px 0px;
-			margin-top: 15px;
-			&:hover {
-				background-color: transparent;
-				color: $brand-primary;
-				border-color: $brand-primary;
-			}
-		}
-	}
-
+    > li {
+        padding: 0 20px;
+        &.active {
+            a {
+                color: $brand-primary;
+                border-color: $brand-primary;
+            }
+        }
+        &.special {
+            a {
+                background-color: $brand-primary;
+                color: white;
+                padding: 3px 15px;
+                margin-left: -15px;
+                border: 2px solid $brand-primary;
+            }
+        }
+        > a {
+            @include transition(all 300ms ease);
+            border-bottom: 2px solid transparent;
+            padding: 5px 0px;
+            margin-top: 15px;
+            &:hover {
+                background-color: transparent;
+                color: $brand-primary;
+                border-color: $brand-primary;
+            }
+        }
+    }
 }
 
 .footermenu {
-	margin-top: 20px;
-	ul.list-unstyled {
-		li {
-			font-weight: 700;
-			margin-bottom: 10px;
-			a {
-				font-weight: 300;  
-			}
-		}
-	}
+    margin-top: 20px;
+    ul.list-unstyled {
+        li {
+            font-weight: 700;
+            margin-bottom: 10px;
+            a {
+                font-weight: 300;
+            }
+        }
+    }
 }
 
 .navbar {
-	min-height: $menu-height;
-	border-bottom: 1px solid $gray-lighter;
-	background-color: white;
+    min-height: $menu-height;
+    border-bottom: 1px solid $gray-lighter;
+    background-color: #fff;
 }
 
 .footer {
-		margin-top: 20px;
+    margin-top: 20px;
     font-size: 12px;
     font-weight: 400;
     padding: 15px 0 15px;
-		background-color: $gray-lighter;
+    background-color: $gray-lighter;
+    a {
+        color: $brand-primary;
+    }
+}
 
-		a {
-			color: $brand-primary;
-		}
+//pricing
+.mg50 {
+    margin: 50px 0;
+}
+
+.plan {
+    border: 1px solid $brand-primary;
+    margin: 30px 0;
+    .price {
+        color: $brand-primary;
+        font-size: 35px;
+    }
+    .plan-info {
+        min-height: 400px;
+        padding: 40px 70px;
+        background-color: #f1f1f1;
+        ul {
+            padding-left: 15px;
+        }
+    }
 }
