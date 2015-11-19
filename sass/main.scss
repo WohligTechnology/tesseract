@@ -5,7 +5,7 @@
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "../bower_components/flexslider/flexslider.css";
-@import "../bower_components/fontawesome/css/font-awesome.min.css";
+@import "../bower_components/font-awesome/css/font-awesome.min.css";
 $gray-base: #000 !default;
 $gray-darker: lighten($gray-base, 13.5%) !default; // #222
 $gray-dark: lighten($gray-base, 20%) !default; // #333
@@ -233,6 +233,7 @@ a.navbar-brand {
     }
 }
 
+//blog list
 .brdr > .btn {
     width: 25px;
     height: 25px;
@@ -251,4 +252,58 @@ a.navbar-brand {
     .blog-img {
         margin: 30px 0;
     }
+}
+
+// login
+.login-form {
+  margin-top: 100px;
+}
+
+.text-style {
+  font-size: 11px;
+}
+
+.brdr {
+  border-radius: 2px;
+}
+
+.input-style {
+  height: 40px;
+  @extend .brdr;
+}
+
+.text-center {
+  margin-top: 20px;
+}
+
+.center {
+  line-height: 42px;
+}
+
+.btn {
+  width: 100%;
+
+  i {
+    margin-left: 15px;
+    float: left;
+  }
+  span {
+    line-height: 200%;
+  }
+}
+
+.social-buttons {
+  margin-top: 10px;
+}
+
+.social-buttons:nth-child(1) {
+  margin-top: 0px;
+}
+
+.social-f {
+  margin: 8px 0px;
+}
+
+.twitter-icon {
+  margin-bottom: 50px;
 }
