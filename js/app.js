@@ -63,9 +63,10 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
 		url: "/rest-password",
 		templateUrl: "views/template.html",
 		controller: 'ResetPasswordCtrl'
-	})
+	});
 
 	$urlRouterProvider.otherwise("/home");
+  $locationProvider.html5Mode(isproduction);
 
 });
 
