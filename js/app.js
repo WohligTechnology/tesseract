@@ -6,7 +6,7 @@ var firstapp = angular.module('firstapp', [
     'navigationservice'
 ]);
 
-firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
+firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
 
 	// for http request with session
 	$httpProvider.defaults.withCredentials = true;
@@ -14,7 +14,7 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
 	$stateProvider
 
 		.state('home', {
-		url: "/home",
+		url: "/",
 		templateUrl: "views/template.html",
 		controller: 'HomeCtrl'
 	})
@@ -65,7 +65,7 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
 		controller: 'ResetPasswordCtrl'
 	});
 
-	$urlRouterProvider.otherwise("/home");
+	$urlRouterProvider.otherwise("/");
   $locationProvider.html5Mode(isproduction);
 
 });
