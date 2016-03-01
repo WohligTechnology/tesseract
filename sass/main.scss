@@ -338,6 +338,7 @@ a.navbar-brand {
     padding: 0px;
     display: block;
     list-style: none;
+    margin-bottom: 0px;
     li{
       display: inline-block;
     }
@@ -393,16 +394,17 @@ margin: 0 auto;
 
 }
 .help-title {
-    padding-top: 22px;
+    padding-top: 15px;
 }
 .help-bg{
   background: url(../img/help.jpg);
   background-color: #fff;
     padding: 13px 13px;
+        margin: 15px 0px;
 }
 .help-icon {
     text-align: center;
-    padding: 15px 0px;
+    padding: 10px 0px;
     img{
       margin: 0 auto;
 width: 130px;
@@ -418,4 +420,43 @@ width: 130px;
   border: 4px solid #fff;
 /* padding: 0px; */
 border-style: dashed;
+}
+.bg-code{
+  background: url(../img/blog-bg.jpg)no-repeat;
+  background-size: cover;
+}
+.social-bg{
+  background: url(../img/social-bg.jpg)no-repeat;
+  background-size: cover;
+      margin-top: 15px;
+          padding: 15px 10px 10px 0px;
+}
+.icon-list {
+    height: 110px;
+    width: auto;
+    overflow: hidden;
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+.social-icons{
+  @extend .icon-list;
+    height: 90px;
+}
+.padding-code {
+    padding: 15px 10px 20px 5px;
+}
+.blog-title{
+  h1{
+    text-align: center;
+font-size: 90px;
+margin: 0px;
+  }
+}
+.short-info {
+    padding: 0px 10px 0px 10px;
+}
+.border-right{
+  border-right:1px solid #fff;
 }
