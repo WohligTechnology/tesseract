@@ -393,21 +393,27 @@ margin: 0 auto;
     margin-top: 20px;
 
 }
+.margin5{
+  margin: 5px 0px;
+}
 .help-title {
-    padding-top: 15px;
+    padding-top: 20px;
+    h2{
+      font-size: 20px;
+    }
 }
 .help-bg{
   background: url(../img/help.jpg);
   background-color: #fff;
-    padding: 13px 13px;
+      padding: 7px 7px;
         margin: 15px 0px;
 }
 .help-icon {
     text-align: center;
-    padding: 10px 0px;
+    padding: 4px 0px;
     img{
       margin: 0 auto;
-width: 130px;
+width: 90px;
     }
 }
 .font-bold{
@@ -417,7 +423,7 @@ width: 130px;
   margin: 0px;
 }
 .border-dash{
-  border: 4px solid #fff;
+  border: 2px solid #fff;
 /* padding: 0px; */
 border-style: dashed;
 }
