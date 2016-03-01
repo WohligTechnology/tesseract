@@ -25,12 +25,12 @@ $text-color: $gray !default;
 $link-color: $gray !default;
 $link-hover-color: $gray-base !default;
 $link-hover-decoration: none !default;
-$font-family-sans-serif: "Lato",
+$font-family-sans-serif: "Lato","Blazen",
 "Helvetica Neue",
 Helvetica,
 Arial,
 sans-serif !default;
-$font-family-serif: "Lato",
+$font-family-serif: "Lato","Blazen",
 Georgia,
 "Times New Roman",
 Times,
@@ -40,12 +40,17 @@ $border-radius-large: 0px !default;
 $border-radius-small: 0px !default;
 $menu-height: 65px !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+// @font-face {
+//     font-family: 'Blazen';
+//     src: url('../fonts/blazen.eot?sfgjhu');
+//     src: url('../fonts/blazen.eot?sfgjhu#iefix') format('embedded-opentype'), url('../fonts/blazen.ttf?sfgjhu') format('truetype'), url('../fonts/blazen.woff?sfgjhu') format('woff'), url('../fonts/blazen.svg?sfgjhu#icomoon') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+// }
 @font-face {
-    font-family: 'Blazen';
-    src: url('../fonts/blazen.eot?sfgjhu');
-    src: url('../fonts/blazen.eot?sfgjhu#iefix') format('embedded-opentype'), url('../fonts/blazen.ttf?sfgjhu') format('truetype'), url('../fonts/blazen.woff?sfgjhu') format('woff'), url('../fonts/blazen.svg?sfgjhu#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Blazen";
+  src: url(../fonts/blazenbold.ttf);
+  src: url(../fonts/blazenbold.eot#iefix) format("embedded-opentype"), url(../fonts/blazenbold.ttf) format("truetype"), url(../fonts/blazenbold.svg) format("svg");
 }
 
 [class^="icon-"],
