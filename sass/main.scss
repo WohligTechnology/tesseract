@@ -104,6 +104,15 @@ $menu-height: 65px !default;
         color: #fff;
     }
 }
+.git-icon {
+    border: 1px solid #545454;
+    background-color: #545454;
+    color: #fff;
+    &:hover {
+        background-color: darken(#545454, 10%);
+        color: #fff;
+    }
+}
 
 body {
     padding-top: $menu-height;
@@ -203,7 +212,9 @@ a.navbar-brand {
         }
     }
 }
-
+.font-weight300{
+  font-weight: 300;
+}
 .navbar {
     min-height: $menu-height;
     border-bottom: 1px solid $gray-lighter;
@@ -292,11 +303,6 @@ a.navbar-brand {
 
 .btn {
   width: 100%;
-
-  i {
-    margin-left: 15px;
-    float: left;
-  }
   span {
     line-height: 200%;
   }
@@ -370,7 +376,9 @@ margin: 0 auto;
   width: 80px;
   padding: 20px 10px 0px 9px;
 }
-
+.mt15{
+  margin-top: 15px;
+}
 .icon-store img {
     width: 35px;
 }
@@ -403,10 +411,10 @@ margin: 0 auto;
     }
 }
 .help-bg{
-  background: url(../img/help.jpg);
-  background-color: #fff;
-      padding: 7px 7px;
-        margin: 15px 0px;
+  // background: url(../img/help.jpg);
+  // background-color: #fff;
+  padding: 7px 7px;
+    margin: 15px 0px;
 }
 .help-icon {
     text-align: center;
@@ -432,8 +440,6 @@ border-style: dashed;
   background-size: cover;
 }
 .social-bg{
-  background: url(../img/social-bg.jpg)no-repeat;
-  background-size: cover;
       margin-top: 15px;
           padding: 15px 10px 10px 0px;
 }
@@ -465,4 +471,88 @@ margin: 0px;
 }
 .border-right{
   border-right:1px solid #fff;
+}
+.social-signup{
+  ul{
+    li{
+      .btn{
+        padding: 0px 12px;
+        border-radius: 0px;
+        &:focus{
+          outline: 0;
+          color:#fff;
+        }
+        &:hover{
+          outline: 0;
+        }
+        &:active{
+              box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.125);
+        }
+      }
+
+    }
+  }
+}
+.margin-btn{
+      margin: 8px 12px 0px 0px;
+}
+.bg-login{
+  background: url(../img/bg-login.jpg)no-repeat;
+  background-size: cover;
+      padding: 0px 0px 30px 20px;
+}
+.feature-bg{
+  background: url(../img/feature-bg.jpg)no-repeat;
+  background-size: 100% 100%;
+      padding: 20px 20px;
+
+}
+.rocket{
+  i{
+    font-size: 70px;
+  }
+}
+.sign-padding{
+      padding: 16px 0px;
+}
+.social-signup{
+  ul{
+    li{
+          padding: 0px 20px;
+    }
+  }
+}
+.pl0{
+  padding-left: 0px !important;
+}
+.float-right{
+  float: right;
+}
+.float-left{
+  float: left;
+}
+.display-inline{
+  display: inline-block;
+}
+.sign-icon{
+  font-size: 35px;
+}
+.feature-list{
+  ul{
+    margin-top: 12px;
+    li{
+      list-style: none;
+      line-height: 160%;
+      font-size: 15px;
+
+    }
+  }
+}
+.padding0{
+  padding: 0px;
+}
+.short-info{
+  h3{
+    font-size: 28px;
+  }
 }
