@@ -26,7 +26,7 @@ $text-color: $gray !default;
 $link-color: $gray !default;
 $link-hover-color: $gray-base !default;
 $link-hover-decoration: none !default;
-$font-family-sans-serif: "Lato","Blazen", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif: "Lato","Blazen","Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-family-serif: "Lato","Blazen", Georgia, "Times New Roman", Times, serif !default;
 $border-radius-base: 0 !default;
 $border-radius-large: 0 !default;
@@ -45,6 +45,7 @@ $menu-height: 65px !default;
   src: url("../fonts/blazenbold.ttf");
   src: url("../fonts/blazenbold.eot#iefix") format("embedded-opentype"), url("../fonts/blazenbold.ttf") format("truetype"), url("../fonts/blazenbold.svg") format("svg");
 }
+
 [class^="icon-"],
 [class*=" icon-"] {
   font-family: 'Blazen';
