@@ -116,6 +116,7 @@ $menu-height: 65px !default;
 
 body {
     padding-top: $menu-height;
+        background-color: #F4F4F4;
 }
 
 img.loading {
@@ -436,12 +437,12 @@ width: 90px;
 border-style: dashed;
 }
 .bg-code{
-  background: url(../img/blog-bg.jpg)no-repeat;
-  background-size: cover;
+border: 1px solid #F4F4F4;
+background: #fff;
 }
 .social-bg{
-      margin-top: 15px;
-          padding: 15px 10px 10px 0px;
+  margin-top: 15px;
+  padding: 15px 10px 10px 0px;
 }
 .icon-list {
     height: 110px;
@@ -470,7 +471,7 @@ margin: 0px;
     padding: 0px 10px 0px 10px;
 }
 .border-right{
-  border-right:1px solid #fff;
+  border-right:1px solid #C3C3C3;
 }
 .social-signup{
   ul{
@@ -497,8 +498,6 @@ margin: 0px;
       margin: 8px 12px 0px 0px;
 }
 .bg-login{
-  background: url(../img/bg-login.jpg)no-repeat;
-  background-size: cover;
       padding: 0px 0px 30px 20px;
 }
 .feature-bg{
@@ -555,4 +554,7 @@ margin: 0px;
   h3{
     font-size: 28px;
   }
+}
+.color-grey{
+  color:#C3C3C3;
 }
