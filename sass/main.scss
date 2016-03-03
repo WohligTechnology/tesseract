@@ -160,6 +160,7 @@ hr.sweet-line {
     background-color: transparent;
     border: none;
     margin: 10px 0 30px;
+        padding-top: 30px;
 }
 
 a.navbar-brand {
@@ -204,7 +205,8 @@ a.navbar-brand {
 }
 
 .footermenu {
-    margin-top: 20px;
+background: #fff;
+padding-bottom: 20px;
     ul.list-unstyled {
         li {
             font-weight: 700;
@@ -512,6 +514,15 @@ margin: 0px;
     font-size: 24px;
     line-height: 60px;
     color: #0d9dff;
+    a{
+        color: #0d9dff;
+        &:hover{
+          color: #0d9dff;
+        }
+        &:focus{
+          color: #0d9dff;
+        }
+    }
 }
 .rocket{
   i{
@@ -564,4 +575,7 @@ margin: 0px;
 }
 .color-grey{
   color:#C3C3C3;
+}
+.mb60{
+  margin-bottom: 60px;
 }
