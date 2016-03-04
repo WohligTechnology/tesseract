@@ -34,8 +34,38 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Features");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+
+    $scope.feature=[{
+      icon:"ln-desktop",
+      desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      title:"Easy Backend"
+    },{
+      icon:"ln-iphone",
+      desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      title:"Live Preview of App"
+    },{
+      icon:"ln-bullhorn",
+      desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      title:"Send Notification"
+    },{
+      icon:"ln-at-sign",
+      desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      title:"Social Login, Email Login"
+    },{
+      icon:"ln-register",
+      desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      title:"Blog integration "
+    },{
+      icon:"ln-thumbs-up",
+      desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      title:"Social Feeds"
+    },{
+      icon:"ln-arrow-up3",
+      desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      title:"iOS, Android App Publishing"
+    }]
 })
-	
+
 .controller('PricingCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html for particular template file
     $scope.template = TemplateService.changecontent("pricing");
@@ -43,7 +73,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Pricing");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
-    
+
 })
 
 .controller('LoginCtrl', function ($scope, TemplateService, NavigationService, $timeout) {

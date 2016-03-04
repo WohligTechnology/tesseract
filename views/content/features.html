@@ -3,5 +3,25 @@
     <div class="text-center">
       <h2 class="font-blazen color-grey">Features</h2>
     </div>
+    <div class="row mt100">
+      <div class="col-md-offset-1 col-md-4">
+        <div class="feature-lists mt30" ng-repeat="data in feature track by $index">
+          <div class="row">
+            <div class="col-md-2">
+              <div class="feature-icon">
+                <i class="{{data.icon}}"></i>
+              </div>
+            </div>
+            <div class="col-md-10 padding0">
+              <div class="feature-count">
+                <h4 class="margin0">{{data.title}}</h4>
+                <p>{{data.desc}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </div>

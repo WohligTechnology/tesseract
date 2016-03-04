@@ -344,6 +344,9 @@ a.navbar-brand {
 .mt15 {
   margin-top: 15px;
 }
+.mt100{
+  margin-top: 100px;
+}
 .icon-store img {
   width: 35px;
 }
@@ -542,4 +545,28 @@ a.navbar-brand {
 }
 .mt50{
   margin-top: 50px;
+}
+.pl30{
+  padding-left: 30px;
+}
+.pr30{
+  padding-right: 30px;
+}
+.feature-icon{
+  text-align: center;
+  i{
+    font-size: 26px;
+text-align: center;
+color:$brand-primary;
+  }
+}
+.feature-count{
+  h4{
+font-weight: 600;
+  }
+  p{
+    padding-top: 10px;
+    color: $gray-light;
+    line-height: 150%;
+  }
 }
