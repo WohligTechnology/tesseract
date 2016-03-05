@@ -26,8 +26,8 @@ $text-color: $gray !default;
 $link-color: $gray !default;
 $link-hover-color: $gray-base !default;
 $link-hover-decoration: none !default;
-$font-family-sans-serif: "Lato","Blazen","Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif: "Lato","Blazen", Georgia, "Times New Roman", Times, serif !default;
+$font-family-sans-serif: "Lato","Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif: "Lato", Georgia, "Times New Roman", Times, serif !default;
 $border-radius-base: 0 !default;
 $border-radius-large: 0 !default;
 $border-radius-small: 0 !default;
@@ -40,15 +40,8 @@ $menu-height: 65px !default;
 //     font-weight: normal;
 //     font-style: normal;
 // }
-@font-face {
-  font-family: "Blazen";
-  src: url("../fonts/blazenbold.ttf");
-  src: url("../fonts/blazenbold.eot#iefix") format("embedded-opentype"), url("../fonts/blazenbold.ttf") format("truetype"), url("../fonts/blazenbold.svg") format("svg");
-}
-
 [class^="icon-"],
 [class*=" icon-"] {
-  font-family: 'Blazen';
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -367,14 +360,9 @@ a.navbar-brand {
 .store-icon {
   margin-top: 20px;
 }
-.margin5 {
-  margin: 5px 0;
-}
-.help-title {
-  padding-top: 20px;
-  h2 {
-    font-size: 20px;
-  }
+
+.f20{
+  font-size: 20px;
 }
 .help-bg {
   // background: url(../img/help.jpg);
@@ -407,7 +395,6 @@ a.navbar-brand {
 }
 .social-bg {
   margin-top: 15px;
-  padding: 15px 10px 10px 0;
 }
 .icon-list {
   height: 110px;
@@ -423,7 +410,7 @@ a.navbar-brand {
   height: 90px;
 }
 .padding-code {
-  padding: 15px 10px 20px 5px;
+      padding: 15px 30px 20px 12px;
 }
 .blog-title {
   h1 {
@@ -532,7 +519,7 @@ a.navbar-brand {
   }
 }
 .color-grey {
-  color: #C3C3C3;
+  color: #939393;
 }
 .mb60 {
   margin-bottom: 60px;
@@ -569,4 +556,13 @@ font-weight: 600;
     color: $gray-light;
     line-height: 150%;
   }
+}
+.f35{
+  font-size: 35px;
+}
+.text-uppercase{
+  text-transform: uppercase;
+}
+.color-head{
+  color:#7d7d7d;
 }
