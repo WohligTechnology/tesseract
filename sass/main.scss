@@ -507,8 +507,8 @@ a.navbar-brand {
     padding-left: 18px;
     li {
       list-style: circle;
-    line-height: 26px;
-      font-size: 15px;
+    line-height: 240%;
+      font-size: 16px;
     }
   }
 }
@@ -583,4 +583,7 @@ font-weight: 600;
      line-height: 190%;
  }
 
+}
+.feature-list {
+    margin-top: 20px;
 }
