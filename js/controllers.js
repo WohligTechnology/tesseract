@@ -47,11 +47,30 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       icon:"ln-bullhorn",
       desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
       title:"Send Notification"
-    },{
-      icon:"ln-at-sign",
-      desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      title:"Social Login, Email Login"
-    },{
+    }
+
+    // ,{
+    //   icon:"ln-register",
+    //   desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    //   title:"Blog integration "
+    // },{
+    //   icon:"ln-thumbs-up",
+    //   desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    //   title:"Social Feeds"
+    // },{
+    //   icon:"ln-arrow-up3",
+    //   desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    //   title:"iOS, Android App Publishing"
+    // }
+  ]
+
+    $scope.features=[
+      {
+        icon:"ln-at-sign",
+        desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        title:"Social Login, Email Login"
+      },
+    {
       icon:"ln-register",
       desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
       title:"Blog integration "
@@ -59,11 +78,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
       icon:"ln-thumbs-up",
       desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
       title:"Social Feeds"
-    },{
-      icon:"ln-arrow-up3",
-      desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      title:"iOS, Android App Publishing"
-    }]
+    }
+    // ,{
+    //   icon:"ln-arrow-up3",
+    //   desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+    //   title:"iOS, Android App Publishing"
+    // }
+  ]
 })
 
 .controller('PricingCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
