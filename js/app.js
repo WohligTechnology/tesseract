@@ -34,6 +34,11 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
 			templateUrl: "views/template.html",
 			controller: 'FeaturesCtrl'
 		})
+		.state('contact', {
+			url: "/contact",
+			templateUrl: "views/template.html",
+			controller: 'ContactCtrl'
+		})
 
 	.state('pricing', {
 		url: "/pricing",

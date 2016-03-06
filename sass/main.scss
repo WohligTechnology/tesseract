@@ -97,6 +97,8 @@ $menu-height: 65px !default;
 body {
   padding-top: $menu-height;
   background-color: #F4F4F4;
+  font-style: normal;
+  font-weight: noraml;
 }
 img.loading {
   text-align: center;
@@ -563,6 +565,7 @@ a.navbar-brand {
     font-size: 26px;
 text-align: center;
 color:$brand-primary;
+font-weight: 300;
   }
 }
 .feature-count{
@@ -614,5 +617,17 @@ font-weight: 600;
         max-height: 100%;
       }
     }
+  }
+}
+.contact {
+    padding: 30px 0px 0px 30px;
+}
+.padd-contact{
+  h4{
+    margin-bottom: 10px;
+  }
+  p{
+    margin: 0px;
+    line-height: 180%;
   }
 }

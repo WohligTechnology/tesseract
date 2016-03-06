@@ -96,6 +96,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
 
 })
+.controller('ContactCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html for particular template file
+    $scope.template = TemplateService.changecontent("contact");
+
+    $scope.menutitle = NavigationService.makeactive("Contact");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+
+})
 
 .controller('LoginCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html for particular template file
