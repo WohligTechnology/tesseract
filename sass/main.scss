@@ -61,7 +61,7 @@ $menu-height: 65px !default;
 .fb-icon {
   border: 1px solid $facebook;
   background-color: $facebook;
-  color: #fff;
+  color: #fff !important;
   &:hover {
     background-color: darken($facebook, 10%);
     color: #fff;
@@ -70,7 +70,7 @@ $menu-height: 65px !default;
 .google-icon {
   border: 1px solid $google;
   background-color: $google;
-  color: #fff;
+  color: #fff !important;
   &:hover {
     background-color: darken($google, 10%);
     color: #fff;
@@ -79,7 +79,7 @@ $menu-height: 65px !default;
 .twitter-icon {
   border: 1px solid $twitter;
   background-color: $twitter;
-  color: #fff;
+  color: #fff !important;
   &:hover {
     background-color: darken($twitter, 10%);
     color: #fff;
@@ -439,6 +439,14 @@ a.navbar-brand {
     font-size: 90px;
     margin: 0;
   }
+  h3{
+    cursor: pointer;
+      @include transition(all 300ms ease);
+    &:hover{
+      color:$brand-primary;
+
+    }
+  }
 }
 .short-info {
   padding: 0 10px;
@@ -629,5 +637,49 @@ font-weight: 600;
   p{
     margin: 0px;
     line-height: 180%;
+  }
+}
+.blogs {
+    padding: 0px 30px;
+}
+.font-bold{
+  font-weight: bold;
+}
+.detail{
+  li{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    color: #979797;
+    font-weight: normal;
+    margin-bottom: 10px;
+    i{
+      margin-right: 8px;
+      color:$brand-primary;
+      font-size: 16px;
+    }
+  }
+}
+.social-lk{
+  ul{
+    li{
+          margin-bottom: 0px;
+              padding: 0px 3px;
+    }
+  }
+}
+.social-pd{
+  height: 30px;
+width: 30px;
+border-radius: 100%;
+padding: 7px;
+}
+.blog-sort {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  p {
+      color: #777777;
+      line-height: 180%;
   }
 }
