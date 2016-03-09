@@ -40,6 +40,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })
+.controller('FaqtCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html for particular template file
+    $scope.template = TemplateService.changecontent("faq");
+    $scope.menutitle = NavigationService.makeactive("FAQ");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
 
 .controller('FeaturesCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html for particular template file
