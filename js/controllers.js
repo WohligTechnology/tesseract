@@ -18,18 +18,25 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
 })
 
-.controller('BloglistCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
-    //Used to name the .html for particular template file
-    $scope.template = TemplateService.changecontent("bloglist");
-
-    $scope.menutitle = NavigationService.makeactive("Blog");
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
-})
+// .controller('BloglistCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+//     //Used to name the .html for particular template file
+//     $scope.template = TemplateService.changecontent("bloglist");
+//
+//     $scope.menutitle = NavigationService.makeactive("Blog");
+//     TemplateService.title = $scope.menutitle;
+//     $scope.navigation = NavigationService.getnav();
+// })
 .controller('BlogDetailCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html for particular template file
     $scope.template = TemplateService.changecontent("blog-detail");
     $scope.menutitle = NavigationService.makeactive("Blog-Detail");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
+.controller('TermsConditionCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html for particular template file
+    $scope.template = TemplateService.changecontent("terms-condition");
+    $scope.menutitle = NavigationService.makeactive("Terms-Condition");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })

@@ -20,15 +20,15 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
 	})
 
 	.state('blog', {
-			url: "/blog/1",
+			url: "/blog",
 			templateUrl: "views/template.html",
 			controller: 'BlogCtrl'
 		})
-		.state('bloglist', {
-			url: "/blog",
-			templateUrl: "views/template.html",
-			controller: 'BloglistCtrl'
-		})
+		// .state('bloglist', {
+		// 	url: "/blog",
+		// 	templateUrl: "views/template.html",
+		// 	controller: 'BloglistCtrl'
+		// })
 		.state('features', {
 			url: "/features",
 			templateUrl: "views/template.html",
@@ -48,6 +48,11 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
 			url: "/faq",
 			templateUrl: "views/template.html",
 			controller: 'FaqtCtrl'
+		})
+		.state('terms-condition', {
+			url: "/terms-condition",
+			templateUrl: "views/template.html",
+			controller: 'TermsConditionCtrl'
 		})
 		.state('blog-detail', {
 			url: "/blog-detail",
