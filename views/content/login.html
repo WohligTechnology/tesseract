@@ -4,15 +4,22 @@
       <div class="col-md-offset-2 col-md-4">
         <div class="">
           <h4 class="login text-center">LOGIN</h4>
+          <form action="" name="login">
           <div class="form-group">
             <label class="text-style">EMAIL ADDRESS</label>
-            <input type="email" class="form-control input-style">
+            <input type="email" class="form-control input-style" name="email" required>
+
           </div>
+             <p class="colpad" ng-show="login.email.$error.required && login.email.$dirty">Invalid email address</p>
           <div class="form-group">
             <label class="text-style">PASSWORD</label>
-            <input type="password" class="form-control input-style">
+            <input type="password" class="form-control input-style"  ng-minlength="8" name="Password" required>
+
           </div>
+           <p class="colpad" ng-show="login.email.$error.required && login.email.$dirty">Password should be min 8 character</p>
+             </form>
         </div>
+
         <div class="row">
           <div class="col-md-6">
             <button class="btn btn-primary brdr">

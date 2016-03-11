@@ -4,22 +4,28 @@
         <div class="col-md-offset-2 col-md-4">
           <div class="">
               <h4 class="login text-center">SIGN UP</h4>
+              <form action="" name="signup">
               <div class="form-group">
                   <label class="text-style">FULL NAME</label>
-                  <input type="text" class="form-control input-style">
+                  <input type="text" class="form-control input-style" name="name" required>
               </div>
+
               <div class="form-group">
                   <label class="text-style">EMAIL ADDRESS</label>
-                  <input type="email" class="form-control input-style">
+                  <input type="email" class="form-control input-style" name="email" required>
               </div>
+              <p class="colpad" ng-show="signup.email.$error.required && signup.email.$dirty">Invalid email address</p>
               <div class="form-group">
                   <label class="text-style">PASSWORD</label>
-                  <input type="password" class="form-control input-style">
+                  <input type="password" class="form-control input-style" name="Password" required>
               </div>
+              <p class="colpad" ng-show="signup.Password.$error.required && signup.Password.$dirty">Password should be min 8 character</p>
               <div class="form-group">
                   <label class="text-style">CONFIRM PASSWORD</label>
-                  <input type="password" class="form-control input-style">
+                  <input type="password" class="form-control input-style" name="confirmpassword" required>
               </div>
+              <p class="colpad" ng-show="signup.confirmpassword.$error.required && signup.confirmpassword.$dirty">Confirm Password not match</p>
+              </form>
           </div>
           <div class="row">
               <div class="col-md-6">

@@ -73,20 +73,22 @@
         </div>
       </div>
       <div class="col-md-4">
-        <form action="" class="mt50">
+        <form action="" name="myForm" class="mt50">
         <div class="">
             <h4 class="login text-center">CONTACT US</h4>
             <div class="form-group">
                 <label class="text-style">FULL NAME</label>
-                <input type="text" class="form-control input-style">
+                <input type="text" class="form-control input-style" name="name" required>
             </div>
             <div class="form-group">
                 <label class="text-style">EMAIL ADDRESS</label>
-                <input type="email" class="form-control input-style">
+                <input type="email" class="form-control input-style"  name="email" required>
+
             </div>
+             <p class="colpad" ng-show="myForm.email.$error.required && myForm.email.$dirty">Invalid email address</p>
             <div class="form-group">
                 <label class="text-style">MESSAGE</label>
-              <textarea class="form-control" rows="3" style="resize: none;"></textarea>
+              <textarea class="form-control" rows="3" style="resize: none;" name="message" required></textarea>
             </div>
             <div class="text-center mt15">
               <button class="btn btn-primary brdr">
@@ -95,6 +97,9 @@
             </div>
         </div>
         </form>
+        <div class="text-center" style="display:none">
+            <h1 class="color-primary">Messange send Successfull !!</h1>
+        </div>
       </div>
     </div>
   </div>
