@@ -787,3 +787,11 @@ font-size: 16px;
       line-height: 180%;
   }
 }
+.doc-list{
+  ul{
+    padding: 0px;
+    li{
+      list-style: none;
+    }
+  }
+}

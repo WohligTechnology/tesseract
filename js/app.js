@@ -39,6 +39,16 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
 			templateUrl: "views/template.html",
 			controller: 'ContactCtrl'
 		})
+		.state('tutorial', {
+			url: "/tutorial",
+			templateUrl: "views/template.html",
+			controller: 'TutorialCtrl'
+		})
+		.state('documentation', {
+			url: "/documentation",
+			templateUrl: "views/template.html",
+			controller: 'DocumentationCtrl'
+		})
 		.state('about', {
 			url: "/about",
 			templateUrl: "views/template.html",
