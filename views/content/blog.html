@@ -8,11 +8,11 @@
       </div>
 
     </div>
-    <div class="blogs mt50 mb60">
+    <div class="blogs mt50 mb60" ng-repeat="blog in blogs">
       <div class="row">
         <div class=" col-md-offset-1 col-md-8">
           <div class="blog-title">
-            <h3>A Quick Tour Of WordPress 4.0 Into Our Lives</h3>
+            <a  ui-sref="blog-detail({id:blog._id})"><h3 ng-bind="blog.title">A Quick Tour Of WordPress 4.0 Into Our Lives</h3></a>
           </div>
         </div>
       </div>
@@ -20,9 +20,8 @@
         <div class="col-md-offset-1 col-md-8">
 
           <div class="blog-sort">
-            <p><span>t</span>he other hand, we denounce with righteous indignation and dislike men who are so beguiled and demo ralized by the char ms of pleasure of the moment, so blinded by des;ire, that they cannot foresee the pain and trouble that are
-              bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. New York City’s skyline is truly awe-inspiring. The iconic skyscrapers, bridges,
-              waterways, islands and monuments create a breathtaking panorama.</p>
+            <p ng-bind-html="blog.content">
+              <span>t</span>he other hand, we denounce with righteous indignation and dislike men who are so beguiled and demo ralized by the char ms of pleasure of the moment, so blinded by des;ire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. New York City’s skyline is truly awe-inspiring. The iconic skyscrapers, bridges, waterways, islands and monuments create a breathtaking panorama.</p>
           </div>
           <div class="blog-img">
             <img src="img/blog-det.png" alt="" class="img-responsive">
@@ -32,59 +31,11 @@
           <div class="details">
             <h5 class="title font-bold">Details</h5>
             <ul class="list-unstyled detail">
-              <li><i class="ln-clock4"></i>26 July 2014</li>
+              <li>
+                <i class="ln-clock4"></i>{{blog.timestamp|date:mediumDate}}</li>
 
-              <li><i class="ln-user"></i>by John Smith</li>
-
-            </ul>
-          </div>
-          <div class="mt15">
-            <h5 class="title font-bold">Share</h5>
-            <div class="custom-li display-inline social-lk">
-              <ul class="list-unstyled">
-                <li>
-                  <a href=""><i class="fa fa-facebook fb-icon social-pd"></i></a>
-                </li>
-                <li>
-                    <a href=""><i class="fa fa-twitter twitter-icon social-pd"></i></a>
-                </li>
-                <li>
-                    <a href=""><i class="fa fa-google-plus google-icon social-pd"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <hr class="sweet-line">
-    <div class="blogs mt50">
-      <div class="row">
-        <div class="col-md-offset-1 col-md-8">
-          <div class="blog-title">
-            <h3>A Quick Tour Of WordPress 4.0 Into Our Lives</h3>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-offset-1 col-md-8">
-
-          <div class="blog-sort">
-            <p><span>t</span>he other hand, we denounce with righteous indignation and dislike men who are so beguiled and demo ralized by the char ms of pleasure of the moment, so blinded by des;ire, that they cannot foresee the pain and trouble that are
-              bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. New York City’s skyline is truly awe-inspiring. The iconic skyscrapers, bridges,
-              waterways, islands and monuments create a breathtaking panorama.</p>
-          </div>
-          <div class="blog-img">
-            <img src="img/blog-det.png" alt="" class="img-responsive">
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="details">
-            <h5 class="title font-bold">Details</h5>
-            <ul class="list-unstyled detail">
-              <li><i class="ln-clock4"></i>26 July 2014</li>
-
-              <li><i class="ln-user"></i>by John Smith</li>
+              <li>
+                <i class="ln-user" ></i>by {{blog.user.name}}</li>
 
             </ul>
           </div>
@@ -93,13 +44,19 @@
             <div class="custom-li display-inline social-lk">
               <ul class="list-unstyled">
                 <li>
-                  <a href=""><i class="fa fa-facebook fb-icon social-pd"></i></a>
+                  <a href="">
+                    <i class="fa fa-facebook fb-icon social-pd"></i>
+                  </a>
                 </li>
                 <li>
-                    <a href=""><i class="fa fa-twitter twitter-icon social-pd"></i></a>
+                  <a href="">
+                    <i class="fa fa-twitter twitter-icon social-pd"></i>
+                  </a>
                 </li>
                 <li>
-                    <a href=""><i class="fa fa-google-plus google-icon social-pd"></i></a>
+                  <a href="">
+                    <i class="fa fa-google-plus google-icon social-pd"></i>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -107,5 +64,6 @@
         </div>
       </div>
     </div>
+
   </div>
 </div>

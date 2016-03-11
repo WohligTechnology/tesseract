@@ -1,6 +1,6 @@
 var navigationservice = angular.module('navigationservice', [])
 
-.factory('NavigationService', function() {
+.factory('NavigationService', function($http) {
   var navigation = [{
     name: "Features",
     classis: "active",
@@ -41,6 +41,12 @@ var navigationservice = angular.module('navigationservice', [])
         }
       }
       return menuname;
+    },
+    getAllBlogs: function(successCallback,errorCallback) {
+      $http.post(adminUrl+"blog/viewAll").success(successCallback).error(errorCallback);
+    },
+    getBlog: function(id,successCallback,errorCallback) {
+      $http.post(adminUrl+"blog/view",{_id:id}).success(successCallback).error(errorCallback);
     },
 
   };

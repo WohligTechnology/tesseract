@@ -12,6 +12,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 .controller('BlogCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html for particular template file
     $scope.template = TemplateService.changecontent("blog");
+    NavigationService.getAllBlogs(function(data) {
+      $scope.blogs = data.data;
+
+      console.log(data);
+    }, function(err) {
+      console.log(err);
+    });
 
     $scope.menutitle = NavigationService.makeactive("Blog");
     TemplateService.title = $scope.menutitle;
@@ -26,9 +33,15 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 //     TemplateService.title = $scope.menutitle;
 //     $scope.navigation = NavigationService.getnav();
 // })
-.controller('BlogDetailCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+.controller('BlogDetailCtrl', function ($scope, TemplateService, NavigationService, $timeout,$stateParams) {
     //Used to name the .html for particular template file
     $scope.template = TemplateService.changecontent("blog-detail");
+    NavigationService.getBlog($stateParams.id,function(data) {
+      $scope.blog = data.data;
+      console.log(data);
+    }, function(err) {
+      console.log(err);
+    });
     $scope.menutitle = NavigationService.makeactive("Blog-Detail");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();

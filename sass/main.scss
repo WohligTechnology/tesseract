@@ -438,7 +438,7 @@ a.navbar-brand {
     margin: 0;
   }
   h3 {
-    cursor: pointer;
+
     @include transition(all 300ms ease);
     &:hover {
       color: $brand-primary;
@@ -676,6 +676,7 @@ a.navbar-brand {
   margin-bottom: 30px;
   p {
     color: #777777;
+    text-align: justify;
     line-height: 180%;
   }
 }

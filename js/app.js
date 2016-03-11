@@ -6,6 +6,8 @@ var firstapp = angular.module('firstapp', [
     'navigationservice'
 ]);
 
+var adminUrl = "http://localhost:1337/";
+
 firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider) {
 
 	// for http request with session
@@ -65,7 +67,7 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
 			controller: 'TermsConditionCtrl'
 		})
 		.state('blog-detail', {
-			url: "/blog-detail",
+			url: "/blog-detail/:id",
 			templateUrl: "views/template.html",
 			controller: 'BlogDetailCtrl'
 		})
