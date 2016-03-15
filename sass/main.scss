@@ -200,9 +200,20 @@ a.navbar-brand {
       padding: 0 4px;
       a {
         font-weight: 300;
+
       }
     }
   }
+}
+.footer-hover{
+    li{
+      a{
+        &:hover{
+          color:$brand-primary;
+        }
+      }
+    }
+
 }
 .font-weight300 {
   font-weight: 300;
