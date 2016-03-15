@@ -795,11 +795,17 @@ border-bottom: 2px solid$brand-primary;
 }
 .faq-qsn {
   h5 {
-    font-size: 15px;
+    font-size: 16px;
+  line-height: 180%;
   }
   p {
     line-height: 180%;
+color: #8492a6;
+font-size: 15px;
   }
+}
+.f16{
+  font-size: 16px;
 }
 .doc-list {
   ul {
@@ -814,7 +820,7 @@ border-bottom: 2px solid$brand-primary;
         text-transform: capitalize;
       }
       &:hover {
-        background-color: #0D9DFF;
+        background-color: $brand-primary;
         color: #fff !important;
         a {
           color: #fff !important;
@@ -851,7 +857,7 @@ border-bottom: 2px solid$brand-primary;
 pre {
   border: 0;
   border-left: 4px solid #D7DBE4;
-  background: #F0F3F8;
+  background:$gray-lighter;
   code {
     padding: 0;
     font-size: inherit;
@@ -871,4 +877,7 @@ pre {
     color: #fff;
     border-color: $brand-primary;
   }
+}
+.pl0{
+  padding-left: 0;
 }
