@@ -229,7 +229,7 @@ border-bottom: 2px solid$brand-primary;
   font-size: 12px;
   font-weight: 400;
   padding: 15px 0;
-  background-color: $gray-lighter;
+  background-color: #202532;
   a {
     color: $brand-primary;
   }
@@ -885,4 +885,7 @@ pre {
   display: block;
 margin-top: 20px;
 margin-bottom: 10px;
+}
+.foot-color{
+  color:#a3aec0;
 }
