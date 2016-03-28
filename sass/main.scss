@@ -176,7 +176,7 @@ a.navbar-brand {
         padding: 3px 15px;
         margin-left: -15px;
         border: 1px solid $brand-primary;
-            border-radius: 2px;
+            border-radius: 0px;
       }
     }
     > a {
@@ -283,7 +283,7 @@ border-bottom: 2px solid$brand-primary;
   font-size: 11px;
 }
 .brdr {
-  border-radius: 2px;
+  border-radius: 0px;
 }
 .input-style {
   height: 40px;
@@ -890,4 +890,27 @@ margin-bottom: 10px;
 }
 .foot-color{
   color:#a3aec0;
+}
+#{$all-text-inputs} {
+  outline: 0;
+  &:focus{
+    outline:0;
+        box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0), 0 0 8px rgba(102, 175, 233, 0);
+  }
+}
+.form-control{
+  &:focus{
+    outline:0;
+        box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0), 0 0 8px rgba(102, 175, 233, 0);
+  }
+}
+.special {
+    margin-top: 20px;
+    display: inline-block;
+    margin-left: 30px;
+    a{
+      border: 1px solid $brand-primary;
+padding: 5px 10px;
+color:$brand-primary;
+    }
 }
