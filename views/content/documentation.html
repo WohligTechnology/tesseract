@@ -15,8 +15,8 @@
               <div class="doc-left doc-list mt20" ng-repeat="doc in documentationdata">
                 <h4>{{doc.DocumentationCategory.name}}</h4>
                 <ul>
-                  <li>
-                    <a ng-click="opencontent(doc._id)">  {{doc.title}}</a>
+                  <li ng-click="opencontent(doc._id)">
+                    {{doc.title}}
                   </li>
                 </ul>
 
