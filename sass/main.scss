@@ -550,7 +550,7 @@ a.navbar-brand {
     padding-left: 18px;
     li {
       list-style: circle;
-      line-height: 240%;
+      line-height: 200%;
       font-size: 16px;
     }
   }
@@ -615,6 +615,10 @@ a.navbar-brand {
 .mb10 {
   margin-bottom: 10px;
 }
+.mb15
+ {
+  margin-bottom: 15px;
+}
 .padding7 {
   ul {
     li {
@@ -624,7 +628,7 @@ a.navbar-brand {
 }
 .code-title {
   p {
-    line-height: 190%;
+    line-height: 150%;
   }
 }
 .feature-list {
@@ -913,5 +917,11 @@ pre {
       border: 1px solid $brand-primary;
 padding: 5px 10px;
 color:$brand-primary;
+  @include transition(all 300ms ease);
+&:hover{
+  background-color: $brand-primary;
+    color: #fff;
+    border: 1px solid $brand-primary;
+}
     }
 }
