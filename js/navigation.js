@@ -1,3 +1,5 @@
+
+var adminurl = "http://192.168.1.113:81/";
 var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function($http) {
@@ -32,6 +34,45 @@ var navigationservice = angular.module('navigationservice', [])
     getnav: function() {
       return navigation;
     },
+
+    viewAllDocumentationSubmit: function(id,callback) {
+      // console.log('form data: ', formData);
+      $http({
+        url: adminurl + 'documentation/viewAll',
+        method: 'POST'
+      }).success(callback);
+    },
+    // viewAllDocumentationCategorySubmit: function(callback) {
+    //   // console.log('form data: ', formData);
+    //   $http({
+    //     url: adminurl + 'documentationcategory/viewAll',
+    //     method: 'POST',
+    //   }).success(callback);
+    // },
+    // getDocumentationEditDetail: function(id, callback) {
+    //   // console.log('form data: ', formData);
+    //   $http({
+    //     url: adminurl + 'documentation/view',
+    //     method: 'POST',
+    //     withCredentials: true,
+    //     data: {
+    //       "_id": id
+    //     }
+    //   }).success(callback);
+    // },
+    editContent: function(id, callback) {
+      // console.log('form data: ', formData);
+      $http({
+        url: adminurl + 'documentation/view',
+        method: 'POST',
+        withCredentials: true,
+        data: {
+          "_id": id.id,
+
+        }
+      }).success(callback);
+    },
+
     makeactive: function(menuname) {
       for (var i = 0; i < navigation.length; i++) {
         if (navigation[i].name == menuname) {

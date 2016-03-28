@@ -58,12 +58,54 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
   })
-  .controller('DocumentationCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+  .controller('DocumentationCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {
     //Used to name the .html for particular template file
     $scope.template = TemplateService.changecontent("documentation");
     $scope.menutitle = NavigationService.makeactive("Documentation");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+    $scope.documentationdata = {};
+
+$scope.opencontent=function(id){
+
+    NavigationService.viewAllDocumentationSubmit($stateParams.id,function(data) {
+        $scope.documentationdata = data.data;
+        console.log('user data', data.data);
+    });
+  };
+
+
+  // NavigationService.getDocumentationEditDetail($stateParams.id, function(data) {
+  //     console.log('getUserEditDetail', data);
+  //     $scope.editdoc = data.data;
+  //
+  // });
+
+      $scope.opencontent();
+
+
+
+      $scope.opencontent = function(id) {
+          console.log('id', id);
+          NavigationService.editContent({
+              id: id
+          }, function(data) {
+            $scope.contentdata=data.data;
+              console.log('data data:', data);
+              // if (data.value === true) {
+              //
+              //     $scope.allUserRecords();
+              // }
+
+          });
+      };
+
+    //
+    // NavigationService.viewAllDocumentationCategorySubmit(function(data) {
+    //     $scope.documentationcategorydata = data.data;
+    //     console.log('user data', data.data);
+    // });
+
   })
   .controller('TermsConditionCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html for particular template file
