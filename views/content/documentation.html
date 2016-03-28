@@ -12,18 +12,16 @@
         <div class="row">
           <div class="col-md-3">
             <div class="doc-left-bg">
-
-              <div class="doc-left doc-list" ng-repeat="doc in documentationdata">
+              <div class="doc-left doc-list mt20" ng-repeat="doc in documentationdata">
+                <h4>{{doc.DocumentationCategory.name}}</h4>
                 <ul>
-                <li>{{doc.DocumentationCategory.name}}
+                  <li>
+                    <a ng-click="opencontent(doc._id)">  {{doc.title}}</a>
+                  </li>
+                </ul>
 
-                <ul>
-                  <li ng-click="opencontent(doc._id)">
-                  {{doc.title}}
-                  </li></ul>
-                    </li></ul>
 
-                  <!-- <li>
+                <!-- <li>
                     <a href="">Before You get start</a>
                   </li>
                   <li>
@@ -93,7 +91,7 @@
                 <figure class="highlight">
                   <pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>npm install -g ionic
 <span class="gp">$ </span>ionic start myproject</code></pre>
-          </figure>
+                </figure>
               </div>
             </div>
           </div>
