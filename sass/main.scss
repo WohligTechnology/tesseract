@@ -13,7 +13,8 @@ $gray-dark: lighten($gray-base, 20%) !default; // #333
 $gray: lighten($gray-base, 33.5%) !default; // #555
 $gray-light: lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter: lighten($gray-base, 93.5%) !default; // #eee
-$brand-primary: #0d9dff !default;
+
+$brand-primary: #1aa3eb !default;
 $brand-success: #1aeb46 !default;
 $brand-warning: #ebb21a !default;
 $brand-danger: #eb2e1a !default;
@@ -21,6 +22,7 @@ $brand-info: #1ad0eb !default;
 $facebook: #3a579d !default;
 $google: #dd4d3c !default;
 $twitter: #49c8f5 !default;
+
 $body-bg: #fff !default;
 $text-color: $gray !default;
 $link-color: $gray !default;
