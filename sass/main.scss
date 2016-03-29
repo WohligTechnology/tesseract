@@ -813,6 +813,9 @@ a.navbar-brand {
     }
   }
 }
+.active{
+  background-color: $brand-primary;
+}
 .doc-left-bg {
   background-color: rgb(240, 243, 248);
   padding: 20px 0 25px;
