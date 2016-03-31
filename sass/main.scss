@@ -35,7 +35,7 @@ $border-radius-large: 0 !default;
 $border-radius-small: 0 !default;
 $menu-height: 65px !default;
 $base-color: #777777;
-$head-color: #555555;
+$head-color: #797979;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 // @font-face {
 //     font-family: 'Blazen';
@@ -188,6 +188,10 @@ a.navbar-brand {
       }
     }
   }
+}
+.f30{
+  font-size: 30px;
+      font-weight: 300;
 }
 .footer-hover {
   li {
