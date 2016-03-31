@@ -21,7 +21,7 @@
 
                                     </h4>
                                     <ul>
-                                        <li ng-repeat="docs in doc.docs" ng-class="{active: docs._id==currentdoc}" ui-sref="documentationid({id:docs._id})">
+                                        <li ng-repeat="docs in doc.docs" ng-class="{actives: docs._id==currentdoc}" ui-sref="documentationid({id:docs._id})">
                                             <a ng-if="docs.status=='Enable'" >{{docs.title}}
 
 
