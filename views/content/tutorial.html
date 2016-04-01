@@ -10,15 +10,21 @@
       <div class="row mt30">
         <div class="col-md-offset-1 col-md-10">
 <div class="row">
-  <div class="col-md-3">
+  <div class="col-md-3" ng-repeat="data in video track by $index">
     <div class="video">
       <div class="video-box">
-        <img src="" alt="">
-        <div class="video-layer">
-          <img src="" alt="">
+        <img ng-src="{{data.img}}" alt="" class="img-responsive">
+        <div class="video-layer pointer">
+          <img src="img/play.png" alt="" style="z-index:99;">
         </div>
+        <div class="over-lay"></div>
       </div>
-      .
+      <div class="video-title">
+        <span>{{data.title}}</span>
+      </div>
+      <div class="video-desc">
+        <p>{{data.descp}}</p>
+      </div>
     </div>
   </div>
 </div>

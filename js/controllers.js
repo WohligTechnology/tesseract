@@ -57,6 +57,32 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.menutitle = NavigationService.makeactive("Tutorial");
         TemplateService.title = $scope.menutitle;
         $scope.navigation = NavigationService.getnav();
+
+        $scope.video=[{
+          img:'img/m7.jpg',
+          title:'Neque porro quisquam',
+          descp:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+        },{
+          img:'img/m6.jpg',
+          title:'Neque porro quisquam',
+          descp:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+        },{
+          img:'img/m4.png',
+          title:'Neque porro quisquam',
+          descp:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+        },{
+          img:'img/m8.jpg',
+          title:'Neque porro quisquam',
+          descp:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+        },{
+          img:'img/m2.png',
+          title:'Neque porro quisquam',
+          descp:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+        },{
+          img:'img/m1.png',
+          title:'Neque porro quisquam',
+          descp:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+        }]
     })
     .controller('DocumentationCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams, $state) {
         //Used to name the .html for particular template file
