@@ -66,10 +66,10 @@ $head-color: #797979;
 .git-icon {
   border: 1px solid #545454;
   background-color: #545454;
-  color: #fff;
+  color: $body-bg;
   &:hover {
     background-color: darken(#545454, 10%);
-    color: #fff;
+    color: $body-bg;
   }
 }
 body {
@@ -142,6 +142,7 @@ a.navbar-brand {
 .nav {
   > li {
     padding: 0 15px;
+
     &.active {
       a {
         color: $brand-primary;
@@ -176,7 +177,7 @@ a.navbar-brand {
   }
 }
 .footermenu {
-  background: #fff;
+  background: $body-bg;
   padding: 30px 0;
   ul.list-unstyled {
     li {
@@ -208,7 +209,7 @@ a.navbar-brand {
 .navbar {
   min-height: $menu-height;
   border-bottom: 1px solid $gray-lighter;
-  background-color: #fff;
+  background-color: $body-bg;
 }
 .footer {
   font-size: 12px;
@@ -346,7 +347,7 @@ a.navbar-brand {
   margin-top: 20px;
 }
 .icon-store {
-  background: #fff;
+  background: $body-bg;
   border-radius: 100%;
   height: 80px;
   width: 80px;
@@ -389,7 +390,7 @@ a.navbar-brand {
 }
 .help-bg {
   // background: url(../img/help.jpg);
-  // background-color: #fff;
+  // background-color: $body-bg;
   padding: 7px;
   margin: 15px 0;
 }
@@ -408,13 +409,14 @@ a.navbar-brand {
   margin: 0;
 }
 .border-dash {
-  border: 2px solid #fff;
+  border: 2px solid $body-bg;
   /* padding: 0px; */
   border-style: dashed;
 }
 .bg-code {
   border: 1px solid #F4F4F4;
-  background: #fff;
+  background: $body-bg;
+      border-bottom: 3px solid #6FA3EB;
 }
 .social-bg {
   margin-top: 15px;
@@ -462,7 +464,7 @@ a.navbar-brand {
         border-radius: 0;
         &:focus {
           outline: 0;
-          color: #fff;
+          color: $body-bg;
         }
         &:hover {
           outline: 0;
@@ -554,7 +556,7 @@ a.navbar-brand {
   margin-bottom: 60px;
 }
 .white-box {
-  background: #fff;
+  background: $body-bg;
   padding: 40px 0 60px;
   margin-top: 60px;
   margin-bottom: 60px;
@@ -693,7 +695,7 @@ a.navbar-brand {
   margin-top: 40px;
 }
 .price {
-  background: #FFFFFF;
+  background: $body-bg;
   padding: 4px 0 20px;
   border: 1px solid #C1C1C1;
   border-top: 5px solid #65c162;
@@ -813,7 +815,7 @@ a.navbar-brand {
         text-transform: capitalize;
       &:hover {
         background-color: $brand-primary;
-        color: #fff !important;
+        color: $body-bg !important;
       }
     }
   }
@@ -868,7 +870,7 @@ pre {
   @include transition(all 300ms ease);
   &:hover {
     background-color: $brand-primary;
-    color: #fff;
+    color: $body-bg;
     border-color: $brand-primary;
   }
 }
@@ -907,7 +909,7 @@ color:$brand-primary;
   @include transition(all 300ms ease);
 &:hover{
   background-color: $brand-primary;
-    color: #fff;
+    color: $body-bg;
     border: 1px solid $brand-primary;
 }
     }

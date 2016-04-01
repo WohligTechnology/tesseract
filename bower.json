@@ -27,6 +27,7 @@
     "font-awesome": "^4.5.0",
     "lodash": "^4.5.1",
     "ui-router": "~0.2.15",
-    "parallax": "https://github.com/wagerfield/parallax.git#~2.1.3"
+    "parallax": "https://github.com/wagerfield/parallax.git#~2.1.3",
+    "hover": "Hover#^2.0.2"
   }
 }
