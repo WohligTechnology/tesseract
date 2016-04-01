@@ -13,7 +13,6 @@ $gray-dark: lighten($gray-base, 20%) !default; // #333
 $gray: lighten($gray-base, 33.5%) !default; // #555
 $gray-light: lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter: lighten($gray-base, 93.5%) !default; // #eee
-
 $brand-primary: #1aa3eb !default;
 $brand-success: #1aeb46 !default;
 $brand-warning: #ebb21a !default;
@@ -22,7 +21,6 @@ $brand-info: #1ad0eb !default;
 $facebook: #3a579d !default;
 $google: #dd4d3c !default;
 $twitter: #49c8f5 !default;
-
 $body-bg: #fff !default;
 $text-color: $gray !default;
 $link-color: $gray !default;
@@ -36,16 +34,15 @@ $border-radius-small: 0 !default;
 $menu-height: 65px !default;
 $base-color: #777777;
 $head-color: #797979;
-@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
-// @font-face {
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap"; // @font-face {
 //     font-family: 'Blazen';
 //     src: url('../fonts/blazen.eot?sfgjhu');
 //     src: url('../fonts/blazen.eot?sfgjhu#iefix') format('embedded-opentype'), url('../fonts/blazen.ttf?sfgjhu') format('truetype'), url('../fonts/blazen.woff?sfgjhu') format('woff'), url('../fonts/blazen.svg?sfgjhu#icomoon') format('svg');
 //     font-weight: normal;
 //     font-style: normal;
 // }
-[class^="icon-"],
-[class*=" icon-"] {
+[class*=" icon-"],
+[class^="icon-"] {
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -62,7 +59,6 @@ $head-color: #797979;
 .primary {
   color: $brand-primary;
 }
-
 .git-icon {
   border: 1px solid #545454;
   background-color: #545454;
@@ -98,17 +94,16 @@ nav li:hover .dropdown-menu {
 .input-group-btn {
   &:focus {
     outline: 0;
-
   }
   &:hover {
     outline: 0;
   }
   &:active {
     outline: 0;
-      @include box-shadow(inset 0 0px 0px rgba(0,0,0,.125));
-      &:focus{
-        outline: 0;
-      }
+    @include box-shadow(inset 0 0px 0px rgba(0,0,0,.125));
+    &:focus {
+      outline: 0;
+    }
   }
 }
 .content {
@@ -142,7 +137,6 @@ a.navbar-brand {
 .nav {
   > li {
     padding: 0 15px;
-
     &.active {
       a {
         color: $brand-primary;
@@ -156,9 +150,7 @@ a.navbar-brand {
         padding: 3px 15px;
         margin-left: -15px;
         border: 1px solid $brand-primary;
-
-            border-radius: 0px;
-
+        border-radius: 0;
       }
     }
     > a {
@@ -190,9 +182,9 @@ a.navbar-brand {
     }
   }
 }
-.f30{
+.f30 {
   font-size: 30px;
-      font-weight: 300;
+  font-weight: 300;
 }
 .footer-hover {
   li {
@@ -267,7 +259,7 @@ a.navbar-brand {
   font-size: 11px;
 }
 .brdr {
-  border-radius: 0px;
+  border-radius: 0;
 }
 .input-style {
   height: 40px;
@@ -416,7 +408,8 @@ a.navbar-brand {
 .bg-code {
   border: 1px solid #F4F4F4;
   background: $body-bg;
-      border-bottom: 3px solid #6FA3EB;
+  border-bottom: 3px solid #6FA3EB;
+  box-shadow: 3px 3px 10px 1px #ccc;
 }
 .social-bg {
   margin-top: 15px;
@@ -537,7 +530,7 @@ a.navbar-brand {
       list-style: circle;
       line-height: 200%;
       font-size: 16px;
-      color:$base-color;
+      color: $base-color;
     }
   }
 }
@@ -601,8 +594,7 @@ a.navbar-brand {
 .mb10 {
   margin-bottom: 10px;
 }
-.mb15
- {
+.mb15 {
   margin-bottom: 15px;
 }
 .padding7 {
@@ -810,9 +802,9 @@ a.navbar-brand {
       padding: 7px 0 7px 40px;
       @include transition(all 300ms ease);
       cursor: pointer;
-        color: $gray;
-        font-size: 14px;
-        text-transform: capitalize;
+      color: $gray;
+      font-size: 14px;
+      text-transform: capitalize;
       &:hover {
         background-color: $brand-primary;
         color: $body-bg !important;
@@ -820,7 +812,7 @@ a.navbar-brand {
     }
   }
 }
-.actives{
+.actives {
   background-color: $brand-primary;
 }
 .doc-left-bg {
@@ -887,81 +879,82 @@ pre {
 }
 #{$all-text-inputs} {
   outline: 0;
-  &:focus{
-    outline:0;
-        box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0), 0 0 8px rgba(102, 175, 233, 0);
+  &:focus {
+    outline: 0;
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 0 8px rgba(102, 175, 233, 0);
   }
 }
-.form-control{
-  &:focus{
-    outline:0;
-        box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0), 0 0 8px rgba(102, 175, 233, 0);
+.form-control {
+  &:focus {
+    outline: 0;
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 0 8px rgba(102, 175, 233, 0);
   }
 }
 .special {
-    margin-top: 20px;
-    display: inline-block;
-    margin-left: 30px;
-    a{
-      border: 1px solid $brand-primary;
-padding: 5px 10px;
-color:$brand-primary;
-  @include transition(all 300ms ease);
-&:hover{
-  background-color: $brand-primary;
-    color: $body-bg;
+  margin-top: 20px;
+  display: inline-block;
+  margin-left: 30px;
+  a {
     border: 1px solid $brand-primary;
-}
+    padding: 5px 10px;
+    color: $brand-primary;
+    @include transition(all 300ms ease);
+    &:hover {
+      background-color: $brand-primary;
+      color: $body-bg;
+      border: 1px solid $brand-primary;
     }
+  }
 }
-.btn-twitter  {
+.btn-twitter {
   @include button-variant(white, $twitter, $twitter);
 }
-.btn-google  {
+.btn-google {
   @include button-variant(white, $google, $google);
 }
-.btn-facebook  {
+.btn-facebook {
   @include button-variant(white, $facebook, $facebook);
 }
-.btn-git  {
+.btn-git {
   @include button-variant(white, $base-color, $base-color);
 }
-h2, .h2 {
-    font-size: 35px;
-    font-weight: 300;
+.h2,
+h2 {
+  font-size: 35px;
+  font-weight: 300;
 }
 .video-box {
-    position: relative;
-    height: 123px;
-    width: auto;
-    overflow: hidden;
-    display: block;
-    img{
-      position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-    }
+  position: relative;
+  height: 123px;
+  width: auto;
+  overflow: hidden;
+  display: block;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
 }
 .video-title {
-    padding: 8px 0px;
-    font-weight: bold;
+  padding: 8px 0;
+  font-weight: bold;
 }
 .video-desc {
-    min-height: 60px;
-    p{
-      color: #AEAEAE;
-    }
+  min-height: 60px;
+  p {
+    color: #AEAEAE;
+  }
 }
-.pointer{
+.pointer {
   cursor: pointer;
 }
-.over-lay{
+.over-lay {
   position: absolute;
-width: 100%;
-height: 100%;
-background: rgba(0, 0, 0, 0.38);
-top: 0;
-left: 0;
-z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.38);
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
