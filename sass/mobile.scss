@@ -1,0 +1,30 @@
+@media (max-width:1200px) {
+
+}
+@media (max-width: $screen-sm-max) {
+.mt10{
+  margin-top: 25px;
+}
+.mt50{
+    margin-top: 30px;
+}
+}
+@media (max-width: $screen-xs-max) {
+  .mtop10{
+  margin-top: 25px;
+  }
+  .mt50{
+      margin-top: 20px;
+  }
+}
+@media (max-width:480px) {
+  .mt50{
+      margin-top: 10px;
+  }
+  .contact{
+    padding: 0 0 25px 30px;
+  }
+  .padd-contact h4 {
+    margin-bottom: 3px;
+}
+}
