@@ -273,6 +273,7 @@ a.navbar-brand {
 }
 .btn {
   width: 100%;
+  padding:6.5px 12px;
   span {
     line-height: 200%;
   }
@@ -896,7 +897,7 @@ pre {
   margin-left: 30px;
   a {
     border: 1px solid $brand-primary;
-    padding: 5px 10px;
+    padding: 5px 20px;
     color: $brand-primary;
     @include transition(all 300ms ease);
     &:hover {
