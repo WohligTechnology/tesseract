@@ -69,6 +69,10 @@
   .f35 {
     font-size: 26px;
   }
+  .mt40{
+    margin-top: 66px;
+    margin-right: 10px;
+  }
 }
 @media (max-width: $screen-xs-max) {
   .mtop10 {
@@ -80,7 +84,7 @@
   // .button-set {
   //   width: 68%;
   //   margin-left: 17%;
-  // }  
+  // }
   .class-forget{
       text-align: center;
     }
@@ -110,5 +114,8 @@
   }
   .padd-contact h4 {
     margin-bottom: 3px;
+  }
+  .dashboard{
+    display:none;
   }
 }
