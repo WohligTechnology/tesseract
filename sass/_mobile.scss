@@ -91,6 +91,9 @@
     .or {
       margin-top: 0px;
     }
+    .dashboard{
+      display:none;
+    }
 }
 @media (max-width:480px) {
   .button-set {
@@ -115,7 +118,8 @@
   .padd-contact h4 {
     margin-bottom: 3px;
   }
-  .dashboard{
-    display:none;
-  }
+ hr.sweet-line{
+     width: 80%;
+     margin: 40px 28px 30px;
+   }
 }
