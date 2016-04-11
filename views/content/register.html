@@ -1,73 +1,72 @@
 <section class="container">
-  <div class="white-box">
-    <div class="row">
-        <div class="col-md-offset-1 col-md-5 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
-        <!-- <div class="col-md-offset-1 col-md-5 col-sm-offset-1 col-sm-6 col-xs-offset-1 col-xs-10"> -->
-          <div class="">
-              <h4 class="login text-center">SIGN UP</h4>
-              <form action="" name="signup">
-              <div class="form-group">
-                  <label class="text-style">FULL NAME</label>
-                  <input type="text" class="form-control input-style" name="name" required>
-              </div>
-
-              <div class="form-group">
-                  <label class="text-style">EMAIL ADDRESS</label>
-                  <input type="email" class="form-control input-style" name="email" required>
-              </div>
-              <p class="colpad" ng-show="signup.email.$error.required && signup.email.$dirty">Invalid email address</p>
-              <div class="form-group">
-                  <label class="text-style">PASSWORD</label>
-                  <input type="password" class="form-control input-style" name="Password" required>
-              </div>
-              <p class="colpad" ng-show="signup.Password.$error.required && signup.Password.$dirty">Password should be min 8 character</p>
-              <div class="form-group">
-                  <label class="text-style">CONFIRM PASSWORD</label>
-                  <input type="password" class="form-control input-style" name="confirmpassword" required>
-              </div>
-              <p class="colpad" ng-show="signup.confirmpassword.$error.required && signup.confirmpassword.$dirty">Confirm Password not match</p>
-              </form>
-          </div>
-          <div class="row">
-              <div class="col-md-6 col-sm-6">
-                  <button class="btn btn-outline brdr">
-                    <span class="social-f">REGISTER</span>
-                  </button>
-              </div>
-              <div class="col-md-6 col-sm-6 center">
-                  <div class="class-forget">
-                      <span>Already Registerd?<a href="#/login" class="primary"> Log In</a></span>
+   <div class="white-box">
+      <div class="row">
+         <div class="col-md-offset-1 col-md-5 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10">
+            <!-- <div class="col-md-offset-1 col-md-5 col-sm-offset-1 col-sm-6 col-xs-offset-1 col-xs-10"> -->
+            <form name="signup" ng-submit="doRegister();">
+               <div class="">
+                  <h4 class="login text-center">SIGN UP</h4>
+                  <div class="form-group">
+                     <label class="text-style">FULL NAME</label>
+                     <input type="text" class="form-control input-style" name="name" ng-model="register.name" required>
                   </div>
-              </div>
-          </div>
-          <!-- <div class="text-center">
+                  <div class="form-group">
+                     <label class="text-style">EMAIL ADDRESS</label>
+                     <input type="email" class="form-control input-style" name="email" ng-model="register.email" required>
+                  </div>
+                  <p class="colpad" ng-show="signup.email.$error.required && signup.email.$dirty">Invalid email address</p>
+                  <div class="form-group">
+                     <label class="text-style">PASSWORD</label>
+                     <input type="password" class="form-control input-style" name="Password" ng-model="register.password" required>
+                  </div>
+                  <p class="colpad" ng-show="signup.Password.$error.required && signup.Password.$dirty">Password should be min 8 character</p>
+                  <div class="form-group">
+                     <label class="text-style">CONFIRM PASSWORD</label>
+                     <input type="password" class="form-control input-style" name="confirmpassword" ng-model="register.confirmpassword" required>
+                  </div>
+                  <p class="colpad" ng-show="signup.confirmpassword.$error.required && signup.confirmpassword.$dirty">Confirm Password not match</p>
+               </div>
+               <div class="row">
+                  <div class="col-md-6 col-sm-6">
+                     <button class="btn btn-outline brdr" type="submit">
+                        <span class="social-f">REGISTER</span>
+                     </button>
+                  </div>
+                  <div class="col-md-6 col-sm-6 center">
+                     <div class="class-forget">
+                        <span>Already Registerd?<a href="#/login" class="primary"> Log In</a></span>
+                     </div>
+                  </div>
+               </div>
+            </form>
+            <!-- <div class="text-center">
               <button class="btn btn-primary">REGISTER</button>
 
               <p>Already Registerd? Log In</p>
           </div> -->
-        </div>
-        <div class="col-md-offset-1 col-md-3 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10 text-center">
-          <div class="mt50">
-            <div class="button-set">
-              <button class="btn btn-facebook brdr social-buttons">
-                <i class="fa fa-facebook social-f margin-btn float-left"></i>
-                <span class="fb">Sign in with facebook</span>
-              </button>
-                <button class="btn btn-google brdr social-buttons">
-                  <i class="fa fa-google-plus social-f margin-btn float-left"></i>
-                  <span class="gp">Sign in with Google+</span>
-                </button>
-                <button class="btn btn-twitter brdr social-buttons">
-                  <i class="fa fa-twitter social-f margin-btn float-left"></i>
-                  <span class="tw">Sign in with Twitter</span>
-                </button>
-                <button class="btn btn-git brdr social-buttons">
-                  <i class="fa fa-github-alt social-f margin-btn float-left"></i>
-                  <span class="tw">Sign in with GitHub</span>
-                </button>
+         </div>
+         <div class="col-md-offset-1 col-md-3 col-sm-offset-2 col-sm-8 col-xs-offset-1 col-xs-10 text-center">
+            <div class="mt50">
+              <div class="button-set">
+                 <a class="btn btn-facebook fb-icon brdr social-buttons" href="http://blazen.io/user/loginFacebook">
+                    <i class="fa fa-facebook social-f margin-btn float-left"></i>
+                    <span class="fb">Sign in with facebook</span>
+                 </a>
+                 <a class="btn btn-google google-icon brdr social-buttons" href="http://blazen.io/user/loginGoogle">
+                    <i class="fa fa-google-plus social-f margin-btn float-left"></i>
+                    <span class="gp">Sign in with Google+</span>
+                 </a>
+                 <a class="btn btn-twitter twitter-icon brdr social-buttons" href="http://blazen.io/user/loginTwitter">
+                    <i class="fa fa-twitter social-f margin-btn float-left"></i>
+                    <span class="tw">Sign in with Twitter</span>
+                 </a>
+                 <a class="btn btn-git git-icon brdr social-buttons" href="http://blazen.io/user/loginGithub">
+                    <i class="fa fa-github-alt social-f margin-btn float-left"></i>
+                    <span class="tw">Sign in with GitHub</span>
+                 </a>
+              </div> 
             </div>
-          </div>
-        </div>
-    </div>
-    </div>
+         </div>
+      </div>
+   </div>
 </section>

@@ -1,3 +1,5 @@
+var globalfunction = {};
+
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider'])
 
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -39,142 +41,147 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 //     $scope.navigation = NavigationService.getnav();
 // })
 .controller('BlogDetailCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams) {
-        //Used to name the .html for particular template file
-        $scope.template = TemplateService.changecontent("blog-detail");
-        NavigationService.getBlog($stateParams.id, function(data) {
-            $scope.blog = data.data;
-            console.log(data);
-        }, function(err) {
-            console.log(err);
-        });
-        $scope.menutitle = NavigationService.makeactive("Blog-Detail");
-        TemplateService.title = $scope.menutitle;
-        $scope.navigation = NavigationService.getnav();
-    })
-    .controller('TutorialCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-        //Used to name the .html for particular template file
-        $scope.template = TemplateService.changecontent("tutorial");
-        $scope.menutitle = NavigationService.makeactive("Tutorial");
-        TemplateService.title = $scope.menutitle;
-        $scope.navigation = NavigationService.getnav();
+    //Used to name the .html for particular template file
+    $scope.template = TemplateService.changecontent("blog-detail");
+    NavigationService.getBlog($stateParams.id, function(data) {
+        $scope.blog = data.data;
+        console.log(data);
+    }, function(err) {
+        console.log(err);
+    });
+    $scope.menutitle = NavigationService.makeactive("Blog-Detail");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
 
-        $scope.video=[{
-          img:'img/m7.jpg',
-          title:'Neque porro quisquam',
-          descp:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-        },{
-          img:'img/m6.jpg',
-          title:'Neque porro quisquam',
-          descp:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-        },{
-          img:'img/m4.png',
-          title:'Neque porro quisquam',
-          descp:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-        },{
-          img:'img/m8.jpg',
-          title:'Neque porro quisquam',
-          descp:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-        },{
-          img:'img/m2.png',
-          title:'Neque porro quisquam',
-          descp:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-        },{
-          img:'img/m1.png',
-          title:'Neque porro quisquam',
-          descp:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-        }]
-    })
-    .controller('DocumentationCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams, $state) {
-        //Used to name the .html for particular template file
-        $scope.template = TemplateService.changecontent("documentation");
-        $scope.menutitle = NavigationService.makeactive("Documentation");
-        TemplateService.title = $scope.menutitle;
-        $scope.navigation = NavigationService.getnav();
-        $scope.documentationdata = {};
-        $scope.currentdoc = $stateParams.id;
-        $scope.opencontent = function(id) {
+.controller('TutorialCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html for particular template file
+    $scope.template = TemplateService.changecontent("tutorial");
+    $scope.menutitle = NavigationService.makeactive("Tutorial");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
 
-            NavigationService.viewAllDocumentationSubmit($stateParams.id, function(data) {
-                var docs = [];
-                var grouped = _.groupBy(data.data, 'DocumentationCategory.name');
-                _.each(grouped, function(key, value) {
-                    var obj = {};
-                    obj.name = value;
-                    obj.docs = key;
-                    docs.push(obj);
+    $scope.video = [{
+        img: 'img/m7.jpg',
+        title: 'Neque porro quisquam',
+        descp: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    }, {
+        img: 'img/m6.jpg',
+        title: 'Neque porro quisquam',
+        descp: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    }, {
+        img: 'img/m4.png',
+        title: 'Neque porro quisquam',
+        descp: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    }, {
+        img: 'img/m8.jpg',
+        title: 'Neque porro quisquam',
+        descp: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    }, {
+        img: 'img/m2.png',
+        title: 'Neque porro quisquam',
+        descp: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    }, {
+        img: 'img/m1.png',
+        title: 'Neque porro quisquam',
+        descp: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+    }]
+})
+
+.controller('DocumentationCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams, $state) {
+    //Used to name the .html for particular template file
+    $scope.template = TemplateService.changecontent("documentation");
+    $scope.menutitle = NavigationService.makeactive("Documentation");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+    $scope.documentationdata = {};
+    $scope.currentdoc = $stateParams.id;
+    $scope.opencontent = function(id) {
+
+        NavigationService.viewAllDocumentationSubmit($stateParams.id, function(data) {
+            var docs = [];
+            var grouped = _.groupBy(data.data, 'DocumentationCategory.name');
+            _.each(grouped, function(key, value) {
+                var obj = {};
+                obj.name = value;
+                obj.docs = key;
+                docs.push(obj);
+            });
+            $scope.documentationdata = docs;
+            console.log('documentationdata', docs);
+            if (!$stateParams.id) {
+                $state.go("documentationid", {
+                    id: $scope.documentationdata[0].docs[0]._id
                 });
-                $scope.documentationdata = docs;
-                console.log('documentationdata',docs);
-                if (!$stateParams.id) {
-                    $state.go("documentationid", {
-                        id: $scope.documentationdata[0].docs[0]._id
-                    });
-                }
-                //console.log('user data', data.data);
-            });
-        };
+            }
+            //console.log('user data', data.data);
+        });
+    };
 
 
-        // NavigationService.getDocumentationEditDetail($stateParams.id, function(data) {
-        //     console.log('getUserEditDetail', data);
-        //     $scope.editdoc = data.data;
-        //
-        // });
+    // NavigationService.getDocumentationEditDetail($stateParams.id, function(data) {
+    //     console.log('getUserEditDetail', data);
+    //     $scope.editdoc = data.data;
+    //
+    // });
 
-        $scope.opencontent();
+    $scope.opencontent();
 
-        if ($stateParams.id) {
-            NavigationService.editContent({
-                id: $stateParams.id
-            }, function(data) {
-                $scope.contentdata = data;
-                console.log('data of contentdata:', data);
-                // if (data.value === true) {
-                //
-                //     $scope.allUserRecords();
-                // }
+    if ($stateParams.id) {
+        NavigationService.editContent({
+            id: $stateParams.id
+        }, function(data) {
+            $scope.contentdata = data;
+            console.log('data of contentdata:', data);
+            // if (data.value === true) {
+            //
+            //     $scope.allUserRecords();
+            // }
 
-            });
-        }
+        });
+    }
 
 
 
-        //
-        // NavigationService.viewAllDocumentationCategorySubmit(function(data) {
-        //     $scope.documentationcategorydata = data.data;
-        //     console.log('user data', data.data);
-        // });
+    //
+    // NavigationService.viewAllDocumentationCategorySubmit(function(data) {
+    //     $scope.documentationcategorydata = data.data;
+    //     console.log('user data', data.data);
+    // });
 
-    })
+})
 
-    .controller('TermsConditionCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-        //Used to name the .html for particular template file
-        $scope.template = TemplateService.changecontent("terms-condition");
-        $scope.menutitle = NavigationService.makeactive("Terms-Condition");
-        TemplateService.title = $scope.menutitle;
-        $scope.navigation = NavigationService.getnav();
-    })
-    .controller('PrivayPolicyCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-        //Used to name the .html for particular template file
-        $scope.template = TemplateService.changecontent("privacy-policy");
-        $scope.menutitle = NavigationService.makeactive("Privacy-Policy");
-        TemplateService.title = $scope.menutitle;
-        $scope.navigation = NavigationService.getnav();
-    })
-    .controller('AboutCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-        //Used to name the .html for particular template file
-        $scope.template = TemplateService.changecontent("about");
-        $scope.menutitle = NavigationService.makeactive("About");
-        TemplateService.title = $scope.menutitle;
-        $scope.navigation = NavigationService.getnav();
-    })
-    .controller('FaqtCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-        //Used to name the .html for particular template file
-        $scope.template = TemplateService.changecontent("faq");
-        $scope.menutitle = NavigationService.makeactive("FAQ");
-        TemplateService.title = $scope.menutitle;
-        $scope.navigation = NavigationService.getnav();
-    })
+.controller('TermsConditionCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html for particular template file
+    $scope.template = TemplateService.changecontent("terms-condition");
+    $scope.menutitle = NavigationService.makeactive("Terms-Condition");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
+
+.controller('PrivayPolicyCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html for particular template file
+    $scope.template = TemplateService.changecontent("privacy-policy");
+    $scope.menutitle = NavigationService.makeactive("Privacy-Policy");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
+
+.controller('AboutCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html for particular template file
+    $scope.template = TemplateService.changecontent("about");
+    $scope.menutitle = NavigationService.makeactive("About");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
+
+.controller('FaqtCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html for particular template file
+    $scope.template = TemplateService.changecontent("faq");
+    $scope.menutitle = NavigationService.makeactive("FAQ");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
 
 .controller('FeaturesCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html for particular template file
@@ -278,6 +285,18 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Sign In");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+
+    $scope.loginData = {};
+
+    $scope.doLogin = function() {
+        NavigationService.doLogin($scope.loginData, function(data) {
+            console.log(data);
+            if (!data.value) {
+                globalfunction.messageModal("Invalid login credentials");
+            }
+        })
+    }
+
 })
 
 .controller('RegisterCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -287,28 +306,70 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Register");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
+    $scope.register = {};
+
+    $scope.doRegister = function() {
+        if ($scope.register.password === $scope.register.confirmpassword) {
+            NavigationService.doRegister($scope.register, function(data) {
+                console.log(data);
+                if (data.value) {
+
+                }
+            })
+        }
+    }
+
 })
 
 .controller('ForgotPasswordCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-        //Used to name the .html for particular template file
-        $scope.template = TemplateService.changecontent("forgotpassword");
+    //Used to name the .html for particular template file
+    $scope.template = TemplateService.changecontent("forgotpassword");
+    $scope.menutitle = NavigationService.makeactive("Forgot Password");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
 
-        $scope.menutitle = NavigationService.makeactive("Forgot Password");
-        TemplateService.title = $scope.menutitle;
-        $scope.navigation = NavigationService.getnav();
-    })
-    .controller('ResetPasswordCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-        //Used to name the .html for particular template file
-        $scope.template = TemplateService.changecontent("resetpassword");
+    $scope.forgot = {};
 
-        $scope.menutitle = NavigationService.makeactive("Reset Password");
-        TemplateService.title = $scope.menutitle;
-        $scope.navigation = NavigationService.getnav();
-    })
+    $scope.forgotPassword = function() {
+        NavigationService.forgotPassword($scope.forgot, function(data) {
 
+        })
+    }
 
-.controller('headerctrl', function($scope, TemplateService) {
-    $scope.template = TemplateService;
 })
 
-;
+.controller('ResetPasswordCtrl', function($scope, TemplateService, NavigationService, $timeout, $uibModal) {
+    //Used to name the .html for particular template file
+    $scope.template = TemplateService.changecontent("resetpassword");
+
+    $scope.menutitle = NavigationService.makeactive("Reset Password");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+})
+
+.controller('headerctrl', function($scope, TemplateService, $uibModal, $timeout) {
+    $scope.template = TemplateService;
+
+    globalfunction.messageModal = function(text) {
+        $scope.modalText = text;
+        $scope.animationsEnabled = true;
+        var modalInstance = $uibModal.open({
+            animation: $scope.animationsEnabled,
+            templateUrl: 'views/modal/modal-message.html',
+            controller: 'headerctrl',
+            size: 'sm',
+            scope: $scope
+        });
+
+        modalInstance.result.then(function(selectedItem) {
+            $scope.selected = selectedItem;
+        }, function() {
+
+        });
+
+        $timeout(function() {
+            modalInstance.close();
+        }, 3000);
+    }
+
+});
