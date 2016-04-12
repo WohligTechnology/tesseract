@@ -16,102 +16,10 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
 	$stateProvider
 
 		.state('home', {
-		url: "/",
-		templateUrl: "views/template.html",
-		controller: 'HomeCtrl'
-	})
-
-	.state('blog', {
-			url: "/blog",
-			templateUrl: "views/template.html",
-			controller: 'BlogCtrl'
-		})
-		// .state('bloglist', {
-		// 	url: "/blog",
-		// 	templateUrl: "views/template.html",
-		// 	controller: 'BloglistCtrl'
-		// })
-		.state('features', {
-			url: "/features",
-			templateUrl: "views/template.html",
-			controller: 'FeaturesCtrl'
-		})
-		.state('contact', {
-			url: "/contact",
-			templateUrl: "views/template.html",
-			controller: 'ContactCtrl'
-		})
-		.state('tutorial', {
-			url: "/tutorial",
-			templateUrl: "views/template.html",
-			controller: 'TutorialCtrl'
-		})
-
-		.state('documentation', {
-			url: "/documentation",
-			templateUrl: "views/template.html",
-			controller: 'DocumentationCtrl'
-		})
-    .state('documentationid', {
-			url: "/documentationid/:id",
-			templateUrl: "views/template.html",
-			controller: 'DocumentationCtrl'
-		})
-		.state('about', {
-			url: "/about",
-			templateUrl: "views/template.html",
-			controller: 'AboutCtrl'
-		})
-		.state('faq', {
-			url: "/faq",
-			templateUrl: "views/template.html",
-			controller: 'FaqtCtrl'
-		})
-		.state('terms-condition', {
-			url: "/terms-condition",
-			templateUrl: "views/template.html",
-			controller: 'TermsConditionCtrl'
-		})
-		.state('privacy-policy', {
-			url: "/privacy-policy",
-			templateUrl: "views/template.html",
-			controller: 'PrivayPolicyCtrl'
-		})
-		.state('blog-detail', {
-			url: "/blog-detail/:id",
-			templateUrl: "views/template.html",
-			controller: 'BlogDetailCtrl'
-		})
-
-	.state('pricing', {
-		url: "/pricing",
-		templateUrl: "views/template.html",
-		controller: 'PricingCtrl'
-	})
-
-	.state('login', {
-		url: "/login",
-		templateUrl: "views/template.html",
-		controller: 'LoginCtrl'
-	})
-
-	.state('register', {
-		url: "/register",
-		templateUrl: "views/template.html",
-		controller: 'RegisterCtrl'
-	})
-
-	.state('forgot-password', {
-		url: "/forgot-password",
-		templateUrl: "views/template.html",
-		controller: 'ForgotPasswordCtrl'
-	})
-
-	.state('rest-password', {
-		url: "/rest-password",
-		templateUrl: "views/template.html",
-		controller: 'ResetPasswordCtrl'
-	});
+    	url: "/",
+    	templateUrl: "views/template.html",
+    	controller: 'HomeCtrl'
+	  });
 
 	$urlRouterProvider.otherwise("/");
   $locationProvider.html5Mode(isproduction);

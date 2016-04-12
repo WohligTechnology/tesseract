@@ -3,32 +3,7 @@ var adminurl = "http://blazen.io/";
 var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function($http) {
-    var navigation = [{
-        name: "Features",
-        classis: "active",
-        link: "features",
-        subnav: []
-    }, {
-        name: "Pricing",
-        classis: "active",
-        link: "pricing",
-        subnav: []
-    }, {
-        name: "Blog",
-        classis: "active",
-        link: "blog",
-        subnav: []
-    }, {
-        name: "Contact",
-        classis: "active",
-        link: "contact",
-        subnav: []
-    }, {
-        name: "Sign In",
-        classis: "active",
-        link: "login",
-        subnav: []
-    }];
+    var navigation = [];
 
     return {
         getnav: function() {
