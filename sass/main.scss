@@ -975,4 +975,10 @@ h2 {
   left: 0;
   z-index: 1;
 }
+.navbar-toggle .icon-bar {
+  background-color: $brand-primary;
+}
+.on-right {
+  float: right;
+}
 @import "mobile";

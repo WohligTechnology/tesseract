@@ -103,6 +103,23 @@
     .faq-qsn p{
     margin: 0 0 4px;
   }
+  .logo {
+    padding-left: 15px;
+  }
+  .navbar-toggle {
+    margin-top: 15px;
+    border: none;
+  }
+  .on-right {
+    float: none;
+    text-align: center;
+    a {
+      display: inline-block;
+    }
+    .special {
+      margin-left: 0;
+    }
+  }
 }
 @media (max-width:480px) {
   .button-set {
