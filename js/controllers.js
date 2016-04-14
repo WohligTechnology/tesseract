@@ -255,7 +255,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }, {
         icon: "ln-circle-plus",
         desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-        title: "& Many More"
+        title: "And Many More"
     }]
 })
 
