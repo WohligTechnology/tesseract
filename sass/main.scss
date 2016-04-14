@@ -704,7 +704,7 @@ a.navbar-brand {
     line-height: 180%;
   }
 }
-.mt60{
+.mt60 {
   margin-top: 40px;
 }
 .price {
@@ -994,5 +994,12 @@ h2 {
 }
 .form-control {
     box-shadow: none;
+}
+.about,
+.feature-count {
+  p,
+   {
+    text-align: justify;
+  }
 }
 @import "mobile";

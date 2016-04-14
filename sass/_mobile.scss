@@ -75,7 +75,7 @@
   .f35 {
     font-size: 26px;
   }
-  .mt60{
+  .mt60 {
     margin-top: 66px;
     margin-right: 10px;
   }
@@ -91,22 +91,22 @@
   //   width: 68%;
   //   margin-left: 17%;
   // }
-  .class-forget{
-      text-align: center;
-    }
-    .or {
-      margin-top: 0px;
-    }
-    .dashboard{
-      display:none;
-    }
-    .mtop{
-      margin-top: 30px;
-    }
-    .faq-qsn h5{
-      line-height: 164%;
-    }
-    .faq-qsn p{
+  .class-forget {
+    text-align: center;
+  }
+  .or {
+    margin-top: 0;
+  }
+  .dashboard {
+    display: none;
+  }
+  .mtop {
+    margin-top: 30px;
+  }
+  .faq-qsn h5 {
+    line-height: 164%;
+  }
+  .faq-qsn p {
     margin: 0 0 4px;
   }
   .logo {
@@ -130,6 +130,30 @@
     margin-bottom: 15px;
     overflow: hidden;
   }
+  .social-buttons:nth-child(1) {
+    margin-top: 10px;
+  }
+  .publish-img img {
+    margin: 0 auto;
+  }
+  .help-title,
+  .code-title,
+  .custom-li ul {
+    text-align: center;
+    h2 {
+      font-size: 26px;
+    }
+  }
+  .feature.title h2 {
+    font-size: 26px;
+  }
+  .border-right {
+    border-color: #fff;
+  }
+  .newsletter span {
+    font-weight: 600;
+    font-size: 16px;
+  }
   .padding-code {
     padding: 20px;
   }
@@ -148,11 +172,11 @@
   // .class-forget1{
   //   text-align: center;
   // }
-  .class-forget{
+  .class-forget {
     text-align: center;
   }
   .or {
-    margin-top: 0px;
+    margin-top: 0;
   }
   .contact {
     padding: 0 0 25px 30px;
@@ -160,14 +184,14 @@
   .padd-contact h4 {
     margin-bottom: 3px;
   }
- hr.sweet-line{
-     width: 80%;
-     margin: 40px 28px 30px;
-   }
-   .f16{
-        padding: 0 17px;
-   }
-   .about p{
+  hr.sweet-line {
+    width: 80%;
+    margin: 40px 28px 30px;
+  }
+  .f16 {
+    padding: 0 17px;
+  }
+  .about p {
     font-size: 13px !important;
-   }
+  }
 }
