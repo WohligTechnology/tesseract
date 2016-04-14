@@ -22,6 +22,12 @@
   .step-img {
     height: 100px;
   }
+  .margin-mobile + .margin-mobile {
+    margin-top: 10px;
+  }
+  .border-right {
+    border: none;
+  }
 }
 @media (max-width: $screen-sm-max) {
   .mt10 {

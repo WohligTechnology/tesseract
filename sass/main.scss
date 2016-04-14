@@ -71,8 +71,8 @@ $head-color: #797979;
 body {
   padding-top: $menu-height;
   background-color: #F4F4F4;
-  font-style: normal;
-  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 img.loading {
   text-align: center;
@@ -82,6 +82,9 @@ img.loading {
 }
 img {
   opacity: 0;
+  @include transition(all 300ms ease);
+}
+.btn, a {
   @include transition(all 300ms ease);
 }
 img.doneLoading {
@@ -156,8 +159,9 @@ a.navbar-brand {
     > a {
       @include transition(all 300ms ease);
       border-bottom: 2px solid transparent;
-      padding: 4px 13px;
+      padding: 5px 0px;
       margin-top: 15px;
+      margin-left: 15px;
       &:hover {
         background-color: transparent;
         color: $brand-primary;
@@ -891,7 +895,7 @@ pre {
   margin-top: 20px;
   margin-bottom: 10px;
 }
-.foot-color {
+.foot-color, .foot-color a {
   color: #a3aec0;
 }
 #{$all-text-inputs} {
@@ -980,5 +984,15 @@ h2 {
 }
 .on-right {
   float: right;
+}
+.pretty {
+  .form-control {
+    background-color: #F4F4F4;
+    box-shadow: none;
+    border-color: #f4f4f4;
+  }
+}
+.form-control {
+    box-shadow: none;
 }
 @import "mobile";
