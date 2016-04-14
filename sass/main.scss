@@ -700,7 +700,7 @@ a.navbar-brand {
     line-height: 180%;
   }
 }
-.mt60{
+.mt60 {
   margin-top: 40px;
 }
 .price {
@@ -980,5 +980,12 @@ h2 {
 }
 .on-right {
   float: right;
+}
+.about,
+.feature-count {
+  p,
+   {
+    text-align: justify;
+  }
 }
 @import "mobile";
