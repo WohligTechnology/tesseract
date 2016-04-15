@@ -116,14 +116,50 @@
     margin-top: 15px;
     border: none;
   }
+  .publish-img {
+      padding-top: 0px;
+      padding-bottom: 30px;
+    img {
+      display: none;
+    }
+  }
+  .icon-store {
+    img {
+      display: inline-block;
+    }
+  }
+  .inner-section {
+    position: static;
+    @include transform(translate(0%,0%));
+  }
+  .no-coding {
+     h4 {
+       font-size: 26px;
+       font-weight: 300;
+       text-transform: uppercase;
+     }
+  }
+  .app-review {
+    margin-top: 0;
+  }
   .on-right {
     float: none;
     text-align: center;
     a {
-      display: inline-block;
+      display: inline-block !important;
     }
     .special {
       margin-left: 0;
+    }
+  }
+  .mobile-center {
+    text-align: center;
+  }
+  .mobile-center .feature-list ul {
+     padding-left: 0;
+    li {
+      list-style: none;
+      line-height: 180%;
     }
   }
   .three-step .fix-height {
