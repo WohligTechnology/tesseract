@@ -1,10 +1,12 @@
 <section class="container">
    <div class="white-box">
-      <div class="row">
-         <div class="col-md-offset-2 col-md-4 col-sm-offset-1 col-sm-5 col-xs-offset-1 col-xs-10">
+     <div class="head text-center">
+       <h2 class="color-head text-uppercase f20 margin0 mb10">Login</h2>
+       <p>Login with your existing account</p>
+     </div>
+      <div class="row mt50">
+         <div class="col-sm-offset-1 col-sm-4">
             <form name="login" ng-submit="doLogin();">
-               <div class="">
-                  <h4 class="login text-center">LOGIN</h4>
                   <div class="form-group">
                      <label class="text-style">EMAIL ADDRESS</label>
                      <input type="email" class="form-control input-style" name="email" ng-model="loginData.email" required>
@@ -15,7 +17,7 @@
                      <input type="password" class="form-control input-style" ng-minlength="8" name="Password" ng-model="loginData.password" required>
                   </div>
                   <p class="colpad" ng-show="login.email.$error.required && login.email.$dirty">Password should be min 8 character</p>
-               </div>
+
                <div class="row">
                   <div class="col-md-6 col-sm-6">
                      <button class="btn btn-outline brdr" type="submit">
@@ -36,8 +38,7 @@
                </div>
             </div>
          </div>
-         <div class="col-md-offset-1 col-md-3 col-sm-4 col-xs-offset-1 col-xs-10 text-center">
-            <div class="mt50">
+         <div class="col-sm-offset-2 col-sm-4 text-center">
                <div class="button-set">
                   <a class="btn btn-facebook fb-icon brdr social-buttons" href="http://blazen.io/user/loginFacebook">
                      <i class="fa fa-facebook social-f margin-btn float-left"></i>
@@ -56,7 +57,6 @@
                      <span class="tw">Sign in with GitHub</span>
                   </a>
                </div>
-            </div>
          </div>
       </div>
    </div>

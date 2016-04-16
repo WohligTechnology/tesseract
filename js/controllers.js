@@ -315,9 +315,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 if (data.value) {
 
                 }
-            })
+            });
         }
-    }
+    };
 
 })
 
@@ -327,14 +327,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.menutitle = NavigationService.makeactive("Forgot Password");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
-
     $scope.forgot = {};
-
     $scope.forgotPassword = function() {
-        NavigationService.forgotPassword($scope.forgot, function(data) {
-
-        })
-    }
+        NavigationService.forgotPassword($scope.forgot, function(data) {});
+    };
 
 })
 

@@ -1,10 +1,12 @@
 <section class="container">
    <div class="white-box">
-      <div class="row">
-         <div class="col-md-offset-2 col-md-4 col-sm-offset-1 col-sm-5 col-xs-offset-1 col-xs-10">
+     <div class="head text-center">
+       <h2 class="color-head text-uppercase f20 margin0 mb10">Sign Up</h2>
+       <p>Register and get an app free</p>
+     </div>
+      <div class="row mt50">
+         <div class="col-sm-offset-1 col-sm-4">
             <form name="signup" ng-submit="doRegister();">
-               <div class="">
-                  <h4 class="login text-center">SIGN UP</h4>
                   <div class="form-group">
                      <label class="text-style">FULL NAME</label>
                      <input type="text" class="form-control input-style" name="name" ng-model="register.name" required>
@@ -24,7 +26,6 @@
                      <input type="password" class="form-control input-style" name="confirmpassword" ng-model="register.confirmpassword" required>
                   </div>
                   <p class="colpad" ng-show="signup.confirmpassword.$error.required && signup.confirmpassword.$dirty">Confirm Password not match</p>
-               </div>
                <div class="row">
                   <div class="col-md-6 col-sm-6">
                      <button class="btn btn-outline brdr" type="submit">
@@ -44,27 +45,27 @@
               <p>Already Registerd? Log In</p>
           </div> -->
          </div>
-         <div class="col-md-offset-1 col-md-3 col-sm-4 col-xs-offset-1 col-xs-10 text-center">
-            <div class="mt50">
+         <div class="col-sm-offset-2 col-sm-4 text-center">
+
               <div class="button-set">
                  <a class="btn btn-facebook fb-icon brdr social-buttons" href="http://blazen.io/user/loginFacebook">
                     <i class="fa fa-facebook social-f margin-btn float-left"></i>
-                    <span class="fb">Sign in with facebook</span>
+                    <span class="fb">Sign up with facebook</span>
                  </a>
                  <a class="btn btn-google google-icon brdr social-buttons" href="http://blazen.io/user/loginGoogle">
                     <i class="fa fa-google-plus social-f margin-btn float-left"></i>
-                    <span class="gp">Sign in with Google+</span>
+                    <span class="gp">Sign up with Google+</span>
                  </a>
                  <a class="btn btn-twitter twitter-icon brdr social-buttons" href="http://blazen.io/user/loginTwitter">
                     <i class="fa fa-twitter social-f margin-btn float-left"></i>
-                    <span class="tw">Sign in with Twitter</span>
+                    <span class="tw">Sign up with Twitter</span>
                  </a>
                  <a class="btn btn-git git-icon brdr social-buttons" href="http://blazen.io/user/loginGithub">
                     <i class="fa fa-github-alt social-f margin-btn float-left"></i>
-                    <span class="tw">Sign in with GitHub</span>
+                    <span class="tw">Sign up with GitHub</span>
                  </a>
               </div>
-            </div>
+
          </div>
       </div>
    </div>
