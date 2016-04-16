@@ -79,6 +79,11 @@
     margin-top: 66px;
     margin-right: 10px;
   }
+  .white-box {
+    padding: 40px 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 }
 @media (max-width: $screen-xs-max) {
   .mtop10 {
@@ -96,9 +101,6 @@
   }
   .or {
     margin-top: 0;
-  }
-  .dashboard {
-    display: none;
   }
   .mtop {
     margin-top: 30px;
@@ -196,6 +198,22 @@
   .footermenu {
     text-align: center;
   }
+  .white-box {
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .feature-icon {
+    text-align: left;
+  }
+  .feature-count {
+    p {
+      padding-top: 5px;
+    }
+  }
+  .nav > li > a {
+    margin-left: 0;
+  }
 }
 @media (max-width:480px) {
   .button-set {
@@ -203,7 +221,7 @@
     margin-left: 0;
   }
   .mt50 {
-    margin-top: 10px;
+    margin-top: 20px;
   }
   .help-title h2, .code-title h2, .custom-li ul h2 {
       font-size: 24px;
@@ -221,8 +239,7 @@
     margin-bottom: 3px;
   }
   hr.sweet-line {
-    width: 80%;
-    margin: 40px 28px 30px;
+    margin: 40px 0;
   }
   .f16 {
     padding: 0 17px;
