@@ -107,8 +107,8 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
 		controller: 'ForgotPasswordCtrl'
 	})
 
-	.state('rest-password', {
-		url: "/rest-password",
+	.state('reset-password', {
+		url: "/reset-password",
 		templateUrl: "views/template.html",
 		controller: 'ResetPasswordCtrl'
 	});
