@@ -193,68 +193,69 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     $scope.feature = [{
         icon: "ln-desktop",
-        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        desc: "Backend provides ready to use templates which can be customized and personalized according to one's choices and needs.Entire app is managed by simple intuitive backend thus easing out majority of your work.",
+
         title: "Easy Backend"
     }, {
         icon: "ln-iphone",
-        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        desc: "Confused of how your app might look?Be doubly sure with the help of live preview option which gives you the ability to watch how your app might feel .Experiment and play with your app on your mobile device in real-time with our Live Preview function.",
         title: "Live Preview of App"
     }]
 
     $scope.feature2 = [{
         icon: "ln-bullhorn",
-        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        desc: "Keep your users updated by send notification function that allows you to share all the developments carried out by you at any time of the day.",
         title: "Send Notification"
     }, {
         icon: "ln-circle-checkmark",
-        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        desc: "Don’t need a feature anymore? No worries.Easy enabling and disabling feature available.",
         title: "Enable or Disable Any Feature "
     }]
 
     $scope.feature3 = [{
         icon: "ln-at-sign",
-        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        desc: "Why create new id when you can optimize the existing one’s.Users can login through social media platforms like facebook,twitter,instagram  or through email.",
         title: "Social Login, Email Login"
     }, {
         icon: "ln-register",
-        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        desc: " Blogging is the backbone of every business marketing strategy in today’s world.Integrate all your blogs to the app and keep users informed about the latest developments.We provide a range of specific blog app builders for your various needs like tumblr app builder, Joomla app builder, WordPress app builder, Drupal app builder and many others.",
         title: "Blog integration "
     }]
 
     $scope.feature4 = [{
         icon: "ln-thumbs-up",
-        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        desc: "Stay socially connected with the masses by means of social feeds option.Provides multiple social media platforms like Facebook, Instagram, Twitter at your disposal.",
         title: "Social Feeds"
     }, {
         icon: "ln-contacts",
-        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        desc: "If your users have some queries then contact form is the thing.Keep track of what your users need and have to say by means of this feature.",
         title: "Contact Form"
     }]
     $scope.feature5 = [{
         icon: "ln-picture",
-        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        desc: "A picture is worth a thousand words. So add volume to your user experience by means of photo gallery option.Let the photos do the talking.",
         title: "Photo Gallery"
     }, {
         icon: "ln-play",
-        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        desc: "Give your users the pleasure of experiencing high quality videos.Strong backend helps you mold, characterize and enhance the video gallery as per your choice.",
         title: "Video Gallery"
     }]
     $scope.feature6 = [{
         icon: "ln-headset",
-        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        desc: "This feature will let you share the audio tracks through soundcloud thus providing your users the opportunity to listen to their favourite tracks.",
         title: "Audio Gallery"
     }, {
         icon: "ln-calendar3",
-        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        desc: "Import your past and upcoming events.Your users can RSVP to events, add to their calendar, see who else is going, and post photos of the event.",
         title: "Events"
     }]
     $scope.feature7 = [{
         icon: "ln-iphone",
-        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        desc: "Over 80% of the smartphones in the world are android based followed by ios.Want a chance to reach out to every one of them?Then this is the feature that will help you be on top of app world by  allowing  you to publish  ios and android apps in no time.",
         title: "iOS, Android App Publishing"
     }, {
         icon: "ln-circle-plus",
-        desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        desc: "This is just the beginning to an awesome experience.There are loads of other features that will let you be ahead of your peers and be at par with latest technologies and make a lasting impression.",
         title: "And Many More"
     }]
 })
