@@ -14,8 +14,11 @@
         </div>
       </div>
 
-      <div class="collapse navbar-collapse on-right" id="nav-collapse">
+      <div class="collapse navbar-collapse on-right" id="nav-collapse" ng-init="showSearch=false;">
         <ul class="nav navbar-nav text-uppercase">
+          <li ng-click="showSearch = !showSearch">
+            <span class="nolink"><i class="fa fa-search"></i></span>
+          </li>
           <li>
             <a href="">Docs</a>
           </li>
@@ -44,4 +47,11 @@
       </div>
     </div>
   </nav>
+  <div class="search-app" ng-class="{'out' : showSearch==true}">
+    <div class="container text-right">
+      <div class="wcolor">
+        <input type="text" class="form-control" placeholder="Search your apps">
+      </div>
+    </div>
+  </div>
 </header>

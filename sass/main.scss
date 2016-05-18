@@ -142,7 +142,7 @@ a.navbar-brand {
 }
 .nav {
   > li {
-    padding: 0 15px;
+    padding: 0 10px;
     &.active {
       a {
         color: $brand-primary;
@@ -159,12 +159,14 @@ a.navbar-brand {
         border-radius: 0;
       }
     }
-    > a {
+    > a, .nolink {
       @include transition(all 300ms ease);
       border-bottom: 2px solid transparent;
       padding: 5px 0px;
       margin-top: 15px;
       margin-left: 15px;
+      display: block;
+      cursor: pointer;
       &:hover {
         background-color: transparent;
         color: $brand-primary;
@@ -1122,5 +1124,34 @@ h2 {
   .form-control {
     border-radius: 0;
   }
+}
+.search-app {
+  width: 100%;
+  @include transform(translatey(-100%));
+  @include transition(all 300ms ease);
+  &.out {
+    @include transform(translatey(0%));
+    .wcolor {
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+    }
+  }
+    input {
+        border: none;
+        border-bottom: 1px solid $border-color;
+        font-size: 16px;
+    }
+    .wcolor {
+      background-color: white;
+      padding: 10px;
+      width: 350px;
+      display: inline-block;
+      @include transition(all 300ms ease);
+    }
+}
+header {
+  position: relative;
+}
+.navbar {
+  margin: 0;
 }
 @import "mobile";
