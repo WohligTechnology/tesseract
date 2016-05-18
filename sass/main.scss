@@ -21,7 +21,9 @@ $brand-info: #1ad0eb !default;
 $facebook: #3a579d !default;
 $google: #dd4d3c !default;
 $twitter: #49c8f5 !default;
+$hover-color: #00bbd3!default;
 $body-bg: #fff !default;
+$brand-base: #666 !default;
 $text-color: $gray !default;
 $link-color: $gray !default;
 $link-hover-color: $gray-base !default;
@@ -34,6 +36,7 @@ $border-radius-small: 0 !default;
 $menu-height: 65px !default;
 $base-color: #777777;
 $head-color: #797979;
+$border-color: #ececec !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap"; // @font-face {
 //     font-family: 'Blazen';
 //     src: url('../fonts/blazen.eot?sfgjhu');
@@ -1013,6 +1016,111 @@ h2 {
   p,
    {
     text-align: justify;
+  }
+}
+.app-box {
+  p {
+    color: $brand-primary;
+  }
+  position: relative;
+  text-align: center;
+  border: 1px solid white;
+  background: white;
+  padding: 10px;
+  min-height: 230px;
+  @include transition(all 300ms ease);
+  cursor: pointer;
+  .app-info {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    i {
+      background-color: $brand-success;
+      border-radius: 100%;
+      color: $brand-success;
+    }
+  }
+  .app-icon {
+    height: 80px;
+    overflow: hidden;
+    display: block;
+    margin-top: 25px;
+    img {
+      margin: 0 auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  .app-name {
+    padding-top: 15px;
+    font-size: 16px;
+    padding-bottom: 4px;
+    color: $brand-base;
+    text-transform: capitalize;
+    height: 41px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .app-date {
+    margin-top: 10px;
+    p {
+      margin-bottom: 3px;
+      span {
+        color: #000;
+      }
+    }
+  }
+  .new-app {
+    margin-top: 25px;
+    span {
+      font-size: 50px;
+      background: #D9D9D9;
+      border-radius: 100%;
+      height: 80px;
+      width: 80px;
+      display: block;
+      margin: 0 auto;
+      color: #fff;
+      padding: 0;
+      border-style: double;
+    }
+  }
+  &:hover {
+    transform: scale(1.1);
+    border: 1px solid $hover-color;
+  }
+}
+.btn.btn-small {
+  width: auto;
+  padding: 6px 30px;
+  text-transform: uppercase;
+}
+.btn-upload {
+  position: relative;
+  overflow: hidden;
+  input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter:alpha(opacity=0);
+  }
+}
+.upload-btn {
+  margin-top: 15px;
+}
+.name-submit {
+  span {
+    display: block;
+    padding-bottom: 10px;
+  }
+  .form-control {
+    border-radius: 0;
   }
 }
 @import "mobile";

@@ -85,7 +85,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         img: 'img/m1.png',
         title: 'Neque porro quisquam',
         descp: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-    }]
+    }];
 })
 
 .controller('DocumentationCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams, $state) {
@@ -154,7 +154,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 .controller('TermsConditionCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html for particular template file
     $scope.template = TemplateService.changecontent("terms-condition");
-    $scope.menutitle = NavigationService.makeactive("Terms-Condition");
+    $scope.menutitle = NavigationService.makeactive("Terms & Condition");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })
@@ -162,7 +162,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 .controller('PrivayPolicyCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html for particular template file
     $scope.template = TemplateService.changecontent("privacy-policy");
-    $scope.menutitle = NavigationService.makeactive("Privacy-Policy");
+    $scope.menutitle = NavigationService.makeactive("Privacy Policy");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
 })
@@ -200,7 +200,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         icon: "ln-iphone",
         desc: "Confused of how your app might look?Be doubly sure with the help of live preview option which gives you the ability to watch how your app might feel .Experiment and play with your app on your mobile device in real-time with our Live Preview function.",
         title: "Live Preview of App"
-    }]
+    }];
 
     $scope.feature2 = [{
         icon: "ln-bullhorn",
@@ -210,7 +210,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         icon: "ln-circle-checkmark",
         desc: "Don’t need a feature anymore? No worries.Easy enabling and disabling feature available.",
         title: "Enable or Disable Any Feature "
-    }]
+    }];
 
     $scope.feature3 = [{
         icon: "ln-at-sign",
@@ -220,7 +220,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         icon: "ln-register",
         desc: " Blogging is the backbone of every business marketing strategy in today’s world.Integrate all your blogs to the app and keep users informed about the latest developments.We provide a range of specific blog app builders for your various needs like tumblr app builder, Joomla app builder, WordPress app builder, Drupal app builder and many others.",
         title: "Blog integration "
-    }]
+    }];
 
     $scope.feature4 = [{
         icon: "ln-thumbs-up",
@@ -230,7 +230,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         icon: "ln-contacts",
         desc: "If your users have some queries then contact form is the thing.Keep track of what your users need and have to say by means of this feature.",
         title: "Contact Form"
-    }]
+    }];
     $scope.feature5 = [{
         icon: "ln-picture",
         desc: "A picture is worth a thousand words. So add volume to your user experience by means of photo gallery option.Let the photos do the talking.",
@@ -239,7 +239,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         icon: "ln-play",
         desc: "Give your users the pleasure of experiencing high quality videos.Strong backend helps you mold, characterize and enhance the video gallery as per your choice.",
         title: "Video Gallery"
-    }]
+    }];
     $scope.feature6 = [{
         icon: "ln-headset",
         desc: "This feature will let you share the audio tracks through soundcloud thus providing your users the opportunity to listen to their favourite tracks.",
@@ -248,7 +248,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         icon: "ln-calendar3",
         desc: "Import your past and upcoming events.Your users can RSVP to events, add to their calendar, see who else is going, and post photos of the event.",
         title: "Events"
-    }]
+    }];
     $scope.feature7 = [{
         icon: "ln-iphone",
         desc: "Over 80% of the smartphones in the world are android based followed by ios.Want a chance to reach out to every one of them?Then this is the feature that will help you be on top of app world by  allowing  you to publish  ios and android apps in no time.",
@@ -257,7 +257,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         icon: "ln-circle-plus",
         desc: "This is just the beginning to an awesome experience.There are loads of other features that will let you be ahead of your peers and be at par with latest technologies and make a lasting impression.",
         title: "And Many More"
-    }]
+    }];
 })
 
 .controller('PricingCtrl', function($scope, TemplateService, NavigationService, $timeout) {
@@ -367,6 +367,28 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $timeout(function() {
             modalInstance.close();
         }, 3000);
-    }
+    };
 
-});
+})
+
+.controller('MyAppCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams, $uibModal) {
+    //Used to name the .html for particular template file
+    $scope.template = TemplateService.changecontent("my-app");
+    $scope.menutitle = NavigationService.makeactive("My Apps");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+    TemplateService.header = 'views/header-app.html';
+
+    $scope.open = function() {
+        var modalInstance = $uibModal.open({
+            animation: $scope.animationsEnabled,
+            templateUrl: 'views/modal/new-app.html',
+            resolve: {
+                items: function() {
+                    return $scope.items;
+                }
+            }
+        });
+    };
+})
+;
