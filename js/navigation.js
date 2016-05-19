@@ -1,5 +1,5 @@
-// var adminurl = "http://192.168.1.113:81/";
-var adminurl = "http://blazen.io/";
+var adminurl = "http://192.168.1.129:84/";
+// var adminurl = "http://blazen.io/";
 var navigationservice = angular.module('navigationservice', [])
 
 .factory('NavigationService', function($http) {
@@ -34,7 +34,24 @@ var navigationservice = angular.module('navigationservice', [])
         getnav: function() {
             return navigation;
         },
-
+        getProfile: function(callback) {
+            $http({
+                url: adminurl + 'user/profile',
+                method: 'POST'
+            }).success(callback);
+        },
+        doLogout: function(callback) {
+            $http({
+                url: adminurl + 'user/logout',
+                method: 'POST'
+            }).success(callback);
+        },
+        createApp: function(callback) {
+            $http({
+                url: adminurl + 'user/createApp',
+                method: 'POST'
+            }).success(callback);
+        },
         viewAllDocumentationSubmit: function(id, callback) {
             // console.log('form data: ', formData);
             $http({

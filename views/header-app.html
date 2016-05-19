@@ -1,57 +1,57 @@
-<header>
-  <nav class="navbar navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+<header ng-controller="headerctrl">
+   <nav class="navbar navbar-fixed-top">
+      <div class="container">
+         <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+            </button>
 
-        <div class="logo display-inline">
-        <a ui-sref="home">  <i class="icon icon-blazen"></i> Blazen</a>
-        </div>
-      </div>
+            <div class="logo display-inline">
+               <a ui-sref="home"> <i class="icon icon-blazen"></i> Blazen</a>
+            </div>
+         </div>
 
-      <div class="collapse navbar-collapse on-right" id="nav-collapse" ng-init="showSearch=false;">
-        <ul class="nav navbar-nav text-uppercase">
-          <li ng-click="showSearch = !showSearch">
-            <span class="nolink"><i class="fa fa-search" ng-class="{'fa-close' : showSearch==true}"></i></span>
-          </li>
-          <li>
-            <a href="">Docs</a>
-          </li>
-          <li>
-            <a href="">Forum</a>
-          </li>
-          <li>
-            <a href="">Mahesh Maurya <i class="fa fa-caret-down"></i></a>
-            <ul class="dropdown-menu">
-              <li>
-                <a href="">Account</a>
-              </li>
-              <li>
-                <a href="">Billing</a>
-              </li>
-              <li>
-                <a href="">Log out</a>
-              </li>
+         <div class="collapse navbar-collapse on-right" id="nav-collapse" ng-init="showSearch=false;">
+            <ul class="nav navbar-nav text-uppercase">
+               <li ng-click="showSearch = !showSearch">
+                  <span class="nolink"><i class="fa fa-search" ng-class="{'fa-close' : showSearch==true}"></i></span>
+               </li>
+               <li>
+                  <a href="">Docs</a>
+               </li>
+               <li>
+                  <a href="">Forum</a>
+               </li>
+               <li>
+                  <a href="">{{userData.name}} <i class="fa fa-caret-down"></i></a>
+                  <ul class="dropdown-menu">
+                     <li>
+                        <a href="">Account</a>
+                     </li>
+                     <li>
+                        <a href="">Billing</a>
+                     </li>
+                     <li ng-click="doLogout();">
+                        <a href="">Log out</a>
+                     </li>
+                  </ul>
+               </li>
             </ul>
-          </li>
-        </ul>
-      </div>
+         </div>
 
-      <div class="clearfix">
+         <div class="clearfix">
 
+         </div>
       </div>
-    </div>
-  </nav>
-  <div class="search-app" ng-class="{'out' : showSearch==true}">
-    <div class="container text-right">
-      <div class="wcolor">
-        <input type="text" class="form-control" placeholder="Search your apps">
+   </nav>
+   <div class="search-app" ng-class="{'out' : showSearch==true}">
+      <div class="container text-right">
+         <div class="wcolor">
+            <input type="text" class="form-control" placeholder="Search your apps">
+         </div>
       </div>
-    </div>
-  </div>
+   </div>
 </header>

@@ -279,7 +279,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     })
 
-.controller('LoginCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('LoginCtrl', function($scope, TemplateService, NavigationService, $timeout, $state) {
     //Used to name the .html for particular template file
     $scope.template = TemplateService.changecontent("login");
 
@@ -292,7 +292,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.doLogin = function() {
         NavigationService.doLogin($scope.loginData, function(data) {
             console.log(data);
-            if (!data.value) {
+            if (data.value != false) {
+                $state.go('my-app');
+            } else {
                 globalfunction.messageModal("Invalid login credentials");
             }
         })
@@ -300,7 +302,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 })
 
-.controller('RegisterCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('RegisterCtrl', function($scope, TemplateService, NavigationService, $timeout, $state) {
     //Used to name the .html for particular template file
     $scope.template = TemplateService.changecontent("register");
 
@@ -313,8 +315,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         if ($scope.register.password === $scope.register.confirmpassword) {
             NavigationService.doRegister($scope.register, function(data) {
                 console.log(data);
-                if (data.value) {
-
+                if (data.value != false) {
+                    $state.go('my-app');
+                } else {
+                    globalfunction.messageModal("Email id already exists");
                 }
             });
         }
@@ -344,7 +348,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
 })
 
-.controller('headerctrl', function($scope, TemplateService, $uibModal, $timeout) {
+.controller('headerctrl', function($scope, TemplateService, NavigationService, $uibModal, $timeout, $state) {
     $scope.template = TemplateService;
 
     globalfunction.messageModal = function(text) {
@@ -369,6 +373,22 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }, 3000);
     };
 
+    $scope.doLogout = function() {
+        NavigationService.doLogout(function(data) {
+            console.log(data);
+            if (data.value != false) {
+                $state.go('home');
+            }
+        })
+    }
+
+    NavigationService.getProfile(function(data) {
+        console.log(data);
+        if (data.value != false) {
+            $scope.userData = data;
+        }
+    })
+
 })
 
 .controller('MyAppCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams, $uibModal) {
@@ -390,5 +410,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             }
         });
     };
-})
-;
+
+    $scope.createApp = function() {
+        NavigationService.createApp(function(data) {
+            console.log(data);
+        })
+    }
+
+});
