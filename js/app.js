@@ -132,6 +132,19 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
 
 });
 
+firstapp.filter('serverimage', function() {
+    return function(input) {
+        if (input) {
+            // console.log('serverimage: ', input);
+            // return input;
+            return imgpath + input;
+            // return "http://192.168.0.123/eurobackend/uploads"+input;
+        } else {
+            return "img/logo.png";
+        }
+    };
+});
+
 firstapp.directive('autoHeight', function($compile, $parse) {
     return {
         restrict: 'EA',
@@ -217,6 +230,17 @@ firstapp.directive('uploadImage', function($http) {
                     }
                 });
             };
+        }
+    };
+});
+
+firstapp.directive('imageonload', function() {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            element.bind('load', function() {
+                scope.$apply(attrs.imageonload);
+            });
         }
     };
 });

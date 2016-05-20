@@ -1,6 +1,6 @@
 var globalfunction = {};
 
-angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider'])
+angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'imageupload'])
 
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html for particular template file
@@ -386,35 +386,60 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         console.log(data);
         if (data.value != false) {
             $scope.userData = data;
+        } else {
+            $state.go('login');
         }
     })
 
 })
 
-.controller('MyAppCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams, $uibModal) {
+.controller('MyAppCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams, $uibModal, $state) {
     //Used to name the .html for particular template file
     $scope.template = TemplateService.changecontent("my-app");
     $scope.menutitle = NavigationService.makeactive("My Apps");
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     TemplateService.header = 'views/header-app.html';
+    var modalInstance = '';
+
+    $scope.create = {};
 
     $scope.open = function() {
-        var modalInstance = $uibModal.open({
+        modalInstance = $uibModal.open({
             animation: $scope.animationsEnabled,
             templateUrl: 'views/modal/new-app.html',
-            resolve: {
-                items: function() {
-                    return $scope.items;
-                }
-            }
+            scope: $scope
         });
     };
 
-    $scope.createApp = function() {
-        NavigationService.createApp(function(data) {
+    $scope.getMyApps = function(data) {
+        NavigationService.getMyApps(function(data) {
             console.log(data);
+            if (data.value != false) {
+                $scope.myApps = _.chunk(data.data, 3);
+            } else {
+                $scope.myApps = [];
+            }
         })
+    }
+    $scope.getMyApps();
+
+    $scope.createApp = function() {
+        NavigationService.createApp($scope.create, function(data) {
+            console.log(data);
+            if (data.value != false) {
+                if (modalInstance)
+                    modalInstance.dismiss();
+                $scope.getMyApps();
+            } else if (data.value == false) {
+                $state.go('home');
+            }
+        })
+    }
+
+    $scope.openApp = function(app) {
+        window.open('http://192.168.1.129:' + (app.port + 20000)+"/www", '_blank');
+        window.open('http://192.168.1.129:' + (app.port + 30000), '_blank');
     }
 
 });
