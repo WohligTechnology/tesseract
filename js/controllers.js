@@ -405,10 +405,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     NavigationService.getProfile(function(data) {
         console.log(data);
-        if (data.value != false) {} else {
+        if (data.value !== false) {} else {
             $state.go('login');
         }
-    })
+    });
 
     $scope.open = function() {
         modalInstance = $uibModal.open({
@@ -418,34 +418,50 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         });
     };
 
+    $scope.edit = function() {
+        modalInstance = $uibModal.open({
+            animation: $scope.animationsEnabled,
+            templateUrl: 'views/modal/app-edit.html',
+            scope: $scope
+        });
+    };
+
+    $scope.delete = function() {
+        modalInstance = $uibModal.open({
+            animation: $scope.animationsEnabled,
+            templateUrl: 'views/modal/app-delete.html',
+            scope: $scope
+        });
+    };
+
     $scope.getMyApps = function(data) {
         NavigationService.getMyApps(function(data) {
             console.log(data);
-            if (data.value != false) {
+            if (data.value !== false) {
                 $scope.myApps = _.chunk(data.data, 3);
             } else {
                 $scope.myApps = [];
             }
-        })
-    }
+        });
+    };
     $scope.getMyApps();
 
     $scope.createApp = function() {
         NavigationService.createApp($scope.create, function(data) {
             console.log(data);
-            if (data.value != false) {
+            if (data.value !== false) {
                 if (modalInstance)
                     modalInstance.dismiss();
                 $scope.getMyApps();
-            } else if (data.value == false) {
+            } else if (data.value === false) {
                 $state.go('home');
             }
-        })
-    }
+        });
+    };
 
     $scope.openApp = function(app) {
         window.open('http://192.168.1.129:' + (app.port + 20000) + "/www", '_blank');
         window.open('http://192.168.1.129:' + (app.port + 30000), '_blank');
-    }
+    };
 
 });

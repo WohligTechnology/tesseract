@@ -1,12 +1,14 @@
 <section>
    <div class="container">
       <div class="mt30">
-         <div class="row" ng-repeat="apps in myApps">
-            <div class="col-md-3" ng-repeat="app in apps">
-               <a href="" ng-click="openApp(app);">
+         <div class="row">
+            <div class="col-md-4">
+
                   <div class="app-box">
-                     <div class="app-icon">
-                        <img ng-src="img/a1.png" ng-if="!app.image">
+                    <button class="btn btn-danger btn-icon btn-float app-hover left fa fa-trash" ng-click="delete()"></button>
+                    <button class="btn btn-default btn-icon btn-float app-hover fa fa-pencil" ng-click="edit()"></button>
+                     <div class="app-icon" ng-click="openApp(app);">
+                        <img ng-src="img/placeholder.jpg" ng-if="!app.image">
                         <img ng-src="{{app.image | serverimage}}" ng-if="app.image">
                      </div>
                      <div class="app-name">
@@ -17,7 +19,18 @@
                         <!-- <p><span>Valid till </span>: Feb. 30, 16</p> -->
                      </div>
                   </div>
-               </a>
+
+            </div>
+            <div class="col-md-4">
+               <!-- <div class="app-box" ng-click="createApp()"> -->
+               <div class="app-box" ng-click="open()">
+                  <div class="new-app mt45">
+                     <span>+</span>
+                  </div>
+                  <div class="app-name">
+                     <span>Create new app</span>
+                  </div>
+               </div>
             </div>
             <!-- <div class="col-md-3">
                <a ui-sref="home">
@@ -51,19 +64,6 @@
                   </div>
                </a>
             </div> -->
-         </div>
-         <div class="row">
-            <div class="col-md-offset-4 col-md-4">
-               <!-- <div class="app-box" ng-click="createApp()"> -->
-               <div class="app-box" ng-click="open()">
-                  <div class="new-app mt45">
-                     <span>+</span>
-                  </div>
-                  <div class="app-name">
-                     <span>Create new app</span>
-                  </div>
-               </div>
-            </div>
          </div>
       </div>
    </div>
