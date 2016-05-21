@@ -1,4 +1,5 @@
 var adminurl = "http://192.168.1.129:84/";
+// var adminurl = "http://104.196.133.123/";
 var imgpath = adminurl + "upload/readFile?file=";
 var uploadurl = adminurl + "upload";
 

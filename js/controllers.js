@@ -99,22 +99,24 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.opencontent = function(id) {
 
         NavigationService.viewAllDocumentationSubmit($stateParams.id, function(data) {
-            var docs = [];
-            var grouped = _.groupBy(data.data, 'DocumentationCategory.name');
-            _.each(grouped, function(key, value) {
-                var obj = {};
-                obj.name = value;
-                obj.docs = key;
-                docs.push(obj);
-            });
-            $scope.documentationdata = docs;
-            console.log('documentationdata', docs);
-            if (!$stateParams.id) {
-                $state.go("documentationid", {
-                    id: $scope.documentationdata[0].docs[0]._id
-                });
+            if (data.value != false) {
+                if (data.data.length > 0) {
+                    var docs = [];
+                    var grouped = _.groupBy(data.data, 'DocumentationCategory.name');
+                    _.each(grouped, function(key, value) {
+                        var obj = {};
+                        obj.name = value;
+                        obj.docs = key;
+                        docs.push(obj);
+                    });
+                    $scope.documentationdata = docs;
+                    if (!$stateParams.id) {
+                        $state.go("documentationid", {
+                            id: $scope.documentationdata[0].docs[0]._id
+                        });
+                    }
+                }
             }
-            //console.log('user data', data.data);
         });
     };
 
@@ -386,8 +388,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         console.log(data);
         if (data.value != false) {
             $scope.userData = data;
-        } else {
-            $state.go('login');
         }
     })
 
@@ -401,8 +401,14 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
     TemplateService.header = 'views/header-app.html';
     var modalInstance = '';
-
     $scope.create = {};
+
+    NavigationService.getProfile(function(data) {
+        console.log(data);
+        if (data.value != false) {} else {
+            $state.go('login');
+        }
+    })
 
     $scope.open = function() {
         modalInstance = $uibModal.open({
@@ -438,7 +444,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     }
 
     $scope.openApp = function(app) {
-        window.open('http://192.168.1.129:' + (app.port + 20000)+"/www", '_blank');
+        window.open('http://192.168.1.129:' + (app.port + 20000) + "/www", '_blank');
         window.open('http://192.168.1.129:' + (app.port + 30000), '_blank');
     }
 
