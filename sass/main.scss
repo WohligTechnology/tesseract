@@ -1019,6 +1019,17 @@ h2 {
     text-align: justify;
   }
 }
+.app-icon {
+  height: 80px;
+  overflow: hidden;
+  display: block;
+  margin-top: 25px;
+  img {
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
 .app-box {
   p {
     color: $brand-primary;
@@ -1041,17 +1052,7 @@ h2 {
       color: $brand-success;
     }
   }
-  .app-icon {
-    height: 80px;
-    overflow: hidden;
-    display: block;
-    margin-top: 25px;
-    img {
-      margin: 0 auto;
-      max-width: 100%;
-      max-height: 100%;
-    }
-  }
+
   .app-name {
     padding-top: 15px;
     font-size: 16px;
