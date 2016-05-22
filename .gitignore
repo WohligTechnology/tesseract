@@ -1,9 +1,13 @@
+# Ignore
 bower_components/
 node_modules/
 w/
 .sass-cache/
 *.tar
-production/
+production/*
 *.zip
 css/
 img2/
+
+# Allow
+!production/sitemap.xml
