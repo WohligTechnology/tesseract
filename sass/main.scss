@@ -913,9 +913,16 @@ pre {
     }
 }
 .btn-outline {
-<<<<<<< HEAD
     background-color: transparent;
     @include transition(all 300ms ease);
+    color: $brand-primary;
+    border-color: $brand-primary;
+    &:focus,
+    &:hover {
+        background-color: $brand-primary;
+        color: white;
+        border-color: $brand-primary;
+    }
     &.btn-primary {
         color: $brand-primary;
         border-color: $brand-primary;
@@ -946,44 +953,6 @@ pre {
             border-color: $brand-danger;
         }
     }
-=======
-  background-color: transparent;
-  color: $brand-primary;
-  border-color: $brand-primary;
-  @include transition(all 300ms ease);
-  &:hover, &:focus {
-    background-color: $brand-primary;
-    color: white;
-    border-color: $brand-primary;
-  }
-  &.btn-primary {
-    color: $brand-primary;
-    border-color: $brand-primary;
-    &:hover,&:focus {
-      background-color: $brand-primary;
-      color: white;
-      border-color: $brand-primary;
-    }
-  }
-  &.btn-success {
-    color: $brand-success;
-    border-color: $brand-success;
-    &:hover,&:focus {
-      background-color: $brand-success;
-      color: white;
-      border-color: $brand-success;
-    }
-  }
-  &.btn-danger {
-    color: $brand-danger;
-    border-color: $brand-danger;
-    &:hover,&:focus {
-      background-color: $brand-danger;
-      color: white;
-      border-color: $brand-danger;
-    }
-  }
->>>>>>> master
 }
 .pl0 {
     padding-left: 0;
