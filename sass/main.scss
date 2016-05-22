@@ -898,7 +898,14 @@ pre {
 }
 .btn-outline {
   background-color: transparent;
+  color: $brand-primary;
+  border-color: $brand-primary;
   @include transition(all 300ms ease);
+  &:hover, &:focus {
+    background-color: $brand-primary;
+    color: white;
+    border-color: $brand-primary;
+  }
   &.btn-primary {
     color: $brand-primary;
     border-color: $brand-primary;
