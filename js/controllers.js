@@ -8,7 +8,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.template = TemplateService.changecontent("home");
 
     $scope.menutitle = NavigationService.makeactive("Home");
-    TemplateService.title = $scope.menutitle;
+    TemplateService.title = "Build Apps with Blaze";
     $scope.navigation = NavigationService.getnav();
     $scope.$on('$viewContentLoaded', function() {
         $timeout(function() {
