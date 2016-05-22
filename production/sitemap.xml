@@ -2,51 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
-        <loc>http://www.blazen.io/</loc>
+        <loc>http://blazen.io/</loc>
     </url>
     <url>
-        <loc>http://www.blazen.io/features</loc>
+        <loc>http://blazen.io/features</loc>
     </url>
     <url>
-        <loc>http://www.blazen.io/contact</loc>
+        <loc>http://blazen.io/contact</loc>
     </url>
     <url>
-        <loc>http://www.blazen.io/login</loc>
+        <loc>http://blazen.io/login</loc>
     </url>
     <url>
-        <loc>http://www.blazen.io/register</loc>
+        <loc>http://blazen.io/register</loc>
     </url>
     <url>
-        <loc>http://www.blazen.io/forgot-password</loc>
+        <loc>http://blazen.io/forgot-password</loc>
     </url>
     <url>
-        <loc>http://www.blazen.io/blog</loc>
+        <loc>http://blazen.io/blog</loc>
     </url>
     <url>
-        <loc>http://www.blazen.io/about</loc>
+        <loc>http://blazen.io/about</loc>
     </url>
     <url>
-        <loc>http://www.blazen.io/faq</loc>
+        <loc>http://blazen.io/faq</loc>
     </url>
     <url>
-        <loc>http://www.blazen.io/terms-condition</loc>
+        <loc>http://blazen.io/terms-condition</loc>
     </url>
     <url>
-        <loc>http://www.blazen.io/privacy-policy</loc>
+        <loc>http://blazen.io/privacy-policy</loc>
     </url>
     <url>
-        <loc>http://www.blazen.io/reset-password</loc>
+        <loc>http://blazen.io/reset-password</loc>
     </url>
     <url>
-        <loc>http://www.blazen.io/my-app</loc>
+        <loc>http://blazen.io/my-app</loc>
     </url>
     <url>
-        <loc>http://www.blazen.io/documentation</loc>
+        <loc>http://blazen.io/documentation</loc>
     </url>
     <url>
-        <loc>http://www.blazen.io/documentationid</loc>
+        <loc>http://blazen.io/documentationid</loc>
     </url>
     <url>
-        <loc>http://www.blazen.io/blog-detail</loc>
+        <loc>http://blazen.io/blog-detail</loc>
     </url>
 </urlset>
