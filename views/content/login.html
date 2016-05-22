@@ -7,12 +7,12 @@
       <div class="row mt50">
          <div class="col-sm-offset-1 col-sm-4">
             <form name="login" ng-submit="doLogin();">
-                  <div class="form-group">
+                  <div class="form-group" >
                      <label class="text-style">EMAIL ADDRESS</label>
                      <input type="email" class="form-control input-style" name="email" ng-model="loginData.email" required>
                   </div>
                   <p class="colpad" ng-show="login.email.$error.required && login.email.$dirty">Invalid email address</p>
-                  <div class="form-group">
+                  <div class="form-group" >
                      <label class="text-style">PASSWORD</label>
                      <input type="password" class="form-control input-style" name="Password" ng-model="loginData.password" required>
                   </div>
@@ -20,13 +20,13 @@
 
                <div class="row">
                   <div class="col-md-6 col-sm-6">
-                     <button class="btn btn-outline brdr" type="submit">
+                     <button class="btn btn-outline brdr" type="submit"  analytics-on="click" analytics-event="Login">
                         <span class="social-f">LOG IN</span>
                      </button>
                   </div>
                   <div class="col-md-6 center">
                      <div class="class-forget">
-                        <a ui-sref="forgot-password">Forgot Password?</a>
+                        <a ui-sref="forgot-password"  analytics-on="click" analytics-event="Forgot Password">Forgot Password?</a>
                      </div>
                   </div>
                </div>
@@ -34,25 +34,26 @@
             <div class="row text-center">
                <div class="col-md-12 col-sm-12 col-xs-12">
                   <span class="or">OR</span>&nbsp;
-                  <a ui-sref="register" class="primary">Create New Account</a>
+                  <a ui-sref="register" class="primary"  analytics-on="click" analytics-event="Create Account">Create New Account</a>
+
                </div>
             </div>
          </div>
          <div class="col-sm-offset-2 col-sm-4 text-center">
                <div class="button-set">
-                  <a class="btn btn-facebook fb-icon brdr social-buttons" href="http://blazen.io/user/loginFacebook">
+                  <a class="btn btn-facebook fb-icon brdr social-buttons" href="http://blazen.io/user/loginFacebook"  analytics-on="click" analytics-event="Facebook Login">
                      <i class="fa fa-facebook social-f margin-btn float-left"></i>
                      <span class="fb">Sign in with facebook</span>
                   </a>
-                  <a class="btn btn-google google-icon brdr social-buttons" href="http://blazen.io/user/loginGoogle">
+                  <a class="btn btn-google google-icon brdr social-buttons" href="http://blazen.io/user/loginGoogle" analytics-on="click" analytics-event="Google Login">
                      <i class="fa fa-google-plus social-f margin-btn float-left"></i>
                      <span class="gp">Sign in with Google+</span>
                   </a>
-                  <a class="btn btn-twitter twitter-icon brdr social-buttons" href="http://blazen.io/user/loginTwitter">
+                  <a class="btn btn-twitter twitter-icon brdr social-buttons" href="http://blazen.io/user/loginTwitter" analytics-on="click" analytics-event="Twitter Login">
                      <i class="fa fa-twitter social-f margin-btn float-left"></i>
                      <span class="tw">Sign in with Twitter</span>
                   </a>
-                  <a class="btn btn-git git-icon brdr social-buttons" href="http://blazen.io/user/loginGithub">
+                  <a class="btn btn-git git-icon brdr social-buttons" href="http://blazen.io/user/loginGithub" analytics-on="click" analytics-event="Github Login">
                      <i class="fa fa-github-alt social-f margin-btn float-left"></i>
                      <span class="tw">Sign in with GitHub</span>
                   </a>

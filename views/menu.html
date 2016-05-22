@@ -3,11 +3,11 @@
     <a ui-sref="{{menu.link}}">{{menu.name}}</a>
     <ul class="dropdown-menu" ng-if="menu.subnav!='';">
       <li ng-repeat="submenu in menu.subnav">
-        <a ui-sref="{{submenu.link}}">{{submenu.name}}</a>
+        <a analytics-on="click" analytics-event="{{submenu.name}}" ui-sref="{{submenu.link}}">{{submenu.name}}</a>
       </li>
     </ul>
   </li>
   <span class="special">
-    <a ui-sref="register">Free Trial</a>
+    <a ui-sref="register" analytics-on="click" analytics-event="Free">Free Trial</a>
   </span>
 </ul>

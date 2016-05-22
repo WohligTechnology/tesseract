@@ -29,6 +29,7 @@
     "ui-router": "~0.2.15",
     "parallax": "https://github.com/wagerfield/parallax.git#~2.1.3",
     "hover": "Hover#^2.0.2",
-    "angularjs-imageupload-directive": "https://github.com/Mischi/angularjs-imageupload-directive.git"
+    "angularjs-imageupload-directive": "https://github.com/Mischi/angularjs-imageupload-directive.git",
+    "angulartics-google-analytics": "^0.1.4"
   }
 }

@@ -1,13 +1,14 @@
 var globalfunction = {};
 
-angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'imageupload'])
+angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'imageupload','angulartics', 'angulartics.google.analytics'])
 
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html for particular template file
+
     $scope.template = TemplateService.changecontent("home");
 
     $scope.menutitle = NavigationService.makeactive("Home");
-    TemplateService.title = $scope.menutitle;
+    TemplateService.title = "Build Apps with Blaze";
     $scope.navigation = NavigationService.getnav();
     $scope.$on('$viewContentLoaded', function() {
         $timeout(function() {
