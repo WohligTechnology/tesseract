@@ -241,13 +241,18 @@ a.navbar-brand {
     background-color: $body-bg;
 }
 .footer {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     padding: 15px 0;
     background-color: #202532;
     a {
         color: $brand-primary;
     }
+}
+.socials {
+  a {
+    padding: 0 10px;
+  }
 }
 //pricing
 .mg50 {
