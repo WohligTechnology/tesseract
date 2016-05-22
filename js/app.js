@@ -8,15 +8,15 @@ var firstapp = angular.module('firstapp', [
 
 var adminUrl = "http://localhost:1337/";
 
-firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider,$analyticsProvider) {
+firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider, $analyticsProvider) {
 
     // for http request with session
-      $analyticsProvider.virtualPageviews(true);
+    $analyticsProvider.virtualPageviews(true);
     $httpProvider.defaults.withCredentials = true;
 
     $stateProvider
 
-    .state('home', {
+        .state('home', {
         url: "/",
         templateUrl: "views/template.html",
         controller: 'HomeCtrl'
