@@ -3,6 +3,7 @@
 
 <head ng-controller="headerctrl">
     <meta charset="utf-8">
+    <base href="/" target="_blank" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,7 @@
     <link rel="shortcut icon" href="img/favicon.ico" />
     <link rel="stylesheet" type="text" href="w.css" />
     <script>
-      var isproduction=false;
+      var isproduction=true;
     </script>
     <script src="w.js"></script>
 
@@ -25,7 +26,7 @@
 <body>
 
     <div class="repeated-item" ui-view></div>
-    
+
     <!--Start of Zopim Live Chat Script-->
     <script type="text/javascript">
     window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
