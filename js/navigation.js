@@ -11,17 +11,22 @@ var navigationservice = angular.module('navigationservice', [])
         classis: "active",
         link: "features",
         subnav: []
-    }, {
-        name: "Pricing",
-        classis: "active",
-        link: "pricing",
-        subnav: []
-    }, {
-        name: "Blog",
-        classis: "active",
-        link: "blog",
-        subnav: []
-    }, {
+    },
+    //
+    // {
+    //     name: "Pricing",
+    //     classis: "active",
+    //     link: "pricing",
+    //     subnav: []
+    // }, {
+    //     name: "Blog",
+    //     classis: "active",
+    //     link: "blog",
+    //     subnav: []
+    // },
+
+
+    {
         name: "Contact",
         classis: "active",
         link: "contact",
