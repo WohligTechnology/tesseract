@@ -57,7 +57,7 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
     })
 
     .state('documentationid', {
-        url: "/documentationid",
+        url: "/documentationid/:id",
         templateUrl: "views/template.html",
         controller: 'DocumentationCtrl'
     })

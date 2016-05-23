@@ -873,13 +873,24 @@ a.navbar-brand {
             text-transform: capitalize;
             &:hover {
                 background-color: $brand-primary;
-                color: $body-bg !important;
+
+                a{
+                    color:#fff !important;
+                }
+            }
+            a{
+              &:hover{
+                    color:#fff !important;
+              }
             }
         }
     }
 }
 .actives {
     background-color: $brand-primary;
+    a{
+      color:#fff;
+    }
 }
 .doc-left-bg {
     background-color: rgb(240, 243, 248);
@@ -899,7 +910,7 @@ a.navbar-brand {
         color: $base-color;
         line-height: 190%;
         font-size: 14px;
-        font-weight: 300;
+        font-weight: 400;
     }
 }
 .highlight {
