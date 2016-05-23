@@ -362,6 +362,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 .controller('headerctrl', function($scope, TemplateService, NavigationService, $uibModal, $timeout, $state) {
     $scope.template = TemplateService;
 
+    $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+        $(window).scrollTop(0);
+    });
     globalfunction.messageModal = function(text) {
         $scope.modalText = text;
         $scope.animationsEnabled = true;
