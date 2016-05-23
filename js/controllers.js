@@ -438,31 +438,32 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.getMyApps = function(data) {
         NavigationService.getMyApps(function(data) {
             console.log(data);
-            if (data.value !== false) {
-                $scope.myApps = _.chunk(data.data, 3);
+            if (data.value != false) {
+                $scope.myApps = data.data
             } else {
                 $scope.myApps = [];
             }
-        });
-    };
+        })
+    }
     $scope.getMyApps();
 
     $scope.createApp = function() {
         NavigationService.createApp($scope.create, function(data) {
             console.log(data);
-            if (data.value !== false) {
+            if (data.value != false) {
                 if (modalInstance)
                     modalInstance.dismiss();
                 $scope.getMyApps();
-            } else if (data.value === false) {
+            } else if (data.value == false && data.data == "User not logged in") {
                 $state.go('home');
             }
-        });
-    };
+        })
+    }
 
     $scope.openApp = function(app) {
-        window.open(appurl + ":" + (app.port + 20000) + "/www", '_blank');
-        window.open(appurl + ":" + (app.port + 30000), '_blank');
+        // window.open(appurl + ":" + (app.port + 20000) + "/www", '_blank');
+        // window.open(appurl + ":" + (app.port + 30000);, '_blank');
+        window.location.href = appurl + ":" + (app.port + 30000);
     };
 
 });
