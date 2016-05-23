@@ -381,7 +381,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
         $timeout(function() {
             modalInstance.close();
-        }, 3000);
+        }, 5000);
     };
 
     $scope.doLogout = function() {
@@ -464,14 +464,16 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                 $scope.getMyApps();
             } else if (data.value == false && data.data == "User not logged in") {
                 $state.go('home');
+            } else if (data.value == true && data.data && data.data.comment == "No Empty App Created") {
+                globalfunction.messageModal("Sorry ! All the apps have been used");
             }
         })
     }
 
     $scope.openApp = function(app) {
-        // window.open(appurl + ":" + (app.port + 20000) + "/www", '_blank');
-        // window.open(appurl + ":" + (app.port + 30000);, '_blank');
-        window.location.href = appurl + ":" + (app.port + 30000);
+        window.open(appurl + ":" + (app.port + 20000), '_blank');
+        window.open(appurl + ":" + (app.port + 30000), '_blank');
+        // window.location.href = appurl + ":" + (app.port + 30000);
     };
 
 });
