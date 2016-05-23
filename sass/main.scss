@@ -974,6 +974,16 @@ pre {
 .foot-color,
 .foot-color a {
     color: #a3aec0;
+    a{
+      i{
+    @include transition(all 300ms ease);
+        &:hover{
+
+    color: #1AA3EB;
+
+        }
+      }
+    }
 }
 #{$all-text-inputs} {
     outline: 0;
@@ -1255,7 +1265,7 @@ header {
   }
 }
 .footer-menus{
-  padding: 6px 0px 15px 0px;
+    padding: 20px 0px 60px 0px;
   border-bottom: 1px solid;
 }
 .footer-pad{
