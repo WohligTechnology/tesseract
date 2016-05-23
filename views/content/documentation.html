@@ -4,7 +4,7 @@
          <div class="head text-center">
             <h2 class="color-head text-uppercase f20 margin0 mb10">Documentation</h2>
           <p>Steps Made Easy Just For You</p>
-      </div> -->
+      </div> 
 
          </div>
          <div class="row mt50">
@@ -88,7 +88,7 @@
                         <h3 class="margin0">{{contentdata.data.title}}</h3>
                         <div class="doc-desc mt15">
 
-                           <p>{{contentdata.data.content}}</p>
+                           <p ng-bind-html="contentdata.data.content"></p>
 
                            <!-- <p>Welcome! Ionic is a powerful HTML5 SDK that helps you build native-feeling mobile apps using web technologies like HTML, CSS, and Javascript.</p>
                 <p>Ionic is focused mainly on the look and feel, and UI interaction of your app. That means we aren't a replacement for PhoneGap or your favorite Javascript framework. Instead, Ionic simply fits in well with these projects in order to simplify
