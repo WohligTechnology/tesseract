@@ -1249,4 +1249,32 @@ header {
 .mb30{
   margin-bottom: 30px;
 }
+.foot-main{
+  li{
+    padding-top: 4px;
+  }
+}
+.footer-menus{
+  padding: 6px 0px 15px 0px;
+  border-bottom: 1px solid;
+}
+.footer-pad{
+  padding: 15px 0px 0px 0px;
+}
+.breadcrumb {
+  padding: 0px;
+    margin-bottom: 20px;
+    list-style: none;
+  background-color: transparent;
+    border-radius: 0;
+}
+.breadcum{
+  ol{
+    li{
+      a{
+        color:$brand-primary !important;
+      }
+    }
+  }
+}
 @import "mobile";
