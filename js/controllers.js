@@ -92,9 +92,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 .controller('DocumentationCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams, $state) {
     //Used to name the .html for particular template file
     $scope.template = TemplateService.changecontent("documentation");
-    $scope.menutitle = NavigationService.makeactive("Documentation");
+    $scope.menutitle = NavigationService.makeactive("Docs");
+    console.log("documentation");
     TemplateService.title = $scope.menutitle;
+    console.log(TemplateService);
     $scope.navigation = NavigationService.getnav();
+
     $scope.documentationdata = {};
     $scope.currentdoc = $stateParams.id;
     $scope.opencontent = function(id) {
