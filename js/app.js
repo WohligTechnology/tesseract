@@ -139,7 +139,6 @@ firstapp.filter('serverimage', function() {
             // console.log('serverimage: ', input);
             // return input;
             return imgpath + input;
-            // return "http://192.168.0.123/eurobackend/uploads"+input;
         } else {
             return "img/logo.png";
         }

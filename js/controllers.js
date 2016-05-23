@@ -1,6 +1,6 @@
 var globalfunction = {};
 
-angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'imageupload','angulartics', 'angulartics.google.analytics'])
+angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'imageupload', 'angulartics', 'angulartics.google.analytics'])
 
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html for particular template file
@@ -461,8 +461,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     };
 
     $scope.openApp = function(app) {
-        window.open('http://192.168.1.129:' + (app.port + 20000) + "/www", '_blank');
-        window.open('http://192.168.1.129:' + (app.port + 30000), '_blank');
+        window.open(appurl + ":" + (app.port + 20000) + "/www", '_blank');
+        window.open(appurl + ":" + (app.port + 30000), '_blank');
     };
 
 });
