@@ -15,6 +15,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $('.scene').parallax();
         });
     });
+
+    $scope.socialLogin = function(val) {
+        window.location.href = "http://api.blazen.io/user/" + val;
+    }
+
 })
 
 .controller('BlogCtrl', function($scope, TemplateService, NavigationService, $timeout) {
