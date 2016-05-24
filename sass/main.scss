@@ -849,12 +849,11 @@ a.navbar-brand {
 .faq-qsn {
     h5 {
         font-size: 16px;
-        line-height: 180%;
+        margin: 0 0 10px;
     }
     p {
-        line-height: 180%;
-        color: #8492a6;
-        font-size: 15px;
+        color: #777;
+        line-height: 175%;
     }
 }
 .f16 {
@@ -910,8 +909,17 @@ a.navbar-brand {
         color: $base-color;
         line-height: 190%;
         font-size: 14px;
-        font-weight: 400;
     }
+}
+.head {
+  h2 {
+    font-size: 30px;
+  }
+  p {
+    color: $brand-primary;
+    margin: 0;
+    font-weight: 300;
+  }
 }
 .highlight {
     margin: 10px 0 20px;
