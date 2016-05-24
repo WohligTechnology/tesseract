@@ -1,84 +1,94 @@
 <footer>
-  <div class="footer-menus">
-    <div class="container">
-<div class="row">
+    <div class="footer-menus">
+        <div class="container">
+            <div class="row">
 
-    <div class="col-md-3">
-      <div class="blazen-logo">
-        <div class="logo display-inline">
-           <a ui-sref="home"> <i class="icon icon-blazen"></i> Blazen</a>
+                <div class="col-md-3">
+                    <div class="blazen-logo">
+                        <div class="logo display-inline">
+                            <a ui-sref="home">
+                                <i class="icon icon-blazen"></i>
+                                Blazen</a>
+                        </div>
+                        <div class="foot-color socials">
+                            <span itemscope itemtype="https://blazen.io">
+                                <link itemprop="url" href="https://www.blazen.io">
+                                <a itemprop="sameAs" href="https://www.facebook.com/Blazen-240917366258079">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <a itemprop="sameAs" href="https://www.twitter.com/Blazendev">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a itemprop="sameAs" href="https://www.instagram.com/devblazen/">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                                <a itemprop="sameAs" href="https://www.youtube.com/channel/UClns9XDkPCf02TL8tDxmFAw">
+                                    <i class="fa fa-youtube"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+
+                    <h4 class="primary">Blazen</h4>
+                    <ul class="list-unstyled footer-hover foot-color foot-main">
+                        <li>
+                            <a ui-sref="login">Sign In</a>
+                        </li>
+                        <li>
+                            <a ui-sref="features">Features</a>
+                        </li>
+                        <li>
+                            <a ui-sref="documentation">Documentation</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div class="col-md-3">
+                    <h4 class="primary">Company</h4>
+                    <ul class=" list-unstyled foot-color footer-hover foot-main">
+                        <li>
+                            <a ui-sref="about">About</a>
+                        </li>
+                        <li>
+                            <a ui-sref="faq">FAQ</a>
+                        </li>
+                        <li>
+                            <a ui-sref="contact">Contact</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="newsletter mt15">
+                        <strong class="primary">Subscribe for Newsletter</strong>
+                        <form action="" class="pt10">
+                            <div class="input-group pretty">
+                                <input type="text" class="form-control" placeholder="Please enter email">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button">Submit</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="foot-color socials">
-          <span itemscope itemtype="https://blazen.io">
-            <link itemprop="url" href="https://www.blazen.io">
-            <a itemprop="sameAs" href="https://www.facebook.com/Blazen-240917366258079"><i class="fa fa-facebook"></i></a>
-            <a itemprop="sameAs" href="https://www.twitter.com/Blazendev"><i class="fa fa-twitter"></i></a>
-            <a itemprop="sameAs" href="https://www.instagram.com/devblazen/"><i class="fa fa-instagram"></i></a>
-            <a itemprop="sameAs" href="https://www.youtube.com/channel/UClns9XDkPCf02TL8tDxmFAw"><i class="fa fa-youtube"></i></a>
-          </span>
+    </div>
+    <div class="footer-pad">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-6 foot-color">
+                    &copy;
+                    {{template.year}}
+                    Blazen. All Rights Resvered.
+                </div>
+                <div class="col-md-6"></div>
+            </div>
         </div>
-      </div>
     </div>
-    <div class="col-md-3">
-
-      <h4 class="primary">Blazen</h4>
-      <ul class="list-unstyled footer-hover foot-color foot-main">
-        <li>
-          <a ui-sref="login">Sign In</a>
-        </li>
-        <li>
-          <a ui-sref="features">Features</a>
-        </li>
-        <li>
-          <a ui-sref="documentation">Documentation</a>
-        </li>
-
-      </ul>
-
-    </div>
-    <div class="col-md-3">
-      <h4 class="primary">Company</h4>
-      <ul class=" list-unstyled foot-color footer-hover foot-main">
-        <li>
-          <a ui-sref="about">About</a>
-        </li>
-        <li>
-          <a ui-sref="faq">FAQ</a>
-        </li>
-        <li>
-          <a ui-sref="contact">Contact</a>
-        </li>
-
-      </ul>
-    </div>
-
-    <div class="col-md-3">
-      <div class="newsletter mt15">
-        <strong class="primary">Subscribe for Newsletter</strong>
-        <form action="" class="pt10">
-          <div class="input-group pretty">
-            <input type="text" class="form-control" placeholder="Please enter email">
-            <span class="input-group-btn">
-                <button class="btn btn-primary" type="button">Submit</button>
-              </span>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-  </div>
-</div>
-<div class="footer-pad">
-  <div class="container">
-
-    <div class="row">
-      <div class="col-md-6 foot-color">
-        &copy; {{template.year}} Blazen. All Rights Resvered.
-      </div>
-      <div class="col-md-6">
-
-      </div>
-    </div>
-  </div>
-  </div>
 </footer>
