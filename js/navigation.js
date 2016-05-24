@@ -151,5 +151,11 @@ var navigationservice = angular.module('navigationservice', [])
             }
             return menuname;
         },
+        newsletterSubmit: function(data,callback) {
+          $http.post(adminurl + 'newsletter/create',data).success(callback);
+        },
+        contactSubmit: function(data,callback) {
+          $http.post(adminurl + 'contact/create',data).success(callback);
+        },
     };
 });

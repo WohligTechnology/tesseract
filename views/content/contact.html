@@ -6,36 +6,38 @@
             <p>Get In Touch With Us</p>
         </div>
 
+        <div class="row mt10">
+            <div class="col-sm-offset-1 col-sm-4">
+                <form name="myForm" class="mt50">
+                    <p ng-show="formSubmit">
+                        Your Enquiry/Suggestion is sent successfully. Thank You.
+                    </p>
+                    <div class="" ng-hide="formSubmit">
 
-    <div class="row mt10">
-      <div class="col-sm-offset-1 col-sm-4">
-        <form action="" name="myForm" class="mt50">
-        <div class="">
+                        <h4 class="login">ENQUIRY / SUGGESTION</h4>
 
-            <h4 class="login">ENQUIRY / SUGGESTION</h4>
+                        <div class="form-group">
+                            <label class="text-style">EMAIL ADDRESS</label>
+                            <input type="email" class="form-control input-style" ng-model="form.email" name="email" required>
+                        </div>
+                        <p class="colpad" ng-show="myForm.email.$error.required && myForm.email.$dirty">Invalid email address</p>
+                        <div class="form-group">
+                            <label class="text-style">MESSAGE</label>
+                            <textarea class="form-control" rows="3" style="resize: none;" name="message" ng-model="form.message" required></textarea>
+                            <p class="colpad" ng-show="myForm.message.$error.required && myForm.message.$dirty">Filled required</p>
+                        </div>
+                        <div class="text-center mt15">
+                            <button class="btn btn-outline brdr" ng-click="contactSubmit(myForm,form)">
+                                <span class="social-f">SUBMIT</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
 
-            <div class="form-group">
-                <label class="text-style">EMAIL ADDRESS</label>
-                <input type="email" class="form-control input-style"  name="email" required>
             </div>
-             <p class="colpad" ng-show="myForm.email.$error.required && myForm.email.$dirty">Invalid email address</p>
-            <div class="form-group">
-                <label class="text-style">MESSAGE</label>
-              <textarea class="form-control" rows="3" style="resize: none;" name="message" required></textarea>
-              <p class="colpad" ng-show="myForm.message.$error.required && myForm.message.$dirty">Filled required</p>
-            </div>
-            <div class="text-center mt15">
-              <button class="btn btn-outline brdr">
-                <span class="social-f">SUBMIT</span>
-              </button>
-            </div>
-        </div>
-        </form>
-
-      </div>
-      <div class="col-sm-offset-2 col-sm-4">
-        <div class="mt50">
-          <!-- <div class="row">
+            <div class="col-sm-offset-2 col-sm-4">
+                <div class="mt50">
+                    <!-- <div class="row">
             <div class="col-md-offset-1 col-md-2">
               <div class="feature-icon">
                 <i class="ln-map-marker"></i>
@@ -50,17 +52,17 @@
               </div>
             </div>
           </div> -->
-          <div class="feature-lists mt30">
-              <div class="feature-icon">
-                <i class="ln-at-sign"></i>
-              </div>
-              <div class="feature-count">
-                  <h4 class="margin0">Email</h4>
-                  <p>info@wohlig.com</p>
-              </div>
-          </div>
+                    <div class="feature-lists mt30">
+                        <div class="feature-icon">
+                            <i class="ln-at-sign"></i>
+                        </div>
+                        <div class="feature-count">
+                            <h4 class="margin0">Email</h4>
+                            <p>info@wohlig.com</p>
+                        </div>
+                    </div>
 
-          <!-- <div class="address-title">
+                    <!-- <div class="address-title">
             <h4>
               Wohlig Technology
             </h4>
@@ -68,11 +70,11 @@
             <p> Laxmi Nivas, Near Sadhana School, Sion,</p>
             <p> Mumbai, Maharashtra 400022</p>
           </div> -->
+                </div>
+                <div class="text-center" style="display:none">
+                    <h1 class="color-primary">Messange Send Successfull !!</h1>
+                </div>
+            </div>
         </div>
-        <div class="text-center" style="display:none">
-            <h1 class="color-primary">Messange Send Successfull !!</h1>
-        </div>
-      </div>
     </div>
-  </div>
 </div>

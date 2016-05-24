@@ -63,19 +63,21 @@
                 </div>
 
                 <div class="col-md-3">
-                    <div class="newsletter mt15">
+                    <div class="newsletter mt15" ng-controller = "NewsletterCtrl">
                         <strong class="primary">Subscribe for Newsletter</strong>
-                        <form class="pt10" name="myForm">
+                        <form class="pt10" name="myForm" ng-hide = "isSubmit">
 
                             <div class="input-group pretty">
-                                <input type="email" class="form-control" placeholder="Please enter email" name="email" required>
-                                  <p class="" ng-show="myForm.email.$invalid && myForm.email.$dirty">Invalid Email Address</p>
-                              
-                                <span class="input-group-btn">
+                                <input type="email" class="form-control" placeholder="Please enter email" name="email" ng-model="form.email" required>
+                                    <span class="input-group-btn" ng-click = "newsLetterSubmit(myForm,form);">
                                     <button class="btn btn-primary" type="button">Submit</button>
                                 </span>
                             </div>
+                            <p class="newsLetterValid" ng-show="myForm.email.$invalid && myForm.email.$dirty">Invalid Email Address</p>
+
                         </form>
+                        <p class="newsLetterValid"  ng-show = "isSubmit">{{submitContent}}</p>
+
                     </div>
                 </div>
             </div>

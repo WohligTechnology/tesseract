@@ -18,7 +18,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     $scope.socialLogin = function(val) {
         window.location.href = "http://api.blazen.io/user/" + val;
-    }
+    };
 
 })
 
@@ -108,7 +108,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.opencontent = function(id) {
 
         NavigationService.viewAllDocumentationSubmit($stateParams.id, function(data) {
-            if (data.value != false) {
+            if (data.value !== false) {
                 if (data.data.length > 0) {
                     var docs = [];
                     var grouped = _.groupBy(data.data, 'DocumentationCategory.name');
@@ -272,23 +272,36 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 })
 
 .controller('PricingCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-        //Used to name the .html for particular template file
-        $scope.template = TemplateService.changecontent("pricing");
+    //Used to name the .html for particular template file
+    $scope.template = TemplateService.changecontent("pricing");
 
-        $scope.menutitle = NavigationService.makeactive("Pricing");
-        TemplateService.title = $scope.menutitle;
-        $scope.navigation = NavigationService.getnav();
+    $scope.menutitle = NavigationService.makeactive("Pricing");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
 
-    })
-    .controller('ContactCtrl', function($scope, TemplateService, NavigationService, $timeout) {
-        //Used to name the .html for particular template file
-        $scope.template = TemplateService.changecontent("contact");
+})
 
-        $scope.menutitle = NavigationService.makeactive("Contact");
-        TemplateService.title = $scope.menutitle;
-        $scope.navigation = NavigationService.getnav();
+.controller('ContactCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+    //Used to name the .html for particular template file
+    $scope.template = TemplateService.changecontent("contact");
+    $scope.formSubmit = false;
+    $scope.form = {};
+    $scope.contactSubmit = function(form, data) {
+        if (form.$valid) {
+            $scope.formSubmit = true;
+            NavigationService.contactSubmit(data, function() {
+                console.log("Form is submitted");
 
-    })
+            });
+        }
+    };
+
+
+    $scope.menutitle = NavigationService.makeactive("Contact");
+    TemplateService.title = $scope.menutitle;
+    $scope.navigation = NavigationService.getnav();
+
+})
 
 .controller('LoginCtrl', function($scope, TemplateService, NavigationService, $timeout, $state) {
     //Used to name the .html for particular template file
@@ -303,13 +316,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.doLogin = function() {
         NavigationService.doLogin($scope.loginData, function(data) {
             console.log(data);
-            if (data.value != false) {
+            if (data.value !== false) {
                 $state.go('my-app');
             } else {
                 globalfunction.messageModal("Invalid login credentials");
             }
-        })
-    }
+        });
+    };
 
 })
 
@@ -326,7 +339,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         if ($scope.register.password === $scope.register.confirmpassword) {
             NavigationService.doRegister($scope.register, function(data) {
                 console.log(data);
-                if (data.value != false) {
+                if (data.value !== false) {
                     $state.go('my-app');
                 } else {
                     globalfunction.messageModal("Email id already exists");
@@ -335,6 +348,25 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         }
     };
 
+})
+
+.controller('NewsletterCtrl', function($scope, TemplateService, NavigationService, $timeout, $state) {
+    //Used to name the .html for particular template file
+    $scope.isSubmit = false;
+    $scope.submitContent = "Sending your Subscription...";
+    $scope.form = {};
+    $scope.newsLetterSubmit = function(form, data) {
+        if (form.$valid) {
+            $scope.isSubmit = true;
+            NavigationService.newsletterSubmit(data, function(data2) {
+                if (data2.value) {
+                    $scope.submitContent = "Thank you for your Subscription.";
+                } else {
+                    $scope.submitContent = "Your Email is already Subscribed.";
+                }
+            });
+        }
+    };
 })
 
 .controller('ForgotPasswordCtrl', function($scope, TemplateService, NavigationService, $timeout) {
