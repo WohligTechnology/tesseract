@@ -22,6 +22,7 @@
             <div class="form-group">
                 <label class="text-style">MESSAGE</label>
               <textarea class="form-control" rows="3" style="resize: none;" name="message" required></textarea>
+              <p class="colpad" ng-show="myForm.message.$error.required && myForm.message.$dirty">Filled required</p>
             </div>
             <div class="text-center mt15">
               <button class="btn btn-outline brdr">
