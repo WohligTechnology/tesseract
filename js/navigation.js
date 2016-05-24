@@ -1,7 +1,7 @@
-var adminurl = "https://api.blazen.io/";
-var appurl = "https://app.blazen.io";
-// var adminurl = "http://192.168.1.129:84/";
-// var appurl = "http://192.168.1.129";
+var adminurl = "http://api.blazen.io/";
+var appurl = "http://app.blazen.io";
+var adminurl = "http://192.168.1.129:84/";
+var appurl = "http://192.168.1.129";
 var imgpath = adminurl + "upload/readFile?file=";
 var uploadurl = adminurl + "upload";
 
@@ -150,12 +150,6 @@ var navigationservice = angular.module('navigationservice', [])
                 }
             }
             return menuname;
-        },
-        newsletterSubmit: function(data,callback) {
-          $http.post(adminurl + 'newsletter/create',data).success(callback);
-        },
-        contactSubmit: function(data,callback) {
-          $http.post(adminurl + 'contact/create',data).success(callback);
         },
     };
 });

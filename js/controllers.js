@@ -398,12 +398,12 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $(window).scrollTop(0);
     });
     globalfunction.messageModal = function(text) {
+        console.log("here");
         $scope.modalText = text;
         $scope.animationsEnabled = true;
         var modalInstance = $uibModal.open({
             animation: $scope.animationsEnabled,
             templateUrl: 'views/modal/modal-message.html',
-            controller: 'headerctrl',
             size: 'sm',
             scope: $scope
         });
@@ -493,21 +493,23 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.createApp = function() {
         NavigationService.createApp($scope.create, function(data) {
             console.log(data);
-            if (data.value != false) {
+            if (data.value == true && data.data.comment == "No Empty App Created") {
+                modalInstance.dismiss();
+                globalfunction.messageModal("Sorry ! All the apps have been used");
+            } else if (data.value == false && data.data == "User not logged in") {
+                $state.go('home');
+            } else if (data.value != false) {
                 if (modalInstance)
                     modalInstance.dismiss();
                 $scope.getMyApps();
-            } else if (data.value == false && data.data == "User not logged in") {
-                $state.go('home');
-            } else if (data.value == true && data.data && data.data.comment == "No Empty App Created") {
-                globalfunction.messageModal("Sorry ! All the apps have been used");
             }
         })
     }
 
     $scope.openApp = function(app) {
         window.open(appurl + ":" + (app.port + 20000), '_blank');
-        window.open(appurl + ":" + (app.port + 30000), '_blank');
+        window.open(appurl + ":" + (app.port + 30000) + "/#/key/" + app.key, '_blank');
+        // window.open("http://localhost/Night/#/key/" + app.key, '_blank');
         // window.location.href = appurl + ":" + (app.port + 30000);
     };
 
