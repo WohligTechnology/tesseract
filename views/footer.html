@@ -65,10 +65,12 @@
                 <div class="col-md-3">
                     <div class="newsletter mt15">
                         <strong class="primary">Subscribe for Newsletter</strong>
-                        <form action="" class="pt10" name="myForm">
+                        <form class="pt10" name="myForm">
+
                             <div class="input-group pretty">
-                                <input type="text" class="form-control" placeholder="Please enter email" name="email" id="" required>
-                                  <p class="" ng-show="myForm.email.$error.required && myForm.email.$dirty">Invalid Email Address</p>
+                                <input type="email" class="form-control" placeholder="Please enter email" name="email" required>
+                                  <p class="" ng-show="myForm.email.$invalid && myForm.email.$dirty">Invalid Email Address</p>
+                              
                                 <span class="input-group-btn">
                                     <button class="btn btn-primary" type="button">Submit</button>
                                 </span>

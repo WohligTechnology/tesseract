@@ -103,7 +103,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     console.log(TemplateService);
     $scope.navigation = NavigationService.getnav();
 
-    $scope.documentationdata = {};
+    // $scope.documentationdata = {};
     $scope.currentdoc = $stateParams.id;
     $scope.opencontent = function(id) {
 
