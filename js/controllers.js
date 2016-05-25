@@ -17,7 +17,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     });
 
     $scope.socialLogin = function(val) {
-        window.location.href = "http://api.blazen.io/user/" + val;
+        window.location.href = "https://api.blazen.io/user/" + val;
     };
 
 })
@@ -377,7 +377,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.navigation = NavigationService.getnav();
     $scope.forgot = {};
     $scope.forgotPassword = function() {
-        NavigationService.forgotPassword($scope.forgot, function(data) {});
+        NavigationService.forgotPassword($scope.forgot, function(data) {
+            if (data.value != false) {
+                globalfunction.messageModal("New password e-mailed to you");
+            }
+        });
     };
 
 })
