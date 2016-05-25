@@ -9,98 +9,91 @@
          </div>
          <div class="row mt50">
             <div class="col-md-offset-1 col-md-10">
-                <h2 class="color-head text-uppercase f20 margin0 mb10 text-center" ng-hide="documentationdata">Loading...</h2>
-               <div class="row" ng-show="documentationdata">
+                <!-- <h2 class="color-head text-uppercase f20 margin0 mb10 text-center" ng-hide="documentationdata">Loading...</h2> -->
+               <div class="row" >
                   <div class="col-md-3">
                      <div class="doc-left-bg">
                         <!-- <div class="doc-left-bg" ng-repeat="doc in documentationdata"> -->
-                        <div class="doc-left doc-list mt30" ng-repeat="doc in documentationdata">
-                           <h4>{{doc.name}}{{doc.status}}</h4>
+                        <div class="doc-left doc-list mt30" >
+                           <h4>Overview</h4>
                            <ul>
-                              <li ng-repeat="docs in doc.docs" ng-class="{actives: docs._id==currentdoc}" ui-sref="documentationid({id:docs._id})">
-                                 <a ng-if="docs.status=='Enable'">{{docs.title}}
+                              <li ng-repeat="docs in doc.docs"  ui-sref="documentationid({id:docs._id})">
+                                 <a >Demo
                                             </a>
                               </li>
+                              <li>
+                                <a href="">start project</a>
+                              </li>
+                              <li>
+                                <a href="">What's Included</a>
+                              </li>
+                              <li>
+                                <a href="">Browser Support </a>
+                              </li>
                            </ul>
+                           <div class="doc-left doc-list mt30">
+                             <h4>
+                       Ios
+                     </h4>
+                             <ul>
+                               <li>
+                                 <a href="">Geting started - IOS</a>
+                               </li>
+                               <li>
+                                 <a href="">step 1 - Installation</a>
+                               </li>
+                               <li>
+                                 <a href="">step 2 - Configration</a>
+                               </li>
+                               <li>
+                                 <a href="">step 3 - integration</a>
+                               </li>
+                             </ul>
+                           </div>
                         </div>
-                        <!-- <ul>
-                                        <li>{{doc.DocumentationCategory.name}}
-                                        <li class="active" ui-sref="documentationid({id:doc._id})">
-                                            {{doc.title}}
-                                        </li>
-                                    </li>
-                                </ul> -->
 
-                        <!-- <li>
-                    <a href="">Before You get start</a>
-                  </li>
-                  <li>
-                    <a href="">start project</a>
-                  </li>
-                  <li>
-                    <a href="">What's Included</a>
-                  </li>
-                  <li>
-                    <a href="">Browser Support </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="doc-left doc-list mt30">
-                <h4>
-          Ios
-        </h4>
-                <ul>
-                  <li>
-                    <a href="">Geting started - IOS</a>
-                  </li>
-                  <li>
-                    <a href="">step 1 - Installation</a>
-                  </li>
-                  <li>
-                    <a href="">step 2 - Configration</a>
-                  </li>
-                  <li>
-                    <a href="">step 3 - integration</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="doc-left doc-list mt30">
-                <h4>
-          Android
-        </h4>
-                <ul>
-                  <li>
-                    <a href="">Geting started - Android</a>
-                  </li>
-                  <li>
-                    <a href="">step 1 - Installation</a>
-                  </li>
-                  <li>
-                    <a href="">step 2 - Configration</a>
-                  </li>
-                  <li>
-                    <a href="">step 3 - integration</a>
-                  </li>
-                </ul> -->
+
                      </div>
                   </div>
                   <div class="col-md-9">
                      <div class="doc-right">
-                        <h3 class="margin0">{{contentdata.data.title}}</h3>
+                        <h3 class="margin0">Start Project</h3>
                         <div class="doc-desc mt15">
 
-                           <p ng-bind-html="contentdata.data.content|rawHtml"></p>
 
-                           <!-- <p>Welcome! Ionic is a powerful HTML5 SDK that helps you build native-feeling mobile apps using web technologies like HTML, CSS, and Javascript.</p>
-                <p>Ionic is focused mainly on the look and feel, and UI interaction of your app. That means we aren't a replacement for PhoneGap or your favorite Javascript framework. Instead, Ionic simply fits in well with these projects in order to simplify
-                  one big part of your app: the front end. We recommend reading Where does the Ionic Framework fit in? to get a good understanding of Ionic's goals. </p>
-                <p>Ionic currently requires AngularJS in order to work at its full potential. While you can still use the CSS portion of the framework, you'll miss out on powerful UI interactions, gestures, animations, and other things.</p>
-                <p>We will be releasing Cordova/PhoneGap plugins in the future to expand the capabilities of your apps. </p> -->
 
-                           <!-- <figure class="highlight">
-                  <pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>npm install -g ionic
-<span class="gp">$ </span>ionic start myproject</code></pre>
-          </figure> -->
+                           <p>Finding difficulty in making your app a dream come true? Then this Tutorial will explain you step by step how to develop your app without much hassle.</p>
+                <p>Just follow the simple steps provided by us and you will have your app  made in a jiffy.</p>
+                <div class="step-box mt30">
+
+
+                <h4 class="primary">Adding a slider to your home page could never be this easy.</h4>
+                <!-- <p>We will be releasing Cordova/PhoneGap plugins in the future to expand the capabilities of your apps. </p> -->
+<p>1. Click on the provided images or click on <code>upload file</code> to upload the images of your choice.
+</p>
+<p>2. If you have selected, provided images then you will come across a <code>edit image</code> Page.
+</p>
+<div class="sub-step">
+  <ul>
+    <li><p>Add a title or caption to your image through the help of title option.
+</p></li>
+    <li><p>You can see the preview of slider image. Incase you don't like that image then you can even upload an image of your choice by clicking on the upload file button.
+</p></li>
+    <li><p>Incase you want those sliders to take you on other article/page then you can do so by using the link option.
+</p></li>
+<figure class="highlight">
+<pre><code class="language-bash" data-lang="bash">Example: Your home page has a slider with multiple images in it and there is one slider with about us written and on whose click you want that user should reach about us page/article then this is the option available.<br>The one that are default will also appear along with the one’s that are created by you.
+</code></pre>
+</figure>
+<li><p>In future if you don't want a particular slide to exist but only for short duration then no need to delete and then again develop it ,when you have the <code>enable/disable</code> option at your disposal.    </p></li>
+<li><p>If you wish to save the changes made then click on <code>save</code> or on <code>cancel</code>.</p></li>
+  </ul>
+  <p>3. Next you will observe the set home content section. Best part of it is the WYSIWYG ("what you see is what you get") property. That is if you copy content from anywhere still you will be able to paste it in the content section.</p>
+</div>
+
+  </div>
+
+
                         </div>
                      </div>
                   </div>

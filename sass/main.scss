@@ -909,6 +909,7 @@ a.navbar-brand {
         color: $base-color;
         line-height: 190%;
         font-size: 14px;
+        text-align: justify;
     }
 }
 .head {
@@ -931,14 +932,14 @@ pre {
     border: 0;
     border-left: 4px solid #D7DBE4;
     background: $gray-lighter;
-    code {
-        padding: 0;
-        font-size: inherit;
-        color: inherit;
-        white-space: pre-wrap;
-        background-color: transparent;
-        border: 0;
-    }
+    // code {
+    //     padding: 0;
+    //     font-size: inherit;
+    //     color: inherit;
+    //     white-space: pre-wrap;
+    //     background-color: transparent;
+    //     border: 0;
+    // }
 }
 .btn-outline {
     background-color: transparent;
@@ -1316,5 +1317,20 @@ header {
 p.newsLetterValid {
     margin-top: 10px;
     color: #a3aec0;
+}
+code {
+    margin-left: 3px;
+    margin-right: 3px;
+    padding: 2px 4px;
+    font-size: 85%;
+    color: #4D8CF4;
+    background-color: #f0f3f8;
+    white-space: nowrap;
+    border-radius: 2px;
+}
+.sub-step{
+  ul{
+    list-style-type: circle;
+  }
 }
 @import "mobile";
