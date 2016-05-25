@@ -1,5 +1,12 @@
+
 var adminurl = "https://api.blazen.io/";
 var appurl = "http://app.blazen.io";
+
+var adminurl = "http://api.blazen.io:84/";
+var appurl = "http://app.blazen.io";
+// var adminurl = "http://192.168.1.129:84/";
+// var appurl = "http://192.168.1.129";
+
 var imgpath = adminurl + "upload/readFile?file=";
 var uploadurl = adminurl + "upload";
 
