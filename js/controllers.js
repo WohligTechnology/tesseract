@@ -485,33 +485,33 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.getMyApps = function(data) {
         NavigationService.getMyApps(function(data) {
             console.log(data);
-            if (data.value != false) {
-                $scope.myApps = data.data
+            if (data.value !== false) {
+                $scope.myApps = data.data;
             } else {
                 $scope.myApps = [];
             }
-        })
-    }
+        });
+    };
     $scope.getMyApps();
 
     $scope.createApp = function() {
         NavigationService.createApp($scope.create, function(data) {
             console.log(data);
-            if (data.value == true && data.data.comment == "No Empty App Created") {
+            if (data.value === true && data.data && data.data.comment === "No Empty App Created") {
                 modalInstance.dismiss();
                 globalfunction.messageModal("Sorry ! All the apps have been used");
-            } else if (data.value == false && data.data == "User not logged in") {
+            } else if (data.value === false && data.data === "User not logged in") {
                 $state.go('home');
-            } else if (data.value != false) {
+            } else if (data.value !== false) {
                 if (modalInstance)
                     modalInstance.dismiss();
                 $scope.getMyApps();
             }
-        })
-    }
+        });
+    };
 
     $scope.openApp = function(app) {
-        window.open(appurl + ":" + (app.port + 20000), '_blank');
+        // window.open(appurl + ":" + (app.port + 20000), '_blank');
         window.open(appurl + ":" + (app.port + 30000) + "/#/key/" + app.key, '_blank');
         // window.open("http://localhost/Night/#/key/" + app.key, '_blank');
         // window.location.href = appurl + ":" + (app.port + 30000);
