@@ -37,6 +37,13 @@ var navigationservice = angular.module('navigationservice', [])
         name: "Sign In",
         classis: "active",
         link: "login",
+        onLogin:1,
+        subnav: []
+    },{
+        name: "My Account",
+        classis: "active",
+        link: "my-app",
+        onLogin:2,
         subnav: []
     }, {
         name: "Docs",

@@ -1,5 +1,5 @@
 <ul class="nav navbar-nav">
-  <li class="{{menu.classis}}" ng-repeat="menu in navigation">
+  <li class="{{menu.classis}}" ng-repeat="menu in navigation" ng-if="((isLoggedin && menu.onLogin == 2) || !menu.onLogin) || (!isLoggedin && (menu.onLogin == 1 || !menu.onLogin)) " >
     <a ui-sref="{{menu.link}}">{{menu.name}}</a>
     <ul class="dropdown-menu" ng-if="menu.subnav!='';">
       <li ng-repeat="submenu in menu.subnav">

@@ -324,6 +324,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         });
     };
 
+    NavigationService.getProfile(function(data) {
+        console.log(data);
+        if (data.value !== false) {
+            $state.go('my-app');
+        }
+    });
+
 })
 
 .controller('RegisterCtrl', function($scope, TemplateService, NavigationService, $timeout, $state) {
@@ -347,6 +354,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             });
         }
     };
+
+    NavigationService.getProfile(function(data) {
+        console.log(data);
+        if (data.value !== false) {
+            $state.go('my-app');
+        }
+    });
 
 })
 
@@ -426,18 +440,21 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.doLogout = function() {
         NavigationService.doLogout(function(data) {
             console.log(data);
-            if (data.value != false) {
+            if (data.value !== false) {
                 $state.go('home');
             }
-        })
-    }
+        });
+    };
 
     NavigationService.getProfile(function(data) {
         console.log(data);
-        if (data.value != false) {
+        if (data.value !== false) {
             $scope.userData = data;
+            $scope.isLoggedin = true;
+        } else {
+            $scope.isLoggedin = false;
         }
-    })
+    });
 
 })
 
