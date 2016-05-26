@@ -167,8 +167,8 @@ a.navbar-brand {
                 }
             }
         }
-         > a,
-        .nolink {
+        .nolink,
+        > a {
             @include transition(all 300ms ease);
             border-bottom: 2px solid transparent;
             padding: 20px 5px 5px;
@@ -1332,26 +1332,33 @@ code {
         list-style-type: circle;
     }
 }
-
 .documentation ol > li {
-    color:  $base-color;
+    color: $base-color;
     line-height: 190%;
     padding: 5px;
 }
-.fancybox-outer, .fancybox-inner img{
-  opacity:1;
+.fancybox-inner img,
+.fancybox-outer {
+    opacity: 1;
 }
-.documentation ol, .documentation ul{
+.documentation ol,
+.documentation ul {
     padding-left: 16px;
 }
 .fancybox-opened .fancybox-skin {
-  border-radius: 0px;
+    border-radius: 0;
 }
-#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
-  background-image: url('../img/fancybox_sprite.png');
-  background-size: 44px 152px;
+#fancybox-loading,
+.fancybox-close,
+.fancybox-next span,
+.fancybox-prev span {
+    background-image: url('../img/fancybox_sprite.png');
+    background-size: 44px 152px;
 }
 .fancybox-overlay {
     background: rgba(0, 0, 0, 0.25);
+}
+.documentation li .row {
+    margin-top: -25px;
 }
 @import "mobile";
