@@ -383,6 +383,9 @@ a.navbar-brand {
 .mt20 {
     margin-top: 20px;
 }
+.mt10{
+  margin-top: 10px;
+}
 .icon-store {
     background: $body-bg;
     border-radius: 100%;
@@ -1336,6 +1339,7 @@ code {
     color: $base-color;
     line-height: 190%;
     padding: 5px;
+    margin-top: 30px;
 }
 .fancybox-inner img,
 .fancybox-outer {
