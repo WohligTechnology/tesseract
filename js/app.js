@@ -133,6 +133,33 @@ firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $loc
 
 });
 
+firstapp.directive('fancyboxBox', function($document) {
+    return {
+        restrict: 'EA',
+        replace: false,
+        link: function(scope, element, attr) {
+            var $element = $(element);
+            var target;
+            if (attr.rel) {
+               target = $("[rel='" + attr.rel + "']");
+            } else {
+                target = element;
+            }
+
+            target.fancybox({
+                openEffect: 'fade',
+                closeEffect: 'fade',
+                padding:0,
+                margin:20,
+                closeBtn: true,
+                helpers: {
+                    media: {}
+                }
+            });
+        }
+    };
+});
+
 firstapp.filter('serverimage', function() {
     return function(input) {
         if (input) {

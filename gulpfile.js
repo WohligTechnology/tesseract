@@ -14,6 +14,7 @@ var jsArray = [
   './bower_components/lodash/lodash.js',
   './bower_components/angulartics/dist/angulartics.min.js',
   './bower_components/angulartics-google-analytics/dist/angulartics-google-analytics.min.js',
+  './bower_components/fancyBox/source/jquery.fancybox.pack.js',
 
   //User JS
   './js/app.js',

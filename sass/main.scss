@@ -7,6 +7,7 @@
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "../bower_components/flexslider/flexslider.css";
 @import "../bower_components/font-awesome/css/font-awesome.min.css";
+@import "../bower_components/fancyBox/source/jquery.fancybox.css";
 $gray-base: #000 !default;
 $gray-darker: lighten($gray-base, 13.5%) !default; // #222
 $gray-dark: lighten($gray-base, 20%) !default; // #333
@@ -1336,5 +1337,21 @@ code {
     color:  $base-color;
     line-height: 190%;
     padding: 5px;
+}
+.fancybox-outer, .fancybox-inner img{
+  opacity:1;
+}
+.documentation ol, .documentation ul{
+    padding-left: 16px;
+}
+.fancybox-opened .fancybox-skin {
+  border-radius: 0px;
+}
+#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+  background-image: url('../img/fancybox_sprite.png');
+  background-size: 44px 152px;
+}
+.fancybox-overlay {
+    background: rgba(0, 0, 0, 0.25);
 }
 @import "mobile";

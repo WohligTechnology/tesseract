@@ -1,35 +1,36 @@
 {
-  "name": "Tesseract",
-  "version": "0.0.1",
-  "homepage": "https://www.wohlig.com",
-  "authors": [
-    "tushar@wohlig.com"
-  ],
-  "description": "Angular Framework Frontend",
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "angular-bootstrap": "^1.1.2",
-    "angular-recaptcha": "~2.2.4",
-    "angular-flexslider": "^1.3.2",
-    "angular-animate": "~1.4.6",
-    "angular-ui": "~0.4.0",
-    "animate.css": "~3.3.0",
-    "bootstrap-sass": "^3.3.6",
-    "bourbon": "^4.2.6",
-    "angular-sanitize": "~1.4.3",
-    "font-awesome": "^4.5.0",
-    "lodash": "^4.5.1",
-    "ui-router": "~0.2.15",
-    "parallax": "https://github.com/wagerfield/parallax.git#~2.1.3",
-    "hover": "Hover#^2.0.2",
-    "angularjs-imageupload-directive": "https://github.com/Mischi/angularjs-imageupload-directive.git",
-    "angulartics-google-analytics": "^0.1.4"
-  }
+    "name": "Tesseract",
+    "version": "0.0.1",
+    "homepage": "https://www.wohlig.com",
+    "authors": [
+        "tushar@wohlig.com"
+    ],
+    "description": "Angular Framework Frontend",
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "angular-bootstrap": "^1.1.2",
+        "angular-recaptcha": "~2.2.4",
+        "angular-flexslider": "^1.3.2",
+        "angular-animate": "~1.4.6",
+        "angular-ui": "~0.4.0",
+        "animate.css": "~3.3.0",
+        "bootstrap-sass": "^3.3.6",
+        "bourbon": "^4.2.6",
+        "fancyBox": "https://github.com/fancyapps/fancyBox.git#~2.1.5",
+        "angular-sanitize": "~1.4.3",
+        "font-awesome": "^4.5.0",
+        "lodash": "^4.5.1",
+        "ui-router": "~0.2.15",
+        "parallax": "https://github.com/wagerfield/parallax.git#~2.1.3",
+        "hover": "Hover#^2.0.2",
+        "angularjs-imageupload-directive": "https://github.com/Mischi/angularjs-imageupload-directive.git",
+        "angulartics-google-analytics": "^0.1.4"
+    }
 }
