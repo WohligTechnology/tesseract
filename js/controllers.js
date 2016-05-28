@@ -1,6 +1,6 @@
 var globalfunction = {};
 
-angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'imageupload', 'angulartics', 'angulartics.google.analytics'])
+angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'imageupload', 'angulartics', 'angulartics.google.analytics','angular-loading-bar'])
 
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html for particular template file
@@ -374,9 +374,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             $scope.isSubmit = true;
             NavigationService.newsletterSubmit(data, function(data2) {
                 if (data2.value) {
-                    $scope.submitContent = "Thank you for your Subscription.";
+                    $scope.submitContent = "Thank you for your subscription.";
                 } else {
-                    $scope.submitContent = "Your Email is already Subscribed.";
+                    $scope.submitContent = "Your have already subscribed.";
                 }
             });
         }
@@ -394,6 +394,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         NavigationService.forgotPassword($scope.forgot, function(data) {
             if (data.value != false) {
                 globalfunction.messageModal("New password e-mailed to you");
+            } else if (data.value == false && data.data && data.data.comment == "User not found") {
+                globalfunction.messageModal("Your email id is not registered with us");
+            } else if (data.value == false && data.data && data.data.comment == "User logged in through social login") {
+                globalfunction.messageModal("Your have registerd using social login");
             }
         });
     };
@@ -458,7 +462,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 })
 
-.controller('MyAppCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams, $uibModal, $state) {
+.controller('MyAppCtrl', function($scope, TemplateService, NavigationService, $timeout, $stateParams, $uibModal, $state, $filter) {
     //Used to name the .html for particular template file
     $scope.template = TemplateService.changecontent("my-app");
     $scope.menutitle = NavigationService.makeactive("My Apps");
@@ -467,6 +471,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     TemplateService.header = 'views/header-app.html';
     var modalInstance = '';
     $scope.create = {};
+    $scope.searchApp = {}
+    $scope.searchApp.search = '';
 
     NavigationService.getProfile(function(data) {
         console.log(data);
@@ -483,7 +489,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         });
     };
 
-    $scope.edit = function() {
+    $scope.editOpen = function(edit) {
+        $scope.edit = _.cloneDeep(edit);
         modalInstance = $uibModal.open({
             animation: $scope.animationsEnabled,
             templateUrl: 'views/modal/app-edit.html',
@@ -513,7 +520,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     $scope.createApp = function() {
         NavigationService.createApp($scope.create, function(data) {
-            console.log(data);
             if (data.value === true && data.data && data.data.comment === "No Empty App Created") {
                 modalInstance.dismiss();
                 globalfunction.messageModal("Sorry ! All the apps have been used");
@@ -524,6 +530,23 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     modalInstance.dismiss();
                 $scope.getMyApps();
             }
+            $scope.create = {};
+        });
+    };
+
+    $scope.editApp = function() {
+        NavigationService.editApp($scope.edit, function(data) {
+            if (data.value === true && data.data && data.data.comment === "No Empty App Created") {
+                modalInstance.dismiss();
+                globalfunction.messageModal("Sorry ! All the apps have been used");
+            } else if (data.value === false && data.data === "User not logged in") {
+                $state.go('home');
+            } else if (data.value !== false) {
+                if (modalInstance)
+                    modalInstance.dismiss();
+                $scope.getMyApps();
+            }
+            $scope.edit = {};
         });
     };
 

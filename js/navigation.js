@@ -1,5 +1,5 @@
 var adminurl = "https://api.blazen.io/";
-var appurl = "https://app.blazen.io";
+var appurl = "http://app.blazen.io";
 // var adminurl = "http://192.168.1.129:84/";
 // var appurl = "http://192.168.1.129";
 var imgpath = adminurl + "upload/readFile?file=";
@@ -75,10 +75,24 @@ var navigationservice = angular.module('navigationservice', [])
                 data: obj
             }).success(callback);
         },
+        editApp: function(obj, callback) {
+            $http({
+                url: adminurl + 'port/save',
+                method: 'POST',
+                data: obj
+            }).success(callback);
+        },
         getMyApps: function(callback) {
             $http({
                 url: adminurl + 'port/getApp',
                 method: 'POST'
+            }).success(callback);
+        },
+        newsletterSubmit: function(obj, callback) {
+            $http({
+                url: adminurl + 'newsletter/create',
+                method: 'POST',
+                data: obj
             }).success(callback);
         },
         viewAllDocumentationSubmit: function(id, callback) {

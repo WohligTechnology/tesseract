@@ -1,39 +1,40 @@
 <section>
-    <div class="container">
-        <div class="mt30">
-            <div class="row">
-                <div class="col-md-4" ng-repeat="app in myApps">
-                    <div class="app-box mb15">
-                        <button class="btn btn-danger btn-icon btn-float app-hover left fa fa-trash" ng-click="delete()"></button>
-                        <button class="btn btn-default btn-icon btn-float app-hover fa fa-pencil" ng-click="edit()"></button>
-                        <div class="app-icon" ng-click="openApp(app);">
-                            <img ng-src="img/placeholder.jpg" ng-if="!app.image">
-                            <img ng-src="{{app.image | serverimage}}" ng-if="app.image">
-                        </div>
-                        <div class="app-name">
-                            <span>{{app.title}}</span>
-                        </div>
-                        <div class="app-date">
-                            <p>
-                                <span>Last Modified
-                                </span>:
-                                {{app.timestamp | date : 'mediumDate'}}</p>
-                            <!-- <p><span>Valid till </span>: Feb. 30, 16</p> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <!-- <div class="app-box" ng-click="createApp()"> -->
-                    <div class="app-box mb15" ng-click="open()">
-                        <div class="new-app mt45">
-                            <span>+</span>
-                        </div>
-                        <div class="app-name">
-                            <span>Create new app</span>
-                        </div>
-                    </div>
-                </div>
+   <div class="container">
+      <div class="mt30">
+         <div class="row">
+            <div class="col-md-4" ng-repeat="app in myApps">
+               <div class="app-box mb15">
+                  <button class="btn btn-danger btn-icon btn-float app-hover left fa fa-trash" ng-click="delete()"></button>
+                  <button class="btn btn-default btn-icon btn-float app-hover fa fa-pencil" ng-click="editOpen(app)"></button>
+                  <div ng-click="openApp(app);">
+                     <div class="app-icon">
+                        <img ng-src="img/placeholder.jpg" ng-if="!app.image">
+                        <img ng-src="{{app.image | serverimage}}" ng-if="app.image">
+                     </div>
+                     <div class="app-name">
+                        <span>{{app.title}}</span>
+                     </div>
+                     <div class="app-date">
+                        <p>
+                           <span>Last Modified
+                                </span>: {{app.timestamp | date : 'mediumDate'}}</p>
+                        <!-- <p><span>Valid till </span>: Feb. 30, 16</p> -->
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
+            <div class="col-md-4">
+               <!-- <div class="app-box" ng-click="createApp()"> -->
+               <div class="app-box mb15" ng-click="open()">
+                  <div class="new-app mt45">
+                     <span>+</span>
+                  </div>
+                  <div class="app-name">
+                     <span>Create new app</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
 </section>
