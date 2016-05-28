@@ -20,22 +20,22 @@
                   <span class="nolink"><i class="fa fa-search" ng-class="{'fa-close' : showSearch==true}"></i></span>
                </li>
                <li>
-                  <a href="">Docs</a>
+                  <a ui-sref="documentation">Docs</a>
                </li>
-               <li>
-                  <a href="">Forum</a>
-               </li>
+               <!-- <li>
+                  <a ui-sref="">Forum</a>
+               </li> -->
                <li>
                   <a href="">{{userData.name}} <i class="fa fa-caret-down"></i></a>
                   <ul class="dropdown-menu">
-                     <li>
-                        <a href="">Account</a>
+                     <!-- <li>
+                        <a ui-sref="">Account</a>
                      </li>
                      <li>
-                        <a href="">Billing</a>
-                     </li>
+                        <a ui-sref="">Billing</a>
+                     </li> -->
                      <li ng-click="doLogout();">
-                        <a href="">Log out</a>
+                        <a>Log out</a>
                      </li>
                   </ul>
                </li>
