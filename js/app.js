@@ -8,11 +8,13 @@ var firstapp = angular.module('firstapp', [
 
 var adminUrl = "http://localhost:1337/";
 
-firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider, $analyticsProvider) {
+firstapp.config(function($stateProvider, $urlRouterProvider, $httpProvider, $locationProvider, $analyticsProvider, cfpLoadingBarProvider) {
 
     // for http request with session
     $analyticsProvider.virtualPageviews(true);
     $httpProvider.defaults.withCredentials = true;
+    cfpLoadingBarProvider.includeSpinner = false;
+    cfpLoadingBarProvider.includeBar = true;
 
     $stateProvider
 
@@ -141,7 +143,7 @@ firstapp.directive('fancyboxBox', function($document) {
             var $element = $(element);
             var target;
             if (attr.rel) {
-               target = $("[rel='" + attr.rel + "']");
+                target = $("[rel='" + attr.rel + "']");
             } else {
                 target = element;
             }
@@ -149,8 +151,8 @@ firstapp.directive('fancyboxBox', function($document) {
             target.fancybox({
                 openEffect: 'fade',
                 closeEffect: 'fade',
-                padding:0,
-                margin:20,
+                padding: 0,
+                margin: 20,
                 closeBtn: true,
                 helpers: {
                     media: {}
@@ -261,11 +263,11 @@ firstapp.directive('uploadImage', function($http) {
     };
 });
 firstapp.filter('rawHtml', ['$sce',
-function($sce) {
-  return function(val) {
-    return $sce.trustAsHtml(val);
-  };
-}
+    function($sce) {
+        return function(val) {
+            return $sce.trustAsHtml(val);
+        };
+    }
 ])
 firstapp.directive('imageonload', function() {
     return {

@@ -1,23 +1,23 @@
 <section>
+   <form ng-submit="editApp();">
+      <div class="modal-content">
+         <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="$dismiss()">
+               <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title text-center">Edit Application</h4>
+         </div>
 
-   <div class="modal-content">
-      <div class="modal-header">
-         <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="$dismiss()">
-            <span aria-hidden="true">&times;</span>
-         </button>
-         <h4 class="modal-title text-center">Edit Application</h4>
-      </div>
-      <form ng-submit="">
          <div class="modal-body">
             <div class="row">
                <div class="col-md-4">
                   <div class="text-center">
                      <div class="app-icon upload-app">
-                        <img src="img/placeholder.jpg" ng-if="!create.image">
-                        <img ng-src="{{create.image | serverimage}}" ng-if="create.image">
+                        <img src="img/placeholder.jpg" ng-if="!edit.image">
+                        <img ng-src="{{edit.image | serverimage}}" ng-if="edit.image">
                      </div>
                      <div class="upload-btn">
-                        <upload-image ng-model="create.image" no-view></upload-image>
+                        <upload-image ng-model="edit.image" no-view></upload-image>
                      </div>
                   </div>
                </div>
@@ -25,7 +25,7 @@
                   <div class="name-submit">
                      <form action="">
                         <span>Application Name</span>
-                        <input type="text" class="form-control" placeholder="Please enter your application name" ng-model="create.title" required>
+                        <input type="text" class="form-control" placeholder="Please enter your application name" ng-model="edit.title" required>
                      </form>
                   </div>
                </div>
@@ -34,7 +34,6 @@
          <div class="modal-footer">
             <button type="submit" class="btn btn-small btn-primary btn-outline" ng-click="">Save</button>
          </div>
-      </form>
-   </div>
-
+      </div>
+   </form>
 </section>
