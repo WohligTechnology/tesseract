@@ -1285,6 +1285,11 @@ header {
     &.left {
         left: 10px;
     }
+    &.btn-floatbottom {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
 }
 .mb30 {
     margin-bottom: 30px;

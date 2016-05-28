@@ -32,6 +32,7 @@
     "hover": "Hover#^2.0.2",
     "angularjs-imageupload-directive": "https://github.com/Mischi/angularjs-imageupload-directive.git",
     "angulartics-google-analytics": "^0.1.4",
-    "angular-loading-bar": "^0.9.0"
+    "angular-loading-bar": "^0.9.0",
+    "jStorage": "^0.4.12"
   }
 }

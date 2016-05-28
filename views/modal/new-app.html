@@ -32,7 +32,8 @@
             </div>
          </div>
          <div class="modal-footer">
-            <button type="submit" class="btn btn-small btn-primary btn-outline">Save</button>
+            <button type="submit" class="btn btn-small btn-primary btn-outline" ng-if="!isCreating">Save</button>
+            <button type="button" class="btn btn-small btn-primary btn-outline" ng-if="isCreating" disabled>Creating App..</button>
          </div>
 
       </div>

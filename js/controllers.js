@@ -1,6 +1,6 @@
 var globalfunction = {};
 
-angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'imageupload', 'angulartics', 'angulartics.google.analytics','angular-loading-bar'])
+angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'imageupload', 'angulartics', 'angulartics.google.analytics', 'angular-loading-bar'])
 
 .controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
     //Used to name the .html for particular template file
@@ -317,6 +317,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         NavigationService.doLogin($scope.loginData, function(data) {
             console.log(data);
             if (data.value !== false) {
+                $.jStorage.set("isLoggedin", true);
                 $state.go('my-app');
             } else {
                 globalfunction.messageModal("Invalid login credentials");
@@ -347,6 +348,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             NavigationService.doRegister($scope.register, function(data) {
                 console.log(data);
                 if (data.value !== false) {
+                    $.jStorage.set("isLoggedin", true);
                     $state.go('my-app');
                 } else {
                     globalfunction.messageModal("Email id already exists");
@@ -356,7 +358,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     };
 
     NavigationService.getProfile(function(data) {
-        console.log(data);
         if (data.value !== false) {
             $state.go('my-app');
         }
@@ -445,20 +446,26 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         NavigationService.doLogout(function(data) {
             console.log(data);
             if (data.value !== false) {
+                $.jStorage.flush();
                 $state.go('home');
             }
         });
     };
 
     NavigationService.getProfile(function(data) {
-        console.log(data);
         if (data.value !== false) {
             $scope.userData = data;
-            $scope.isLoggedin = true;
+            $.jStorage.set("isLoggedin", true);
         } else {
+            $.jStorage.flush();
             $scope.isLoggedin = false;
         }
     });
+    if ($.jStorage.get('isLoggedin')) {
+        $scope.isLoggedin = true;
+    } else {
+        $scope.isLoggedin = false;
+    }
 
 })
 
@@ -473,6 +480,8 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
     $scope.create = {};
     $scope.searchApp = {}
     $scope.searchApp.search = '';
+    $scope.isCreating = false;
+    $scope.showLoading = true;
 
     NavigationService.getProfile(function(data) {
         console.log(data);
@@ -514,11 +523,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             } else {
                 $scope.myApps = [];
             }
+            $scope.showLoading = false;
         });
     };
     $scope.getMyApps();
 
     $scope.createApp = function() {
+        $scope.isCreating = true;
         NavigationService.createApp($scope.create, function(data) {
             if (data.value === true && data.data && data.data.comment === "No Empty App Created") {
                 modalInstance.dismiss();
@@ -530,6 +541,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     modalInstance.dismiss();
                 $scope.getMyApps();
             }
+            $scope.isCreating = false;
             $scope.create = {};
         });
     };
@@ -550,11 +562,21 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         });
     };
 
-    $scope.openApp = function(app) {
-        // window.open(appurl + ":" + (app.port + 20000), '_blank');
+    $scope.openBack = function(app) {
         window.open(appurl + ":" + (app.port + 30000) + "/#/key/" + app.key, '_blank');
-        // window.open("http://localhost/Night/#/key/" + app.key, '_blank');
-        // window.location.href = appurl + ":" + (app.port + 30000);
+    };
+
+    $scope.openApp = function(app) {
+        var width = 400;
+        var height = screen.height;
+        var left = screen.width - 400;
+        var top = 0;
+        var params = 'width=' + width + ', height=' + height;
+        params += ', top=' + top + ', left=' + left;
+        newwin = window.open(appurl + ":" + (app.port + 20000), 'customWindow', params);
+        if (window.focus) {
+            newwin.focus()
+        }
     };
 
 });
