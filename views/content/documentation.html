@@ -11,7 +11,7 @@
         <div class="row mt50">
             <div class="col-md-offset-1 col-md-10">
                 <!-- <h2 class="color-head text-uppercase f20 margin0 mb10 text-center" ng-hide="documentationdata">Loading...</h2> -->
-                <div class="row">
+                <div class="row" ng-init="showStart=1;">
                     <div class="col-md-3">
                         <div class="doc-left-bg">
                             <!-- <div class="doc-left-bg" ng-repeat="doc in documentationdata"> -->
@@ -22,15 +22,74 @@
                                         <a>Demo
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="">start project</a>
-                                    </li>
-                                    <li>
-                                        <a href="">What's Included</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Browser Support
-                                        </a>
+                                    <li class="active">
+                                        <li ng-class="{'active':showStart==1}">
+                                            <a href="" ng-click="showStart=1;">start project</a>
+                                        </li>
+                                        <li ng-class="{'active':showStart==2}">
+                                            <a href="" ng-click="showStart=2;">Navigation</a>
+                                        </li>
+
+                                        <li ng-class="{'active':showStart==3}">
+                                            <a href="" ng-click="showStart=3;">Login and SignUp</a>
+
+                                        </li>
+                                        <li ng-class="{'active':showStart==4}">
+                                            <a href="" ng-click="showStart=4;">Notification</a>
+
+                                        </li>
+                                        <li ng-class="{'active':showStart==5}">
+                                            <a href="" ng-click="showStart=5;">Events</a>
+
+                                        </li>
+                                        <li ng-class="{'active':showStart==6}">
+                                            <a href="" ng-click="showStart=6;">Blog</a>
+
+                                        </li>
+                                        <li ng-class="{'active':showStart==7}">
+                                            <a href="" ng-click="showStart=7;">Article</a>
+
+                                        </li>
+                                        <li ng-class="{'active':showStart==8}">
+                                            <a href="" ng-click="showStart=8;">Photo Gallery</a>
+
+                                        </li>
+                                        <li ng-class="{'active':showStart==9}">
+                                            <a href="" ng-click="showStart=9;">Video Gallery</a>
+
+                                        </li>
+                                        <li ng-class="{'active':showStart==10}">
+                                            <a href="" ng-click="showStart=10;">Contact</a>
+
+                                        </li>
+                                        <li ng-class="{'active':showStart==11}">
+                                            <a href="" ng-click="showStart=11;">Audio Gallery</a>
+
+                                        </li>
+                                        <li ng-class="{'active':showStart==12}">
+                                            <a href="" ng-click="showStart=12;">Intro Slider</a>
+
+                                        </li>
+                                        <li ng-class="{'active':showStart==13}">
+                                            <a href="" ng-click="showStart=13;">Users</a>
+
+                                        </li>
+                                        <li ng-class="{'active':showStart==14}">
+                                            <a href="" ng-click="showStart=14;">Configration</a>
+
+                                        </li>
+                                        <li ng-class="{'active':showStart==15}">
+                                            <a href="" ng-click="showStart=15;">Enquiry</a>
+
+                                        </li>
+                                        <li ng-class="{'active':showStart==16}">
+                                            <a href="" ng-click="showStart=16;">About Us</a>
+
+                                        </li>
+                                        <li ng-class="{'active':showStart==17}">
+                                            <a href="" ng-click="showStart=17;">FAQ</a>
+
+                                        </li>
                                     </li>
                                 </ul>
                                 <div class="doc-left doc-list mt30">
@@ -57,7 +116,7 @@
                         </div>
                     </div>
                     <div class="col-md-9">
-                        <div class="doc-right">
+                        <div class="doc-right doc1" ng-if="showStart==1">
                             <h3 class="margin0">Start Project</h3>
                             <div class="doc-desc mt15">
 
@@ -135,9 +194,804 @@
 
                             </div>
                         </div>
+                        <div class="doc-right doc2" ng-if="showStart==2">
+                            <h3 class="margin0">Navigation</h3>
+                            <div class="doc-desc mt15">
+
+                                <p>Navigation forms the base of your site as it will provide access to other pages/articles of your site
+                                </p>
+
+                                <div class="step-box mt30">
+
+                                    <ol>
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-md-3">You will find the
+                                                    <code>Create</code>button at the right side which will help you start off with your navigation.
+                                                </div>
+                                                <div class="col-md-9">
+
+                                                    <a href="img/n1.jpg" fancybox-box><img src="img/n1.jpg" class="img-responsive" /></a>
+
+                                                    <!-- <a href="img/dashboard.png" fancybox-box><img src="img/dashboard.png" class="img-responsive" /></a> -->
+
+                                                </div>
+                                            </div>
+
+                                        </li>
+                                        <li>Now you will observe the create navigation page in which their are various options further available.
+
+                                            <a href="img/n2.jpg" fancybox-box><img src="img/n2.jpg" class="img-responsive mt10" /></a>
+
+                                            <!-- <a href="img/dashboard.png" fancybox-box><img src="img/dashboard.png" class="img-responsive" /></a> -->
+
+
+                                            <div class="sub-step">
+                                                <ul>
+                                                    <li>
+                                                        <p>NAME-Here you need to fill in the name of your individual articles.
+                                                        </p>
+                                                        <p>eg:HOME,ABOUT,CAREERS etc.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>SELECT ICON:Here you are been provided with a list of icons from which you can choose to use as a logo for each navigation name.
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>ENABLE:It might happen that you don't anymore want a particular article to appear on your site then you can simply disable it with the enable(ON)/disable(OFF)button.
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>LINK:You can link that article further to any other article that you wish.If also later you wish like changing the link you can do it with ease by simply clicking on the CHANGE LINK.</p>
+                                                        <p> In links you further have the option of linking all the photo galleries/video galleries or a single photo gallery/video gallery and placing it in the navigation itself.</p>
+                                                    </li>
+
+
+
+                                                    <li>
+                                                        <p>If you wish to save the changes made then click on
+                                                            <code>save</code> or on
+                                                            <code>cancel</code>.</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            Follow the step 2 again every time you want a new article to be created and which needs to be in navigation.
+
+                                        </li>
+                                        <li>
+                                            Once you are done with the CREATE part you will find the entire navigation made by you with further options at the extreme right.
+
+
+                                        </li>
+                                        <div class="sub-step">
+                                            <ul>
+                                                <li>
+                                                    <p>STAR SIGN-This sign on click turns into yellow which indicates that,the particular article has become default (i.e Whenever your site loads that article will be the first to appear to user on your site
+                                                        page. )
+
+                                                    </p>
+
+                                                </li>
+                                                <li>
+                                                    <p>PENCIL SIGN(BLUE COLOURED)-By means of it you can edit your article content. eg:If you no longer like the icon that you had initially used for about us article then click on edit icon(BLUE COLOURED)-->goto
+                                                        <code>select</code> icon-->select another icon from the list provided in dropdown-->click <code>SAVE</code>
+
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>DELETE SIGN(RED COLOURED): No longer wanted articles can be deleted by clicking on this icon.On clicking a popup will appear that will ask whether you surely want to delete it.
+
+                                                    </p>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+
+
+                                    </ol>
+                                    <!-- <p>We will be releasing Cordova/PhoneGap plugins in the future to expand the capabilities of your apps. </p> -->
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="doc-right doc3" ng-if="showStart==3">
+                            <h3 class="margin0">Login and SignUp</h3>
+                            <div class="doc-desc mt15">
+
+
+                                <p>Various options are provided for LOGIN/SIGNUP SETTING</p>
+                                <div class="step-box mt30">
+
+
+
+                                    <ol>
+                                        <li>
+
+                                            <p>Set LOGIN/SIGNUP-If you keep it disabled then there won’t be any LOGIN/SIGNUP concept for your app.</p>
+
+
+                                        </li>
+                                        <li>LOGIN AND SIGNUP can be possible with many modes-</li>
+
+
+
+
+                                        <!-- <a href="img/dashboard.png" fancybox-box><img src="img/dashboard.png" class="img-responsive" /></a> -->
+
+
+                                        <div class="sub-step">
+                                            <ul>
+                                                <ol type="a">
+                                                    <li>
+                                                        CUSTOM LOGIN / SIGNUP-By means of this you will provide only custom login/signup option to your clients/users.
+                                                        <p>No social logins will be possible</p>
+                                                        <a href="img/l1.jpg" fancybox-box><img src="img/l1.jpg" class="img-responsive" /></a>
+                                                    </li>
+                                                    <li>GOOGLE LOGIN- In order to login through google you need to provide-
+                                                        <a href="img/l2.jpg" fancybox-box><img src="img/l2.jpg" class="img-responsive mt10" /></a>
+                                                        <ul>
+                                                            <li>
+                                                                GOOGLE CLIENT ID-Google will provide you a client id and you need to paste it here.
+                                                            </li>
+                                                            <li>GOOGLE CLIENT ID-Google will provide you a client id and you need to paste it here.</li>
+                                                        </ul>
+
+                                                    </li>
+                                                    <li>FACEBOOK LOGIN- In order to login through facebook you need to provide
+                                                        <a href="img/l3.jpg" fancybox><img src="img/l3.jpg" class="img-responsive"></a>
+                                                        <ul>
+                                                            <li>
+                                                                FACEBOOK APP ID-Google will provide you a client id and you need to paste it here.
+                                                            </li>
+                                                            <li>FACEBOOK APP SECRET-</li>
+
+                                                        </ul>
+                                                        <li>TWITTER LOGIN- In order to login through twitter you need to provide
+                                                            <a href="img/l4.jpg" fancybox><img src="img/l4.jpg" class="img-responsive"></a>
+                                                            <ul>
+                                                                <li>TWITTER CUSTOMER KEY-</li>
+                                                                <li>TWITTER CUSTOMER SECRET-</li>
+                                                            </ul>
+                                                        </li>
+                                                    </li>
+                                                    <li>INSTAGRAM LOGIN- INSTAGRAM LOGIN-
+                                                        <a href="img/l5.jpg" fancybox><img src="img/l5.jpg" class="img-responsive"></a>
+                                                        <ul>
+                                                            <li>INSTAGRAM CLIENT ID-</li>
+                                                            <li>INSTAGRAM CLIENT SECRET
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ol>
+
+
+
+                                            </ul>
+
+
+                                        </div>
+                                        <li>Once done click on <code>SAVE</code> button.</li>
+
+
+
+
+
+
+
+
+
+                                </div>
+
+
+
+
+
+
+
+                                <!-- <p>We will be releasing Cordova/PhoneGap plugins in the future to expand the capabilities of your apps. </p> -->
+
+
+
+                            </div>
+
+                        </div>
+                        <div class="doc-right doc4" ng-if="showStart==4">
+                            <h3 class="margin0">Notification</h3>
+                            <div class="doc-desc mt15">
+
+
+
+
+                                <ol>
+                                    <li>
+                                        <p> For sending notifications you will need a account on google cloud messaging. There you will be provided with a server key and a passphrase which on entering you will be able to send notifications to your users about
+                                            any updates or additions.</p>
+                                        <a href="img/notification.png" fancybox-box><img src="img/notification.png" class="img-responsive" /></a>
+
+                                    </li>
+
+                                    <li>SEND NOTIFICATION-
+                                        <div class="sub-step">
+                                            <ul>
+                                                <li>LINK:In this you need to provide link to the notification(i.e on clicking that notification which page/article should open).</li>
+                                                <a href="img/no2.jpg" fancybox><img src="img/no2.jpg"  class="img-responsive"></a>
+                                                <li>IMAGE:Add the image that has a relation with the notification.</li>
+                                                <a href="img/no1.jpg" fancybox><img src="img/no1.jpg"  class="img-responsive"></a>
+                                                <li>ENABLE:You can enable/disable the notification.</li>
+                                                <li>MESSAGE:Here you can type the message as in what exactly the notification is all about.</li>
+                                    </li>
+
+                                    </ul>
+                                    </div>
+                                </ol>
+
+                                <!-- <p>We will be releasing Cordova/PhoneGap plugins in the future to expand the capabilities of your apps. </p> -->
+
+
+
+                            </div>
+
+                        </div>
+                        <div class="doc-right doc5" ng-if="showStart==5">
+                            <h3 class="margin0">Events</h3>
+                            <div class="doc-desc mt15">
+                                EVENTS-
+                                <p>If you have a certain event organised for your clients then events option is made available, through which your clients will be notified and they will thus be able to attend that event.</p>
+                                <div class="sub-step">
+                                    <ul>
+                                        <li>
+                                            <p>TITLE-Provide title to your event(eg:Opening ceremony of our new branch)</p>
+                                            <a href="img/e1.jpg"><img src="img/e1.jpg" alt="" class="img-responsive"></a>
+                                        </li>
+                                        <li>
+                                            <p>VENUE-Provide the address where the event is going to take place.</p>
+                                        </li>
+                                        <li>
+                                            <p>CONTENT-Add content , basically a short description about the events that are going to take place at the described venue.You can even beautify it by the various options made available to you.</p>
+                                        </li>
+                                        <li>
+                                            <p>START &amp; END DATE-If the function is going to be for long duration ( eg: college fest ) then you can also provide start date and end date.</p>
+                                        </li>
+                                        <li>
+                                            <p> START &amp; END TIME-If the function is going to be for a specific time period then provide the same.</p>
+                                        </li>
+                                        <li>
+                                            <p>EVENT BANNER-The first look of your event( eg:image) can be provided through the UPLOAD FILE button.</p>
+                                        </li>
+                                        <a href="img/e2.jpg"><img src="img/e2.jpg" alt="" class="img-responsive"></a>
+                                    </ul>
+                                </div>
+                                <p>There are two ways in which you can provide info of your event in just a click-</p>
+
+                                <ol type="a">
+                                    <li>Images-Adding multiple event images can be done by means of the UPLOAD FILES button.</li>
+                                    <li>Videos-If you have a video to show then it can be done with the help of UPLOAD VIDEO button.</li>
+                                </ol>
+
+
+
+
+                                <!-- <p>We will be releasing Cordova/PhoneGap plugins in the future to expand the capabilities of your apps. </p> -->
+
+
+
+                            </div>
+
+                        </div>
+                        <div class="doc-right doc6" ng-if="showStart==6">
+                            <h3 class="margin0">Blog</h3>
+                            <div class="doc-desc mt15">
+
+                                <p>On this page you may find the SETTINGS button next to TUTORIALS button where you can select from four options basically:-</p>
+                                <p> *CMS , *WORDPRESS , *TUMBLR , *SELF HOSTED WORDPRESS BLOG </p>
+                                <ol type="a">
+                                    <li>CMS-When you click on CMS(Content Management System) you will observe a CREATE BLOG page</li>
+                                    <a href="img/b1.jpg"><img src="img/b1.jpg" alt="" class="img-responsive"></a>
+                                    <div class="sub-step">
+                                        <ul>
+                                            <li>
+                                                <p>TITLE-Add title to your blog wherein people will know exactly what type of blog it is going to be.</p>
+                                            </li>
+                                            <li>
+                                                <p>CONTENT:Next you will observe the content section.Best part of it is the WYSIWYG("what you see is what you get")property.That is if you copy content from anywhere still you will be able to paste it in the
+                                                    content section and it will appear in the same format.</p>
+                                            </li>
+                                            <li>
+                                                <p>DATE:Add date to your blog so that your clients/users will know when you have written the blog or when you have updated certain content.</p>
+                                            </li>
+                                            <li>
+                                                <p>Once you are done with the create part you can edit it or delete it .</p>
+                                            </li>
+                                            <li>
+                                                <p>IMAGE UPLOAD:You can add an image if you want ,to your blog by using the <code>UPLOAD IMAGE</code> button.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <li>
+                                        <p>TUMBLR &amp; WORDPRESS-Here you need to provide user name of your Tumblr or wordpress account.</p>
+                                        </li>
+                                        <p>Tumblr</p>
+                                        <a href="img/b4.jpg"><img src="img/b4.jpg" alt="" class="img-responsive"></a>
+                                        <p>WordPress</p>
+                                        <a href="img/b2.jpg"><img src="img/b2.jpg" alt="" class="img-responsive"></a>
+
+                                    <li>
+                                        <p>SELF HOSTED-You can self host your app with the help of wordpress.</p>
+                                        <a href="img/b3.jpg"><img src="img/b3.jpg" alt="" class="img-responsive"></a>
+                                    </li>
+                                </ol>
+
+
+
+
+                                <!-- <p>We will be releasing Cordova/PhoneGap plugins in the future to expand the capabilities of your apps. </p> -->
+
+
+
+                            </div>
+
+                        </div>
+                        <div class="doc-right doc7" ng-if="showStart==7">
+                            <h3 class="margin0">Article</h3>
+                            <div class="doc-desc mt15">
+
+                                <div class="sub-step">
+                                    <ul>
+                                      <p>
+                                        <a href="img/a1.jpg"><img src="img/a1.jpg" alt="" class="img-responsive"></a>
+                                      </p>
+
+                                        <li>
+                                            <p>TITLE-Add title to your article wherein people will know exactly what type of article it is going to be.</p>
+                                        </li>
+                                        <li>
+                                            <p>STATUS:You can keep the status on/off(i.e whether you want a particular content to appear or not to appear on screen ).</p>
+                                        </li>
+                                        <li>
+                                            <p>CONTENT:Next you will observe the content section.Best part of it is the WYSIWYG("what you see is what you get")property.That is if you copy content from anywhere still you will be able to paste it in the content
+                                                section and it will appear in the same format.</p>
+                                        </li>
+                                        <li>
+                                            <p>DATE:Add date to your article so that your clients/users will know when you have written the article or when you have updated certain content.</p>
+                                        </li>
+                                        <li>
+                                            <p>IMAGE UPLOAD:You can add an image if you want ,to your article by using the UPLOAD IMAGE button.</p>
+                                        </li>
+                                        <li>
+                                            <p>If you wish to save the changes made then click on SAVE or on CANCEL.</p>
+                                        </li>
+                                        <li>
+                                            <p>Once you are done with the create part you can edit it or delete it .</p>
+                                        </li>
+                                        <p>
+                                            <a href="img/a2.jpg"><img src="img/a2.jpg" alt="" class="img-responsive"></a>
+                                        </p>
+                                    </ul>
+                                </div>
+
+
+
+
+
+
+                                <!-- <p>We will be releasing Cordova/PhoneGap plugins in the future to expand the capabilities of your apps. </p> -->
+                            </div>
+
+                        </div>
+                        <div class="doc-right doc8" ng-if="showStart==8">
+                            <h3 class="margin0">Photo Gallery</h3>
+                            <div class="doc-desc mt15">
+
+
+                                <p>We have already provided many photos in the form of an album where there are multiple images provided.</p>
+                                <p>Here you will be provided with different categories of albums(with images related to them) and you can choose any such album.</p>
+                                <p>There are two ways of creating an album by starting from scratch using the create button or you can edit the one's that are already made available.</p>
+                                <p>You can create your own album with the help of CREATE option present at the right side</p>
+                                <a href="img/p1.jpg"><img src="img/p1.jpg" alt="" class="img-responsive"></a>
+                                <div class="sub-step">
+                                    <ul>
+                                        <li>
+                                            <p>TITLE:Give a title to your album(eg:Birthdays,weddings,etc)</p>
+                                        </li>
+                                        <li>
+                                            <p>STATUS:You can keep the status on/off(i.e whether you want a particular photo album to appear or not to appear on screen ).</p>
+                                        </li>
+                                        <li>
+                                            <p>UPLOAD IMAGE-Here you can keep one image as the main image that indicates what the rest of the images are going to be.</p>
+                                        </li>
+                                        <li>
+                                            <p>UPLOAD IMAGES-Here you can keep the related images just like we maintain albums for our photos</p>
+                                        </li>
+                                        <li>
+                                            <p>If you wish to save the changes made then click on SAVE or on CANCEL.</p>
+                                        </li>
+                                        <a href="img/p2.jpg"><img src="img/p2.jpg" alt="" class="img-responsive"></a>
+                                    </ul>
+                                </div>
+
+
+
+
+
+
+                                <!-- <p>We will be releasing Cordova/PhoneGap plugins in the future to expand the capabilities of your apps. </p> -->
+                            </div>
+
+                        </div>
+                        <div class="doc-right doc9" ng-if="showStart==9">
+                            <h3 class="margin0">Video Gallery</h3>
+                            <div class="doc-desc mt15">
+                                <p>We have already provided many VIDEOS in the form of an album where there are multiple VIDEOS provided.</p>
+                                <p>Here you will be provided with different categories of albums(with videos related to them) and you can choose any such album.</p>
+                                <p>There are two ways of creating an album by starting from scratch using the create button or you can edit the one's that are already made available.</p>
+                                <p>You can create your own album with the help of CREATE CATEGORY option present at the right side
+                                </p>
+                                <a href="img/v1.jpg"><img src="img/v1.jpg" alt="" class="img-responsive"></a>
+                                <div class="sub-step">
+                                    <ul>
+                                        <li>
+                                            <p>CATEGORY TITLE:Give a title to your video album(eg:Dance,DIY,etc)</p>
+                                        </li>
+                                        <li>
+                                            <p>STATUS:You can keep the status on/off(i.e whether you want a particular video album to appear or not to appear on screen ).</p>
+                                        </li>
+                                        <li>
+                                            <p>UPLOAD IMAGE-Here you can keep one image as the main image that indicates what the videos are going to be of.</p>
+                                        </li>
+                                        <li>
+                                            <p>UPLOAD VIDEOS-Here you can keep the related images just like we maintain albums for our photos
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>If you wish to save the changes made then click on SAVE or on CANCEL.</p>
+                                        </li>
+                                        <a href="img/v2.jpg"><img src="img/v2.jpg" alt="" class="img-responsive"></a>
+                                    </ul>
+                                </div>
+
+
+
+
+
+
+
+
+                                <!-- <p>We will be releasing Cordova/PhoneGap plugins in the future to expand the capabilities of your apps. </p> -->
+                            </div>
+
+                        </div>
+                        <div class="doc-right doc10" ng-if="showStart==10">
+                            <h3 class="margin0">Contact</h3>
+                            <div class="doc-desc mt15">
+                                <p>By using the CREATE option present at right side one can create the CONTACT page
+                                </p>
+                                <a href="img/c1.jpg"><img src="img/c1.jpg" alt="" class="img-responsive"></a>
+                                <div class="sub-step">
+                                    <ul>
+                                        <li>
+                                            <p>TITLE-Add a name to your contact page eg:CONTACT US,REACH US etc.</p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                ADDRESS-Add address where you can be contacted by your clients.You can even beautify it by the various options made available to you.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                EMAIL-Provide email address so that your clients can contact you socially.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                CONTACT NO.-Provide your phone number to your clients so that then can contact you on the go.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Once you are done with the creation then you can view it and if need be can edit or delete it.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>If there are many contact us pages developed and you require only some then you can select all the unwanted pages with the help of the select box present next to contact title.
+                                            </p>
+                                        </li>
+                                        <a href="img/c2.jpg"><img src="img/c2.jpg" alt="" class="img-responsive"></a>
+                                    </ul>
+                                </div>
+
+
+
+
+
+
+
+
+                                <!-- <p>We will be releasing Cordova/PhoneGap plugins in the future to expand the capabilities of your apps. </p> -->
+                            </div>
+
+                        </div>
+                        <div class="doc-right doc11" ng-if="showStart==11">
+                            <h3 class="margin0">Audio Gallery</h3>
+                            <div class="doc-desc mt15">
+                                <p>Here You can add audios that you like from your soundcloud account by providing your soundcloud username.</p>
+                                <p>If you wish to save the changes made then click on <code>SAVE</code> or can reset it if you wish to.</p>
+<a href="img/au1.jpg"><img src="img/au1.jpg" class="img-responsive alt=""></a>
+
+
+
+
+
+
+                                <!-- <p>We will be releasing Cordova/PhoneGap plugins in the future to expand the capabilities of your apps. </p> -->
+                            </div>
+
+                        </div>
+                        <div class="doc-right doc12" ng-if="showStart==12">
+                            <h3 class="margin0">Intro Slider</h3>
+                            <div class="doc-desc mt15">
+                                <p>The purpose of these onboarding screens/intro sliders is to introduce the app and demonstrate what it does.
+                                </p>
+                                <p>Generally a single image is used as a intro slider/onboarding screen.</p>
+                                <div class="sub-step">
+                                    <ol type="a">
+                                        <li>
+                                            <p>There are multiple single image sliders available but if you want to add some of your own then you can do so by using the <code>UPLOAD FILES</code> button.</p>
+                                            <a href="img/o1.jpg"><img src="img/o1.jpg" alt="" class="img-responsive" /></a>
+                                            <ul>
+                                                <li>
+                                                    <p>Now click <code>SAVE</code> or <code>Cancel</code> as per your preference. </p>
+                                                </li>
+                                            </ul>
+                                            <li>You are been provided with multiple options from which you can choose.
+                                                <ul>
+                                                    <li>
+                                                        <p>On choosing one such image you will land on EDIT IMAGE.</p>
+                                                    </li>
+                                                    <li>
+                                                        <p>Now you can change the image by using the UPLOAD FILE button.</p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p>If you wish to save the changes made then click on SAVE or on CANCEL.
+                                                </p>
+                                                <a href="img/o2.jpg"><img src="img/o2.jpg" alt="" class="img-responsive"/></a>
+                                            </li>
+                                    </ol>
+                                </div>
+
+
+
+
+
+
+
+                                <!-- <p>We will be releasing Cordova/PhoneGap plugins in the future to expand the capabilities of your apps. </p> -->
+                            </div>
+
+                        </div>
+                        <div class="doc-right doc13" ng-if="showStart==13">
+                            <h3 class="margin0">Users</h3>
+                            <div class="doc-desc mt15">
+                                <p>You can add users/clients by means of <code>CREATE</code> button</p>
+                                <a href="img/u1.jpg"><img src="img/u1.jpg" alt="" class="img-responsive" /></a>
+                                <div class="sub-step">
+                                    <ul>
+                                        <li>
+                                            <p>NAME-Enter the name of the user.</p>
+                                        </li>
+                                        <li>
+                                            <p>EMAIL ID-Enter a valid email id.</p>
+                                        </li>
+                                        <li>
+                                            <p>PASSWORD-Enter a secure password.</p>
+                                        </li>
+                                        <li>
+                                            <p>ADDRESS-Provide address of users /clients.</p>
+                                        </li>
+                                        <li>
+                                            <p>PROFILE IMAGE-You can add profile image of users.</p>
+                                        </li>
+                                        <li>
+                                            <p>COVER IMAGE-You can add a cover image along with a profile image of users (eg:like in Facebook)
+                                            </p>
+                                        </li>
+                                        <a href="img/u2.jpg"><img src="img/u2.jpg" alt="" class="img-responsive" /></a>
+                                    </ul>
+                                </div>
+
+
+
+
+
+
+                                <!-- <p>We will be releasing Cordova/PhoneGap plugins in the future to expand the capabilities of your apps. </p> -->
+                            </div>
+
+                        </div>
+                        <div class="doc-right doc14" ng-if="showStart==14">
+                            <h3 class="margin0">Configration</h3>
+                            <div class="doc-desc mt15">
+
+                                <div class="sub-step">
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                SEARCH- You can enable or disable search options for your article.</p>
+                                            <p>eg:If you don't want the audio gallery article to be searchable then disable its search.</p>
+<a href="img/cn1.jpg"><img src="img/cn1.jpg" alt="" class="img-responsive" /></a>
+                                        </li>
+                                      <li>  <p>  SocialFeeds</p>
+<a href="img/cn2.jpg"><img src="img/cn2.jpg" alt="" class="img-responsive"/></a>
+                                      </li>
+
+                                        <li>
+                                            <p>GOOGLE ANALYTICS-Google Analytics is a freemium web analytics service offered by Google that tracks and reports website traffic.
+                                                <p>Thus you will be able to keep track of all those who have visited your app.</p>
+                                            </p>
+                                            <a href="img/cn3.jpg"><img src="img/cn3.jpg" alt="" class="img-responsive" /></a>
+                                        </li>
+                                        <li>
+                                            <p>MAKE ADMIN-Sharing app access can be done by MAKE ADMIN wherein you can choose another person to be admin for which one needs to provide email id and password for the same.</p>
+                                        </li>
+                                        <a href="img/cn4.jpg"><img src="img/cn4.jpg" alt="" class="img-responsive" /></a>
+                                    </ul>
+                                </div>
+
+
+
+
+
+
+                                <!-- <p>We will be releasing Cordova/PhoneGap plugins in the future to expand the capabilities of your apps. </p> -->
+                            </div>
+
+                        </div>
+                        <div class="doc-right doc15" ng-if="showStart==15">
+                            <h3 class="margin0">Enquiry</h3>
+                            <div class="doc-desc mt15">
+                                <p>Every App/Site has an enquiry page wherein if clients have any questions then they can ask them through this page.</p>
+                                <p>You can also connect with your users through one such enquiry page wherein they can place not only their doubts but can also comment about their experience .</p>
+
+                                <!-- <p>We will be releasing Cordova/PhoneGap plugins in the future to expand the capabilities of your apps. </p> -->
+                            </div>
+
+                        </div>
+                        <div class="doc-right doc16" ng-if="showStart==16">
+                            <h3 class="margin0">About Us</h3>
+                            <div class="doc-desc mt15">
+                                <p>We've been crafting beautiful websites, awesome apps and making all our clients happy for years.We have a team that’s expertised and experienced in field of technology that rarely is present in other organisations.Our clients
+                                    happiness is enough to speak for us. But we saw many that needed an app for their business but couldn't afford it.So this time the the team has come with an idea that sticks to our mission-”technology for all”. We are
+                                    a Team whose mission is to provide opportunities to everyone to create their own apps. Using the team's expert knowledge, we have built a platform that helps build app easily and at a significantly lower cost and that
+                                    to without much hassle.For us our customers success is top priority.</p>
+
+                                <!-- <p>We will be releasing Cordova/PhoneGap plugins in the future to expand the capabilities of your apps. </p> -->
+                            </div>
+
+                        </div>
+                        <div class="doc-right doc17" ng-if="showStart==17">
+                            <h3 class="margin0">FAQ</h3>
+                            <div class="doc-desc mt15">
+                                <ol>
+                                    <li>
+                                        <p>Can we integrate self hosted wordpress OR wordpress.com blogs?
+                                            <p>Ans:Yes .BLAZEN provides the ability to integrate both SELF HOSTED WORDPRESS and WORDPRESS.com blogs.One can do it by entering the backend (i.e the dashboard present at left) and enter your wordpress username
+                                                and Self Hosted Wordpress Blog URL and it will thus be integrated.
+                                            </p>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>Can I get the audio gallery from my soundcloud account?</p>
+                                        <p>Ans:Absolutely. All you have to do is provide the username of your Soundcloud account.One can do it by: Click on audio gallery-->SETUP AUDIO GALLERY-->Enter the Soundcloud username And thus you will have access
+                                            to your audio gallery.</p>
+
+                                    </li>
+                                    <li>
+                                        <p>Can I make additional Navigations and assign different pages to each navigation?
+                                        </p>
+                                        <p>Ans:Yes you can add up navigations as per your wish.For that you need to follow the following steps:
+                                        </p>
+                                        <ol type="a">
+                                            <li>
+                                                <p>You will find the CREATE button at the right side which will help you start off with your navigation.</p>
+                                            </li>
+                                            <li>
+                                                <p>Now you will observe the create navigation page in which their are various options further available.</p>
+                                                <div class="sub-step">
+                                                    <ul>
+                                                        <li>
+                                                            <p>NAME-Here you need to fill in the name of your individual articles.
+                                                                <p>eg:HOME,ABOUT,CAREERS etc.</p>
+                                                            </p>
+                                                        </li>
+                                                        <li>SELECT ICON:Here you are been provided with a list of icons from which you can choose to use as a logo for each navigation name.</li>
+                                                        <li>ENABLE:It might happen that you don't anymore want a particular article to appear on your site then you can simply disable it with the <code>enable(ON)</code>/<code>disable(OFF)</code>button. </li>
+                                                        <li>LINK:You can link that article further to any other article that you wish.If also later you wish like changing the link you can do it with ease by simply clicking on the CHANGE LINK. In links you
+                                                            further have the option of linking all the photo galleries/video galleries or a single photo gallery/video gallery and placing it in the navigation itself.</li>
+
+                                                        <li>If you wish to save the changes made then click on <code>SAVE</code> or on <code>CANCEL</code>.</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>Follow the step 2 again every time you want a new article to be created and which needs to be in navigation. </li>
+                                            <li>Once you are done with the CREATE part you will find the entire navigation made by you with further options at the extreme right.
+                                                <div class="sub-step">
+                                                    <ul>
+                                                        <li>
+                                                            <p>STAR SIGN-This sign on click turns into yellow which indicates that,the particular article has become default
+                                                                <p>(i.e Whenever your site loads that article will be the first to appear to user on your site page. )</p>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p>PENCIL SIGN(BLUE COLOURED)-By means of it you can edit your article content.
+                                                                <p>eg:If you no longer like the icon that you had initially used for about us article then click on edit icon(BLUE COLOURED)-->goto <code>select</code> icon-->select another icon from the list
+                                                                    provided in dropdown-->click <code>SAVE</code></p>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p>DELETE SIGN(RED COLOURED): No longer wanted articles can be deleted by clicking on this icon.On clicking a popup will appear that will ask whether you surely want to delete it.</p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                            </li>
+                                        </ol>
+                                        <li>
+                                            <p>I don’t have wordpress or tumblr blog but can I still create blog with help of Blazen?
+                                                <p>Ans:Yes there’s no need to worry.By means of CMS wherein you are been provided the option of CREATE you can create blog with help of blazen even if you dont own a account on tumblr or wordpress.</p>
+                                            </p>
+                                        </li>
+                                    </li>
+                                    <li>
+                                        <p>How can I integrate tumblr blog with my app on Blazen?
+                                            <p>Ans: Its just a matter of seconds .Yes you have read it right.You just need to give the username of our tumblr account and it will be done.</p>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>What will be the developer name if we publish the app using Blazen?
+                                            <p>Ans :Initially the developer name will be that of BLAZEN but if you provide your publishing account we can publish using your account as well.</p>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>How many social logins do you provide?
+                                            <p>Ans :FB,Google+,Instagram, Twitter, Linkedin are the social modes made available by default.If you want another social media (eg:pinterest) then you can not do so but if you want to disable any you can by means
+                                                of the ENABLE/DISABLE option.If you want additional social logins you can get it done using custom development for which you will have to get in contact with us.</p>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>Can I disable login in my app?
+                                            <p>Ans :Yes you can disable login by following steps: Click on LOGIN AND SIGNUP in Backend -->Set login/signup-->OFF(Enable/Disable)</p>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>Can I remove any feature I don’t want to ?Can I add any additional feature in the same?can I modify the designs?
+                                            <p>Ans :Yes you can .We are already providing the code for the application so if you want to customize any part you can do it.You can also contact the BLAZEN team if you want as we will also be providing custom
+                                                development services for blazen app for those who need help.
+                                            </p>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>Can I have any additional features within the App?
+                                            <p>Ans :Yes you can definietly add up features.You can get it customized from any other developer or get it done from blazen team as well . We also provide high quality custom development services which will leave
+                                                no space for disappointment.</p>
+                                        </p>
+                                    </li>
+                                </ol>
+                                <!-- <p>We will be releasing Cordova/PhoneGap plugins in the future to expand the capabilities of your apps. </p> -->
+                            </div>
+
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+</div>
 </div>
